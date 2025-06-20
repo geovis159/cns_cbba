@@ -1,0 +1,19 @@
+uuid: 2dc2ec57-f51b-401c-9818-abbb35b1ae74
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_enlaceinteres
+    - node.type.enlaces_de_interes
+id: node.enlaces_de_interes.field_descripcion_enlaceinteres
+field_name: field_descripcion_enlaceinteres
+entity_type: node
+bundle: enlaces_de_interes
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

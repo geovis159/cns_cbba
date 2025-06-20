@@ -1,0 +1,77 @@
+uuid: 7530702e-fc3a-4d25-8073-3b98db2e0206
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.comunicados.field_archivo_comunicado
+    - field.field.node.comunicados.field_contenido_comunicado
+    - field.field.node.comunicados.field_fecha_comunicado
+    - field.field.node.comunicados.field_lugar_comunicado
+    - field.field.node.comunicados.field_resumen_comunicado
+    - field.field.node.comunicados.field_titulo_comunicado
+    - node.type.comunicados
+  module:
+    - datetime
+    - file
+    - text
+    - user
+id: node.comunicados.default
+targetEntityType: node
+bundle: comunicados
+mode: default
+content:
+  field_archivo_comunicado:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_contenido_comunicado:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_fecha_comunicado:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_lugar_comunicado:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_resumen_comunicado:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_titulo_comunicado:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: d8b97867-d62d-47c8-b9b6-009c5d5cce8d
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Nómina de servidoras y servidores públicos'
+type: nomina_de_servidoras_y_servidore
+description: 'Nómina de servidoras y servidores públicos'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

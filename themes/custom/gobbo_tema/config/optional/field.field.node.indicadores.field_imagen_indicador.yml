@@ -1,0 +1,38 @@
+uuid: 5f6d9dd2-d3a9-487f-a9c8-137927ae88a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagen_indicador
+    - node.type.indicadores
+  module:
+    - image
+id: node.indicadores.field_imagen_indicador
+field_name: field_imagen_indicador
+entity_type: node
+bundle: indicadores
+label: 'Imagen referencia'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

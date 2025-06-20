@@ -1,0 +1,23 @@
+uuid: 52597cac-f40a-40f0-b853-95f8c8483207
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlace_prog_proy_inv
+    - node.type.programas_y_proyectos_de_inverci
+  module:
+    - link
+id: node.programas_y_proyectos_de_inverci.field_enlace_prog_proy_inv
+field_name: field_enlace_prog_proy_inv
+entity_type: node
+bundle: programas_y_proyectos_de_inverci
+label: Enlace
+description: 'Para los detalles del proyecto se recomienda trabajar un enlace a un sistema como es SISIN, SISFIN o SIGEP'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,11 @@
+uuid: ab15cc2b-0305-4310-9d08-b5c7f206964f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.programas_y_proyectos_de_inverci
+id: node.programas_y_proyectos_de_inverci
+target_entity_type_id: node
+target_bundle: programas_y_proyectos_de_inverci
+default_langcode: site_default
+language_alterable: false

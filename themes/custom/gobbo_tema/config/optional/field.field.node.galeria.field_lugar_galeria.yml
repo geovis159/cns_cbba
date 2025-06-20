@@ -1,0 +1,19 @@
+uuid: 572e0b97-d182-4223-9934-1af27e39c487
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar_galeria
+    - node.type.galeria
+id: node.galeria.field_lugar_galeria
+field_name: field_lugar_galeria
+entity_type: node
+bundle: galeria
+label: Lugar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 12166152-6a54-40a4-b037-d175d1438b05
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.datos_y_estadisticas
+id: node.datos_y_estadisticas
+target_entity_type_id: node
+target_bundle: datos_y_estadisticas
+default_langcode: site_default
+language_alterable: false

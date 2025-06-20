@@ -1,0 +1,19 @@
+uuid: e3516558-6c0e-4300-8899-6d0f45cb851b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resumen_campania
+    - node.type.campanas
+id: node.campanas.field_resumen_campania
+field_name: field_resumen_campania
+entity_type: node
+bundle: campanas
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

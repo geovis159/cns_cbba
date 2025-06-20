@@ -1,0 +1,19 @@
+uuid: a0bb49a0-9e89-4ffc-b5ed-bfbf1bbe80a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slug_servicios
+    - node.type.servicios
+id: node.servicios.field_slug_servicios
+field_name: field_slug_servicios
+entity_type: node
+bundle: servicios
+label: Slug
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

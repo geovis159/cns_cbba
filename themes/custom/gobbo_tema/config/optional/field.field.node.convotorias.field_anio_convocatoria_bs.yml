@@ -1,0 +1,23 @@
+uuid: 555a5018-8917-4419-8f73-d5599e125f03
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_convocatoria_bs
+    - node.type.convotorias
+id: node.convotorias.field_anio_convocatoria_bs
+field_name: field_anio_convocatoria_bs
+entity_type: node
+bundle: convotorias
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

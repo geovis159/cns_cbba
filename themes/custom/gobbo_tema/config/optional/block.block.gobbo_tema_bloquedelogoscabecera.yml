@@ -1,0 +1,25 @@
+uuid: e030ecd5-7517-4fe0-9061-b7b9d698902b
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:bloque_cabecera:3e9106f4-182a-43a9-9423-46f03f47737c'
+  module:
+    - block_content
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquedelogoscabecera
+theme: gobbo_tema
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:3e9106f4-182a-43a9-9423-46f03f47737c'
+settings:
+  id: 'block_content:3e9106f4-182a-43a9-9423-46f03f47737c'
+  label: 'Bloque de logos cabecera'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

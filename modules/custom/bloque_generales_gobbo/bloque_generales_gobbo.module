@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+use Drupal\Core\Form\FormStateInterface;
+
+
+function  bloque_generales_gobbo_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+ 
+ // Verifica si es un formulario de creación de contenido.
+  if (strpos($form_id, 'node_') === 0 && strpos($form_id, '_form') !== false) {
+    // Obtiene el nodo del formulario.
+    $node = $form_state->getFormObject()->getEntity();
+
+    // Verifica si el nodo es nuevo.
+    if ($node->isNew()) {
+      foreach ($form as $field_name => &$field) {
+        // Verifica si el campo es un field y contiene "nro" en su nombre.
+        if (is_array($field) && isset($field['widget'][0]['value']) && strpos($field_name, 'nro') !== false) {
+          // Consulta para obtener el último valor registrado en ese campo específico. 
+             $query = \Drupal::entityQuery('node')
+            ->condition('type', $node->bundle())
+            ->sort($field_name, 'DESC')
+            ->range(0, 1)
+            ->accessCheck(FALSE)
+            ->execute();
+        $max_value = 1;
+        if (!empty($query)) {
+            $last_node_id = reset($query);
+            $last_node = \Drupal\node\Entity\Node::load($last_node_id);
+ 
+            $max_value = $last_node->get($field_name)->value + 1;
+          }
+          // +1 al último valor de Nro
+          $field['widget'][0]['value']['#default_value'] = $max_value;
+
+        }
+      }
+    }
+  }
+  // Para el formulario de contacto llamado 'soporte'
+
+  if ($form_id === 'contact_message_formulario_solicitud_form') {
+    $form['field_form_nombres_solicitud']['widget'][0]['value']['#placeholder'] = 'Nombres...';
+    $form['field_form_apellidos_solicitud']['widget'][0]['value']['#placeholder'] = 'Apellidos...';
+    $form['field_form_celular_solicitud']['widget'][0]['value']['#placeholder'] = 'Ej. 77722772';
+    $form['field_form_ci_solicitud']['widget'][0]['value']['#placeholder'] = 'Ej. 5050550';
+    $form['field_form_peticion_solicitud']['widget'][0]['value']['#placeholder'] = 'Realice la descripción concreta de la petición';
+  }
+    if ($form_id === 'contact_message_formulario_de_denuncias_por_hech_form') {
+    $form['field_form_apellidos_denuncia']['widget'][0]['value']['#placeholder'] = 'Apellidos...';
+    $form['field_form_celular_denuncia']['widget'][0]['value']['#placeholder'] = 'Ej. 77722772';
+    $form['field_form_ci_denuncia']['widget'][0]['value']['#placeholder'] = 'Ej. 5050550';
+
+    $form['field_form_descripcion_denuncia']['widget'][0]['value']['#placeholder'] = 'Realice la descripción concreta de la denucia...';
+    $form['field_form_servidores_denuncia']['widget'][0]['value']['#placeholder'] = 'Ingrese la lista de los servidores públicos involucrados...';
+    $form['field_form_pruebas_denuncia']['widget'][0]['value']['#placeholder'] = 'Indique cuáles serían las pruebas y el lugar en el que se encuentras...';
+    $form['field_form_antecedente_denuncia']['widget'][0]['value']['#placeholder'] = 'Si presentó esta denuncia ante otra entidad o instancia, indique dónde la presentó.';
+
+  }
+}
+
+function bloque_generales_gobbo_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $form_id = $variables['element']['#form_id'] ?? '';
+
+  if ($form_id === 'contact_message_formulario_solicitud_form') {
+    $suggestions[] = 'form__contact_message__solicitud';
+  }
+ if ($form_id === 'contact_message_formulario_de_denuncias_por_hech_form') {
+    $suggestions[] = 'form__contact_message__denuncia';
+  }
+
+}

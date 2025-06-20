@@ -1,0 +1,27 @@
+uuid: 9f1a4f27-c01c-4f58-a28b-1384681b6ca8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_contrato
+    - node.type.contratos
+  module:
+    - file
+id: node.contratos.field_documento_contrato
+field_name: field_documento_contrato
+entity_type: node
+bundle: contratos
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

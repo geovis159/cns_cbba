@@ -1,0 +1,11 @@
+uuid: ab137e69-91ff-4613-b331-3fdcbabe7ae7
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.presupuesto_institucional
+id: node.presupuesto_institucional
+target_entity_type_id: node
+target_bundle: presupuesto_institucional
+default_langcode: site_default
+language_alterable: false

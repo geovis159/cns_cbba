@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{{ attach_library('bootstrap_barrio/form') }}
+{# {{dump(element)}} #}
+<div class="pb-4">
+  <div class="alert alert-secondary d-flex align-items-center" role="alert">
+      <i class="bi bi-exclamation-triangle-fill pe-2"></i>
+      <div>
+        Los campos marcados con (*) son de llenado obligatorio
+      </div>
+    </div>
+</div>
+<div class="ps-0 ps-md-4">
+
+  <form{{ attributes }}>
+    {# {{ children }} #}
+    <div class="pb-3 texto-default">
+      <strong >Identificación del denunciante</strong>
+    </div>
+    {{element.name}}
+    {{element.field_form_nombres_denuncia}}
+    {{element.field_form_apellidos_denuncia}}
+    {{element.field_form_ci_denuncia}}
+    {{element.field_form_celular_denuncia}}
+    {{element.mail}}
+    <div class="pb-3 texto-default">
+      <strong >Hecho denunciado</strong>
+    </div>
+    {{element.field_form_descripcion_denuncia}}
+    {{element.field_form_servidores_denuncia}}
+    {{element.field_form_pruebas_denuncia}}
+    {{element.field_form_antecedente_denuncia}}
+    
+    {{element.actions}}
+  </form>
+</div>

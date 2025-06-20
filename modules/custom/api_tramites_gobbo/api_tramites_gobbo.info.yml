@@ -1,0 +1,7 @@
+name: 'Módulo para consumo de api tramites/servicios Gobbo'
+type: module
+description: 'Consume una API externa.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:rest

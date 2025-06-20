@@ -1,0 +1,21 @@
+uuid: 8605e99b-a05c-47c6-abce-9744caee0090
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_aprobacion_manual
+    - node.type.manual_de_organizacion_funcional
+  module:
+    - datetime
+id: node.manual_de_organizacion_funcional.field_fecha_de_aprobacion_manual
+field_name: field_fecha_de_aprobacion_manual
+entity_type: node
+bundle: manual_de_organizacion_funcional
+label: 'Fecha de aprobación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

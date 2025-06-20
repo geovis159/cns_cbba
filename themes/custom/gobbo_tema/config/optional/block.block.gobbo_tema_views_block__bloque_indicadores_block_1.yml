@@ -1,0 +1,29 @@
+uuid: 77b5d51f-deb0-4b89-8ac5-9a27613994d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.bloque_indicadores
+  module:
+    - system
+    - views
+  theme:
+    - gobbo_tema
+id: gobbo_tema_views_block__bloque_indicadores_block_1
+theme: gobbo_tema
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:bloque_indicadores-block_1'
+settings:
+  id: 'views_block:bloque_indicadores-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

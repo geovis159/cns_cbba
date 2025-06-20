@@ -1,0 +1,78 @@
+uuid: 431c1351-0854-4a3e-b055-9892c0be928e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.notas_de_prensa.field_contenido_nota
+    - field.field.node.notas_de_prensa.field_descripcion_nota
+    - field.field.node.notas_de_prensa.field_imagen_nota
+    - field.field.node.notas_de_prensa.field_lugar_nota
+    - field.field.node.notas_de_prensa.field_resumen_nota
+    - field.field.node.notas_de_prensa.field_titulo_nota
+    - node.type.notas_de_prensa
+  module:
+    - image
+    - text
+    - user
+id: node.notas_de_prensa.default
+targetEntityType: node
+bundle: notas_de_prensa
+mode: default
+content:
+  field_contenido_nota:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_descripcion_nota:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_imagen_nota:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_lugar_nota:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_resumen_nota:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_titulo_nota:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

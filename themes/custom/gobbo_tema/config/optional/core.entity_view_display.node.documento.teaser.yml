@@ -1,0 +1,27 @@
+uuid: 9f678312-c064-4e79-a469-ed91928b059c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.documento.field_anio_documentos
+    - field.field.node.documento.field_descripcion_documentos
+    - field.field.node.documento.field_documento_documentos
+    - node.type.documento
+  module:
+    - user
+id: node.documento.teaser
+targetEntityType: node
+bundle: documento
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_documentos: true
+  field_descripcion_documentos: true
+  field_documento_documentos: true
+  langcode: true

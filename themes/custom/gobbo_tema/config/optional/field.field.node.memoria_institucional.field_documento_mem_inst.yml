@@ -1,0 +1,27 @@
+uuid: 1f7aeab3-2161-4ed3-9f5c-81012098b120
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_mem_inst
+    - node.type.memoria_institucional
+  module:
+    - file
+id: node.memoria_institucional.field_documento_mem_inst
+field_name: field_documento_mem_inst
+entity_type: node
+bundle: memoria_institucional
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: true
+field_type: file

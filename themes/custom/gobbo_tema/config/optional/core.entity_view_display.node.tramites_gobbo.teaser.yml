@@ -1,0 +1,45 @@
+uuid: b9fab971-4024-47e5-afe8-3f74288a5f45
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tramites_gobbo.field_codigo_tramite
+    - field.field.node.tramites_gobbo.field_costo_tramite
+    - field.field.node.tramites_gobbo.field_descripcion_tramite
+    - field.field.node.tramites_gobbo.field_detalles_tramite
+    - field.field.node.tramites_gobbo.field_id_tramite
+    - field.field.node.tramites_gobbo.field_nombre_tramite
+    - field.field.node.tramites_gobbo.field_paraquien_tramite
+    - field.field.node.tramites_gobbo.field_requisitos_tramite
+    - field.field.node.tramites_gobbo.field_resumen_tramite
+    - field.field.node.tramites_gobbo.field_slug_tramite
+    - field.field.node.tramites_gobbo.field_tipo_tramite
+    - field.field.node.tramites_gobbo.field_vigencia_tramite
+    - node.type.tramites_gobbo
+  module:
+    - user
+id: node.tramites_gobbo.teaser
+targetEntityType: node
+bundle: tramites_gobbo
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_codigo_tramite: true
+  field_costo_tramite: true
+  field_descripcion_tramite: true
+  field_detalles_tramite: true
+  field_id_tramite: true
+  field_nombre_tramite: true
+  field_paraquien_tramite: true
+  field_requisitos_tramite: true
+  field_resumen_tramite: true
+  field_slug_tramite: true
+  field_tipo_tramite: true
+  field_vigencia_tramite: true
+  langcode: true

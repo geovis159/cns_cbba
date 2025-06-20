@@ -1,0 +1,11 @@
+uuid: 6470fc82-5f4d-4823-baa4-9eed55c63eb4
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_bolivia_a_tu_servicio
+id: block_content.bloque_bolivia_a_tu_servicio
+target_entity_type_id: block_content
+target_bundle: bloque_bolivia_a_tu_servicio
+default_langcode: site_default
+language_alterable: false

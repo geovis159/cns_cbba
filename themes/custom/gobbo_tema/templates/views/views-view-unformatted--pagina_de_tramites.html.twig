@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<div id="">
+
+  <div class="row"> 
+  
+    {% for row in rows %}
+      <div class='col-12 m-2'>
+          <div class='card  h-100 card p-2 fondo-paper' style='border-radius: 20px; border-color: var(--texto-default);'>
+              <div class='card-body'>
+                  <p class='card-text texto-default'> Modalidades | <b class="px-2 ">
+                          Virtual <i class="bi bi-phone px-2"></i>
+                          Presencial <i class="bi bi-people px-2"></i>
+                      </b></p>
+                  <h6><b>
+                          {{row['content']['#row']._entity.field_nombre_tramite.value}}
+                      </b></h6>
+                  <p class='card-text texto-default'>
+                    {{row['content']['#row']._entity.field_descripcion_tramite.value}}
+                  </p>
+              </div>
+              <div class='card-footer bg-transparent text-end' style='border: none;'>
+                  <a target="_blank" href="{{url('<front>')}}/node/{{row['content']['#row']._entity.nid.value}}" class='btn btn-sm texto-default'>Ver detalles</a>
+              </div>
+          </div>
+      </div>
+    {% endfor %}
+    
+  </div>
+</div>

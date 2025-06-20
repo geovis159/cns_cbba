@@ -1,0 +1,11 @@
+uuid: 69f433a0-4691-41a4-ad39-efb6bbb798d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.autoridad
+id: node.autoridad
+target_entity_type_id: node
+target_bundle: autoridad
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,20 @@
+uuid: 2597a267-8e9b-4519-a602-a693bc60dc3d
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_anio_escala_salarial
+field_name: field_anio_escala_salarial
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

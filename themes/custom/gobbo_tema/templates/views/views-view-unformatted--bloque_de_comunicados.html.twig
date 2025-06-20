@@ -1,0 +1,197 @@
+{#
+/**
+* @file
+* Theme override to display a view of unformatted rows.
+*
+* Available variables:
+* - title: The title of this group of rows. May be empty.
+* - rows: A list of the view's row items.
+* - attributes: The row's HTML attributes.
+* - content: The row's content.
+* - view: The view object.
+* - default_row_class: A flag indicating whether default classes should be
+* used on rows.
+*
+* @see template_preprocess_views_view_unformatted()
+*/
+#}
+
+
+<div class="mx-auto my-2 justify-content-center otro">
+
+	<div style="display: flex;" id="comunicadosCarousel" class="carousel slide" data-bs-ride="carousel">
+
+		<div class="position-relative mx-2">
+			<a class="position-absolute top-50 start-50 translate-middle" href="#comunicadosCarousel" role="button"
+				data-bs-slide="prev">
+				<i class="align-middle bi bi-caret-left-fill"></i>
+			</a>
+		</div>
+
+		<div class="carousel-inner row row-cols-md-4 row-cols-lg-5" role="listbox">
+
+			{% set bandera = true %}
+			{% set comunicados = [] %}
+			{% for row in rows %}
+			{% set comunicado = {'titulo':row.content['#row']._entity.field_titulo_comunicado.value,
+			'contenido':row.content['#row']._entity.field_contenido_comunicado.value,
+			'archivo': file_url(row.content['#row']._entity.field_archivo_comunicado.entity.getFileUri()),
+			} %}
+
+			{% set comunicados = comunicados | merge([comunicado]) %}
+			{# {% set comuinicados = [ %} #}
+			<div class="carousel-item {{ bandera ? 'active' : '' }} mt-2">
+
+				<div class="col">
+					<div class='card mx-2 p-0 mb-2' style="max-height: 134px;min-height: 134px;">
+
+						<div class='card-body pb-0'>
+
+							<p class='texto-default ver-comunicado'>
+								<small>
+									{% if row.content['#row']._entity.field_fecha_comunicado.value %}
+									 	{{row.content['#row']._entity.field_fecha_comunicado.value|date('d/m/Y')}}
+									{% endif %}
+									|
+									{{row.content['#row']._entity.field_lugar_comunicado.value}}
+								</small>
+							</p>
+							<div class='titulo'
+								style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">
+								{{row.content['#row']._entity.field_titulo_comunicado.value}}
+							</div>
+
+							<!-- button ver comunicado en modal -->
+						</div>
+						<div class='card-footer mt-0 pt-0 bg-transparent' style='border: none;'>
+							<a href="#">
+								<p class='text-lg-end ver-comunicado mb-1' data-bs-toggle="modal"
+									data-bs-target="#modalComunicado" data-post-id="{{loop.index0}}">Ver comunicado
+									<i class='bi bi-arrow-right'></i>
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% set bandera = false %}
+			{% endfor %}
+		</div>
+		<div class="position-relative mx-2">
+			<a class="position-absolute top-50 start-50 translate-middle" href="#comunicadosCarousel" role="button"
+				data-bs-slide="next">
+				<i class="bi bi-caret-right-fill"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="modalComunicado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="modalComunicadoLabel" aria-hidden="true">
+	<div class=" modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 800px;">
+		<div id="modal-comunicado" class="fondo-default modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalComunicadoLabel">
+					<strong>Comunicado</strong>
+				</h5>
+				<button type="button" class="texto-default btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+
+			<div class="modal-body">
+
+				<div style="display: flex;" class="text-center">
+					<a class="floating-button" style="left: 0px;" onclick="anteriorComunicadoModal()"
+						href="#comunicadosCarousel" role="button" data-bs-slide="prev">
+						<i class="bi bi-caret-left-fill icono-color"></i>
+					</a>
+					<div class="">
+
+						<div class="mt-2" style="margin-left: 26px;margin-right: 26px;">
+							<h5 id="modal-titulo"></h5>
+							<div class="contenido-modal texto-default" id="modal-contenido"
+								style="white-space: pre-wrap;">
+							</div>
+						</div>
+
+					</div>
+					<a class="floating-button" style="right: 0px;" href="#comunicadosCarousel"
+						onclick="siguienteComunicadoModal()" role="button" data-bs-slide="next">
+						<i class="bi bi-caret-right-fill icono-color"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a href="" target="_blank" id="modal-archivo" class="btn">Descargar
+					<i class="bi bi-file-earmark-pdf-fill icono-color"></i>
+				</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script>
+	var postData = JSON.parse("{{ comunicados|json_encode|e('js') }}");
+</script>
+<script>
+	let items = document.querySelectorAll('.otro .carousel .carousel-item')
+	var width = window.innerWidth;
+	let currentComunicado = 1;
+	const titulo = document.getElementById('modal-titulo');
+	const contenido = document.getElementById('modal-contenido');
+	const archivo = document.getElementById('modal-archivo');
+	
+
+	
+	items.forEach((el) => {
+		const minPerSlide = width > 992 ? 5 : 4
+		let next = el.nextElementSibling
+		for (var i = 1; i < minPerSlide; i++) {
+			if (!next) {
+				next = items[0]
+			}
+			let cloneChild = next.cloneNode(true)
+			el.appendChild(cloneChild.children[0])
+			next = next.nextElementSibling
+		}
+	})
+
+	function actualizarModal(post) {
+		titulo.textContent = post.titulo;
+		contenido.innerHTML = post.contenido;
+		archivo.setAttribute('href', post.archivo);
+	}
+	document.querySelectorAll('.ver-comunicado').forEach(item => {
+		item.addEventListener('click', event => {
+			const postId = item.getAttribute('data-post-id');
+
+			this.currentComunicado = postId;
+			const post = postData[postId];
+			actualizarModal(post)
+		});
+	});
+
+	function siguienteComunicadoModal() {
+		currentComunicado = (parseInt(currentComunicado) + 1) % postData.length
+
+		const post = postData[currentComunicado];
+		actualizarModal(post)
+	}
+	function anteriorComunicadoModal() {
+		currentComunicado = (parseInt(currentComunicado) - 1 + postData.length) % postData.length
+		const post = postData[currentComunicado];
+		actualizarModal(post)
+	}
+
+	document.addEventListener('DOMContentLoaded', function () {
+	{% if mostrar_modal == 1 %}
+	actualizarModal(postData[0])
+	const myModal = new bootstrap.Modal(document.getElementById('modalComunicado'));
+	myModal.show();
+	{% endif %}
+
+  });
+</script>

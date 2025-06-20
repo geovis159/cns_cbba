@@ -1,0 +1,27 @@
+uuid: 87d09877-0266-41d7-ba03-87ba9e746ed0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_pres
+    - node.type.presupuesto_institucional
+  module:
+    - file
+id: node.presupuesto_institucional.field_documento_pres
+field_name: field_documento_pres
+entity_type: node
+bundle: presupuesto_institucional
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: true
+field_type: file

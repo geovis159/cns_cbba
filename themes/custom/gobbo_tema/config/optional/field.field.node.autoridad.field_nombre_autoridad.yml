@@ -1,0 +1,19 @@
+uuid: be26ff2d-2623-442e-93a6-325f95e9034e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_autoridad
+    - node.type.autoridad
+id: node.autoridad.field_nombre_autoridad
+field_name: field_nombre_autoridad
+entity_type: node
+bundle: autoridad
+label: Nombre
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

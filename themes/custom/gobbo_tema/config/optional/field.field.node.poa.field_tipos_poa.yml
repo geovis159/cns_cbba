@@ -1,0 +1,21 @@
+uuid: 0b625986-6b87-4e6b-be06-8139d4b5469b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipos_poa
+    - node.type.poa
+  module:
+    - options
+id: node.poa.field_tipos_poa
+field_name: field_tipos_poa
+entity_type: node
+bundle: poa
+label: 'Tipos de POA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

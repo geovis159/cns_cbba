@@ -1,0 +1,21 @@
+uuid: 01fd6a9b-2c3e-4ee8-a355-5ff1948e8f3b
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_titulo_publicacion
+field_name: field_titulo_publicacion
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

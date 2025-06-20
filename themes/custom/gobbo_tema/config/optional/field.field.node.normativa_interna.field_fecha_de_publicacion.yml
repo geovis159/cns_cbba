@@ -1,0 +1,21 @@
+uuid: 1978fae7-49c7-4970-95c1-c5caf55fed33
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_publicacion
+    - node.type.normativa_interna
+  module:
+    - datetime
+id: node.normativa_interna.field_fecha_de_publicacion
+field_name: field_fecha_de_publicacion
+entity_type: node
+bundle: normativa_interna
+label: 'Fecha de publicación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

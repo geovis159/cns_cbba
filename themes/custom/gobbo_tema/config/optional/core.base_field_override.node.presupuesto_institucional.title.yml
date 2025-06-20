@@ -1,0 +1,18 @@
+uuid: 74fee349-9828-441b-bf5f-ce588636b00f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.presupuesto_institucional
+id: node.presupuesto_institucional.title
+field_name: title
+entity_type: node
+bundle: presupuesto_institucional
+label: 'Presupuesto Institucional'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 3eb15fb6-a921-4459-9278-f3285dcbf7a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_monto_de_inversion
+    - node.type.programas_y_proyectos_de_inverci
+id: node.programas_y_proyectos_de_inverci.field_monto_de_inversion
+field_name: field_monto_de_inversion
+entity_type: node
+bundle: programas_y_proyectos_de_inverci
+label: 'Monto de Inversión'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,19 @@
+uuid: 66b5c440-ae8f-4760-ba81-2ee227a84355
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resumen_comunicado
+    - node.type.comunicados
+id: node.comunicados.field_resumen_comunicado
+field_name: field_resumen_comunicado
+entity_type: node
+bundle: comunicados
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

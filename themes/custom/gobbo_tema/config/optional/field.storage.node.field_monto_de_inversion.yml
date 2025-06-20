@@ -1,0 +1,18 @@
+uuid: 2facd383-8098-4ad3-b2b2-dfe954e9b84e
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_monto_de_inversion
+field_name: field_monto_de_inversion
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

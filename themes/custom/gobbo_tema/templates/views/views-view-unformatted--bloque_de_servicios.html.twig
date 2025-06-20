@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+
+<div id="servicios" class="row py-2">
+
+
+	{% for row in rows %}
+		<div class=' col-12 col-sm-6 col-md-4 pb-2'>
+			{% if row.content['#row']._entity.field_enlace_servicios.uri|length > 1 %}
+			<a style="text-decoration: none;" target="_blank" href="{{row.content['#row']._entity.field_enlace_servicios.uri}}">
+			{% else %}
+			<a style="text-decoration: none;" href="{{url('<front>')}}/node/{{row.content['#row']._entity.nid.value}}">
+			{% endif %}
+				<div class='card  h-100 p-2' style='border-radius: 20px;'>
+					<div class='card-body pb-0'>
+						<div class='row justify-content-center align-items-center g-0'>
+						
+							<div class='col-10 col-sm-9'>
+								<p class="titulo">{{row.content['#row']._entity.field_titulo_servicios.value}}</p>
+								<p class="anuncio" style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;">{{row.content['#row']._entity.field_anuncio_servicios.value}}</p>
+							</div>
+							<div class='col-2 col-sm-3 text-center'>
+								<img style="object-fit: contain;" src="{{file_url(row.content['#row']._entity.field_imagen_servicios.entity.getFileUri())}}" class='text-success' width='50' height='50'>
+							</div>
+				
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+
+	{% endfor %}
+
+
+</div>

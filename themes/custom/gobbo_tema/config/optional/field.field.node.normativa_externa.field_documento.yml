@@ -1,0 +1,27 @@
+uuid: e9b2e705-bc75-4792-b6fd-71bfd207ba7c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento
+    - node.type.normativa_externa
+  module:
+    - file
+id: node.normativa_externa.field_documento
+field_name: field_documento
+entity_type: node
+bundle: normativa_externa
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,27 @@
+uuid: 229351e7-62bc-4455-9078-ebba4e0936ee
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - gobbo_tema
+_core:
+  default_config_hash: _sUpMpWMkeHmFSZ7JFdHkM0tMsBLwfRTrInmRK67QPg
+id: gobbo_tema_main_menu
+theme: gobbo_tema
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 5
+  expand_all_items: true
+visibility: {  }

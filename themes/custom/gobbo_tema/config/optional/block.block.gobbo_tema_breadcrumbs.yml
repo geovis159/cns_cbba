@@ -1,0 +1,22 @@
+uuid: 0cc9994b-b49f-4d06-a1f0-180486072ecb
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gobbo_tema
+_core:
+  default_config_hash: AnM62T1S15T00IL7m8s-MbRx05qNOb7f6eYvTrvEiUM
+id: gobbo_tema_breadcrumbs
+theme: gobbo_tema
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

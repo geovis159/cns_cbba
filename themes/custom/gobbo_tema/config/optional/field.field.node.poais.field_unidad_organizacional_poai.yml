@@ -1,0 +1,19 @@
+uuid: f642a503-fc85-4c96-8980-5c56bee59fca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unidad_organizacional_poai
+    - node.type.poais
+id: node.poais.field_unidad_organizacional_poai
+field_name: field_unidad_organizacional_poai
+entity_type: node
+bundle: poais
+label: 'Unidad Organizacional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

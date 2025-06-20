@@ -1,0 +1,35 @@
+uuid: a5736473-d55e-4895-bffd-15273a4a9dba
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.campanas.field_contenido_campania
+    - field.field.node.campanas.field_fecha_fin_campania
+    - field.field.node.campanas.field_fecha_ini_campania
+    - field.field.node.campanas.field_imagenes_campania
+    - field.field.node.campanas.field_portada_campania
+    - field.field.node.campanas.field_resumen_campania
+    - field.field.node.campanas.field_titulo_campania
+    - node.type.campanas
+  module:
+    - user
+id: node.campanas.teaser
+targetEntityType: node
+bundle: campanas
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contenido_campania: true
+  field_fecha_fin_campania: true
+  field_fecha_ini_campania: true
+  field_imagenes_campania: true
+  field_portada_campania: true
+  field_resumen_campania: true
+  field_titulo_campania: true
+  langcode: true

@@ -1,0 +1,12 @@
+uuid: 157bca64-b9cd-49cd-9b9c-627af7f5e4a4
+langcode: es
+status: true
+dependencies: {  }
+id: formulario_solicitud
+label: 'Formulario de Solicitud de Información'
+recipients:
+  - ricardo.paucara@agetic.gob.bo
+reply: ''
+weight: 0
+message: ''
+redirect: /

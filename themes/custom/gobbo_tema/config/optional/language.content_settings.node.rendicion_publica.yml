@@ -1,0 +1,11 @@
+uuid: 5f1952d3-b09a-4d9e-a34a-890f73f98121
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.rendicion_publica
+id: node.rendicion_publica
+target_entity_type_id: node
+target_bundle: rendicion_publica
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 26c552a2-6389-43cd-9433-634145232d37
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_normativa_inter
+    - node.type.normativa_interna
+id: node.normativa_interna.field_titulo_normativa_inter
+field_name: field_titulo_normativa_inter
+entity_type: node
+bundle: normativa_interna
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

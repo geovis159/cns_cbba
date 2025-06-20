@@ -1,0 +1,11 @@
+uuid: f0fad6bf-73b8-4f2b-bc52-3a3badea7d94
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tramites_gobbo
+id: node.tramites_gobbo
+target_entity_type_id: node
+target_bundle: tramites_gobbo
+default_langcode: site_default
+language_alterable: false

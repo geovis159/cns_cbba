@@ -1,0 +1,19 @@
+uuid: 0a46b9a7-74b4-4bc4-b4fa-00ebb8d981e8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_id_tramite
+    - node.type.tramites_gobbo
+id: node.tramites_gobbo.field_id_tramite
+field_name: field_id_tramite
+entity_type: node
+bundle: tramites_gobbo
+label: 'Id de trámite'
+description: 'Id de trámite según Gob.bo'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 73e6d9f8-4016-43fe-9c0f-704fe6ab3c40
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_departamento_direcciones
+    - node.type.direcciones
+  module:
+    - options
+id: node.direcciones.field_departamento_direcciones
+field_name: field_departamento_direcciones
+entity_type: node
+bundle: direcciones
+label: Departamento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,99 @@
+uuid: 6f87d624-115c-4705-85ee-74aa7fcefe3b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.redes_sociales.field_facebook_rrss
+    - field.field.node.redes_sociales.field_instagram_rrss
+    - field.field.node.redes_sociales.field_tiktok_rrss
+    - field.field.node.redes_sociales.field_whatsapp_rrss
+    - field.field.node.redes_sociales.field_x_rrss
+    - field.field.node.redes_sociales.field_youtube_rrss
+    - node.type.redes_sociales
+  module:
+    - link
+    - user
+id: node.redes_sociales.default
+targetEntityType: node
+bundle: redes_sociales
+mode: default
+content:
+  field_facebook_rrss:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_instagram_rrss:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_tiktok_rrss:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_whatsapp_rrss:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_x_rrss:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_youtube_rrss:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

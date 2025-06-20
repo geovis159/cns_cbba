@@ -1,0 +1,70 @@
+uuid: 206f68df-b004-48d0-9d1b-338f76453f8c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.contratos.field_anio_contrato
+    - field.field.node.contratos.field_documento_contrato
+    - field.field.node.contratos.field_empresa
+    - field.field.node.contratos.field_fecha_de_contrato
+    - field.field.node.contratos.field_nro_contratos
+    - node.type.contratos
+  module:
+    - datetime
+    - file
+    - user
+id: node.contratos.default
+targetEntityType: node
+bundle: contratos
+mode: default
+content:
+  field_anio_contrato:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_documento_contrato:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_empresa:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_fecha_de_contrato:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_nro_contratos:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

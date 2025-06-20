@@ -1,0 +1,23 @@
+uuid: 47145192-0da8-40bf-adfc-2f9b2e795288
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ano_periodo
+    - node.type.datos_y_estadisticas
+id: node.datos_y_estadisticas.field_ano_periodo
+field_name: field_ano_periodo
+entity_type: node
+bundle: datos_y_estadisticas
+label: 'Año / Periodo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

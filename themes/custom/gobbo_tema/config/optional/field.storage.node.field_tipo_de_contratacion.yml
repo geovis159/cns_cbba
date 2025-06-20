@@ -1,0 +1,24 @@
+uuid: 32ba8edb-f7a3-4b14-b1b3-998b68624cbb
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_de_contratacion
+field_name: field_tipo_de_contratacion
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: consultoria_en_linea
+      label: 'Consultoría en linea'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: cbbba7e6-3dcb-4cb0-b820-0d50182f516e
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_marca_gobbo
+id: block_content.bloque_marca_gobbo
+target_entity_type_id: block_content
+target_bundle: bloque_marca_gobbo
+default_langcode: site_default
+language_alterable: false

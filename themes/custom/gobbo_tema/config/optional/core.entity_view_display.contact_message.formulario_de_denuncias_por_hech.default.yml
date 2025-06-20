@@ -1,0 +1,81 @@
+uuid: 296879bf-37ba-4e11-8191-e6af06bc908e
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.formulario_de_denuncias_por_hech
+    - field.field.contact_message.formulario_de_denuncias_por_hech.field_field_form_ci_denuncia
+    - field.field.contact_message.formulario_de_denuncias_por_hech.field_form_antecedente_denuncia
+    - field.field.contact_message.formulario_de_denuncias_por_hech.field_form_apellidos_denuncia
+    - field.field.contact_message.formulario_de_denuncias_por_hech.field_form_celular_denuncia
+    - field.field.contact_message.formulario_de_denuncias_por_hech.field_form_descripcion_denuncia
+    - field.field.contact_message.formulario_de_denuncias_por_hech.field_form_pruebas_denuncia
+    - field.field.contact_message.formulario_de_denuncias_por_hech.field_form_servidores_denuncia
+id: contact_message.formulario_de_denuncias_por_hech.default
+targetEntityType: contact_message
+bundle: formulario_de_denuncias_por_hech
+mode: default
+content:
+  field_field_form_ci_denuncia:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_form_antecedente_denuncia:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_form_apellidos_denuncia:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_form_celular_denuncia:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_form_descripcion_denuncia:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_form_pruebas_denuncia:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_form_servidores_denuncia:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

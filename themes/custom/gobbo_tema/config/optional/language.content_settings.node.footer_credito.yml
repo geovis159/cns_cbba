@@ -1,0 +1,11 @@
+uuid: b4f90bef-eba3-4198-9a3e-0427a3763f57
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.footer_credito
+id: node.footer_credito
+target_entity_type_id: node
+target_bundle: footer_credito
+default_langcode: site_default
+language_alterable: false

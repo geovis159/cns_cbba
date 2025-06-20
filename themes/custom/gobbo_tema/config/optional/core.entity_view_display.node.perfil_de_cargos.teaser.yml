@@ -1,0 +1,29 @@
+uuid: d47eba06-9c81-4d30-a6cb-6a5ae0960c9e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.perfil_de_cargos.field_anio_perfil_cargo
+    - field.field.node.perfil_de_cargos.field_documento_perfil_cargo
+    - field.field.node.perfil_de_cargos.field_fecha_de_aprobacion_perfil
+    - field.field.node.perfil_de_cargos.field_titulo_perfil_cargos
+    - node.type.perfil_de_cargos
+  module:
+    - user
+id: node.perfil_de_cargos.teaser
+targetEntityType: node
+bundle: perfil_de_cargos
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_perfil_cargo: true
+  field_documento_perfil_cargo: true
+  field_fecha_de_aprobacion_perfil: true
+  field_titulo_perfil_cargos: true
+  langcode: true

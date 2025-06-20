@@ -1,0 +1,19 @@
+uuid: b7db56e7-8004-43c6-9123-6ad7e7334520
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_form_descripcion_denuncia
+field_name: field_form_descripcion_denuncia
+entity_type: contact_message
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

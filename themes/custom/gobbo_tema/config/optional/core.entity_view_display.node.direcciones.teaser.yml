@@ -1,0 +1,33 @@
+uuid: ba787a17-c585-4ed7-8f55-b6325add30c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.direcciones.field_departamento_direcciones
+    - field.field.node.direcciones.field_direccion_direcciones
+    - field.field.node.direcciones.field_latitud_direcciones
+    - field.field.node.direcciones.field_longitud_direcciones
+    - field.field.node.direcciones.field_oficina_direcciones
+    - field.field.node.direcciones.field_telefono_direcciones
+    - node.type.direcciones
+  module:
+    - user
+id: node.direcciones.teaser
+targetEntityType: node
+bundle: direcciones
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_departamento_direcciones: true
+  field_direccion_direcciones: true
+  field_latitud_direcciones: true
+  field_longitud_direcciones: true
+  field_oficina_direcciones: true
+  field_telefono_direcciones: true
+  langcode: true

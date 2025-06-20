@@ -1,0 +1,18 @@
+uuid: 4d75d018-5ed5-4b7f-b67e-e1d36938c5b5
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Perfil de cargos'
+type: perfil_de_cargos
+description: 'perfil de cargos'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,60 @@
+uuid: a224d9a3-5ec1-44ce-a432-48b3d45087c0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.escala_salarial.field_anio_escala_salarial
+    - field.field.node.escala_salarial.field_documento_escala_salarial
+    - field.field.node.escala_salarial.field_fecha_de_aprobacion
+    - field.field.node.escala_salarial.field_titulo_escala_salrial
+    - node.type.escala_salarial
+  module:
+    - datetime
+    - file
+    - user
+id: node.escala_salarial.default
+targetEntityType: node
+bundle: escala_salarial
+mode: default
+content:
+  field_anio_escala_salarial:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_documento_escala_salarial:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_fecha_de_aprobacion:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_titulo_escala_salrial:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

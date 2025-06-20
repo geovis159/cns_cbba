@@ -1,0 +1,21 @@
+uuid: 2cd63fa7-1a7a-477e-9951-2f8159ed64ea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_tramite
+    - node.type.tramites_gobbo
+  module:
+    - options
+id: node.tramites_gobbo.field_tipo_tramite
+field_name: field_tipo_tramite
+entity_type: node
+bundle: tramites_gobbo
+label: 'Tipo de trámite'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

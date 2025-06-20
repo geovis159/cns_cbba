@@ -1,0 +1,11 @@
+uuid: d344b072-8933-43c9-bae8-4de31be0a5da
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.direcciones
+id: node.direcciones
+target_entity_type_id: node
+target_bundle: direcciones
+default_langcode: site_default
+language_alterable: false

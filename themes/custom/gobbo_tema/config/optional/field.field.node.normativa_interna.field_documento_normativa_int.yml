@@ -1,0 +1,27 @@
+uuid: ee46af39-a275-403e-9d02-5253893eac40
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_normativa_int
+    - node.type.normativa_interna
+  module:
+    - file
+id: node.normativa_interna.field_documento_normativa_int
+field_name: field_documento_normativa_int
+entity_type: node
+bundle: normativa_interna
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

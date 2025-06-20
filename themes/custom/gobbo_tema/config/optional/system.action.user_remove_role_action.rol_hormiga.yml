@@ -1,0 +1,14 @@
+uuid: 0479ee5a-2c11-4f08-9756-2cdcde1240b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_hormiga
+  module:
+    - user
+id: user_remove_role_action.rol_hormiga
+label: 'Elimina el rol Rol Hormiga al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rol_hormiga

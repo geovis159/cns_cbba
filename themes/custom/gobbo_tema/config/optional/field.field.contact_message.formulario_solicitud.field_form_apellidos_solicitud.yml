@@ -1,0 +1,19 @@
+uuid: 2535bc9d-3cf6-4eac-a157-b918f753eaf1
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.formulario_solicitud
+    - field.storage.contact_message.field_form_apellidos_solicitud
+id: contact_message.formulario_solicitud.field_form_apellidos_solicitud
+field_name: field_form_apellidos_solicitud
+entity_type: contact_message
+bundle: formulario_solicitud
+label: Apellidos
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

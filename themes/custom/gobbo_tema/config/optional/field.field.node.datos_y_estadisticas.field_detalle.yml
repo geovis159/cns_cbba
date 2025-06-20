@@ -1,0 +1,27 @@
+uuid: 2c9f3f75-0640-4675-be47-30107d77eb82
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_detalle
+    - node.type.datos_y_estadisticas
+  module:
+    - file
+id: node.datos_y_estadisticas.field_detalle
+field_name: field_detalle
+entity_type: node
+bundle: datos_y_estadisticas
+label: Detalle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: true
+field_type: file

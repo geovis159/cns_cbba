@@ -1,0 +1,21 @@
+uuid: 30644136-c62e-431d-b12c-79440c7a10e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_auditoria
+    - node.type.auditoria
+  module:
+    - options
+id: node.auditoria.field_tipo_auditoria
+field_name: field_tipo_auditoria
+entity_type: node
+bundle: auditoria
+label: Tipo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

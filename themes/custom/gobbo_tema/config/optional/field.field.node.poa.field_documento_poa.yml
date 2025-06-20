@@ -1,0 +1,27 @@
+uuid: 08288183-0cf2-4078-ad5f-00d06d92c726
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_poa
+    - node.type.poa
+  module:
+    - file
+id: node.poa.field_documento_poa
+field_name: field_documento_poa
+entity_type: node
+bundle: poa
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: true
+field_type: file

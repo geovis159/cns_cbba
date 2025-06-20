@@ -1,0 +1,19 @@
+uuid: a529b93d-1227-475f-b22e-ce0893e7f6c9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_puesto
+    - node.type.oportunidad_de_empleo
+id: node.oportunidad_de_empleo.field_puesto
+field_name: field_puesto
+entity_type: node
+bundle: oportunidad_de_empleo
+label: Puesto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

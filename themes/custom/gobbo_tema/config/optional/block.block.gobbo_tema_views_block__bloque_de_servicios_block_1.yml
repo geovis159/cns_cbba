@@ -1,0 +1,29 @@
+uuid: b94909d3-3b73-48c6-a10c-063a728ddf7e
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.bloque_de_servicios
+  module:
+    - system
+    - views
+  theme:
+    - gobbo_tema
+id: gobbo_tema_views_block__bloque_de_servicios_block_1
+theme: gobbo_tema
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:bloque_de_servicios-block_1'
+settings:
+  id: 'views_block:bloque_de_servicios-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

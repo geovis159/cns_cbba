@@ -1,0 +1,23 @@
+uuid: 34e0d977-3346-4ba4-94d9-a8e6ad7fb21d
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_documento_poa
+field_name: field_documento_poa
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

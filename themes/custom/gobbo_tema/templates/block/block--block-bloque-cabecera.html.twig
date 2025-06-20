@@ -1,0 +1,127 @@
+{# /** * @file * Default theme implementation to display a block. * * Available
+variables: * - plugin_id: The ID of the block implementation. * - label: The
+configured label of the block if visible. * - configuration: A list of the
+block's configuration values. * - label: The configured label for the block. * -
+label_display: The display settings for the label. * - provider: The module or
+other provider that provided this block plugin. * - Block plugin specific
+settings will also be stored here. * - content: The content of this block. * -
+attributes: array of HTML attributes populated by modules, intended to * be
+added to the main container tag of this template. * - id: A valid HTML ID and
+guaranteed unique. * - title_attributes: Same as attributes, except applied to
+the main title * tag that appears in the template. * - content_attributes: Same
+as attributes, except applied to the main content * tag that appears in the
+template. * - title_prefix: Additional output populated by modules, intended to
+be * displayed in front of the main title tag that appears in the template. * -
+title_suffix: Additional output populated by modules, intended to be * displayed
+after the main title tag that appears in the template. * * @see
+template_preprocess_block() * * @ingroup themeable */ #} {#
+{{ dump(campos) }} #}
+ <div id="cabecera">  
+   <div class="container py-4">
+    <div class="ocultar-en-movil">
+
+      <div class=" row">
+        <div class="col-3 col-md-2">
+          {% if content['#block_content'].field_cabecera_logo_1.entity.uri.value %}
+          <a
+            href="{{ path('<front>') }}"
+            title="{{ 'Home' | t }}"
+            rel="home"
+            class="navbar-brand"
+          >
+            <img
+              style="object-fit: contain"
+              src="{{ file_url(content['#block_content'].field_cabecera_logo_1.entity.uri.value) }}"
+              class="d-block w-100 my-2"
+              height="140px"
+            />
+          </a>
+          {% endif %}
+        </div>
+        <div class="col-6 col-md-8">
+    
+            <h1>
+              {{ content['#block_content'].field_cabecera_sigla.value }}
+            </h1>
+            <h4>
+              {{ content['#block_content'].field_cabecera_nombre.value }}
+            </h4>
+            <h6>
+              {{ content['#block_content'].field_cabecera_lema.value }}
+            </h6>
+         
+        </div>
+        <div class="col-3 col-md-2">
+          {% if content['#block_content'].field_cabecera_logo_2.entity.uri.value%}
+          <a
+            href="{{ path('<front>') }}"
+            title="{{ 'Home' | t }}"
+            rel="home"
+            class="navbar-brand"
+          >
+            <img
+              style="object-fit: contain"
+              src="{{ file_url(content['#block_content'].field_cabecera_logo_2.entity.uri.value) }}"
+              class="d-block w-100 my-2"
+              height="140px"
+            />
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="mostrar-en-movil">
+
+      <div class="row">
+       <div class="col-6 col-md-6">
+         {% if content['#block_content'].field_cabecera_logo_1.entity.uri.value %}
+         <a
+           href="{{ path('<front>') }}"
+           title="{{ 'Home' | t }}"
+           rel="home"
+           class="navbar-brand"
+         >
+           <img
+             style="object-fit: contain"
+             src="{{ file_url(content['#block_content'].field_cabecera_logo_1.entity.uri.value) }}"
+             class="d-block w-100 my-2"
+             height="140px"
+           />
+         </a>
+         {% endif %}
+       </div>
+       <div class="col-6 col-md-6">
+         {% if content['#block_content'].field_cabecera_logo_2.entity.uri.value %}
+         <a
+           href="{{ path('<front>') }}"
+           title="{{ 'Home' | t }}"
+           rel="home"
+           class="navbar-brand"
+         >
+           <img
+             style="object-fit: contain"
+             src="{{ file_url(content['#block_content'].field_cabecera_logo_2.entity.uri.value) }}"
+             class="d-block w-100 my-2"
+             height="140px"
+           />
+         </a>
+         {% endif %}
+       </div> 
+       <div class="col-12 col-md-12">
+   
+           <h1>
+             {{ content['#block_content'].field_cabecera_sigla.value }}
+           </h1>
+           <h4>
+             {{ content['#block_content'].field_cabecera_nombre.value }}
+           </h4>
+           <h6>
+             {{ content['#block_content'].field_cabecera_lema.value }}
+           </h6>
+        
+       </div>
+      </div>
+    </div>
+   </div>
+   <div class="linea-cabecera m-0 p-0"></div>
+ </div>

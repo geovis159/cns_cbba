@@ -1,0 +1,25 @@
+uuid: cb288d59-f7c1-40b9-9af4-bd1b78133a88
+langcode: es
+status: true
+dependencies:
+  module:
+    - bloque_generales_gobbo
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquemodalgobbo
+theme: gobbo_tema
+region: highlighted
+weight: 0
+provider: null
+plugin: bloque_modal_gobbo
+settings:
+  id: bloque_modal_gobbo
+  label: 'Bloque modal gobbo'
+  label_display: visible
+  provider: bloque_generales_gobbo
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

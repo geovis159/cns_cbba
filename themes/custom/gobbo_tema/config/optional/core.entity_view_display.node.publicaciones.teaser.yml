@@ -1,0 +1,33 @@
+uuid: 3dfeb1ed-b3fc-4c97-bcea-6f3ce498345b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publicaciones.field_documento_publicacion
+    - field.field.node.publicaciones.field_fecha_publicacion
+    - field.field.node.publicaciones.field_portada_publicacion
+    - field.field.node.publicaciones.field_resumen_publicacion
+    - field.field.node.publicaciones.field_tipo_publicacion
+    - field.field.node.publicaciones.field_titulo_publicacion
+    - node.type.publicaciones
+  module:
+    - user
+id: node.publicaciones.teaser
+targetEntityType: node
+bundle: publicaciones
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_documento_publicacion: true
+  field_fecha_publicacion: true
+  field_portada_publicacion: true
+  field_resumen_publicacion: true
+  field_tipo_publicacion: true
+  field_titulo_publicacion: true
+  langcode: true

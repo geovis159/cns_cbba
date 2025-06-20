@@ -1,0 +1,27 @@
+uuid: f9b8a8f9-fe98-4f0e-9170-36c7dcc1e996
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - gobbo_tema
+_core:
+  default_config_hash: rQ-RH4L6RyWrKpNaeglTnZ487Qbwn7KD-8Vm-tyU3t4
+id: gobbo_tema_account_menu
+theme: gobbo_tema
+region: secondary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menú de cuenta de usuario'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 859dd3d3-f3a4-41d8-9af7-d47f9c968b6d
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_anio_contrato
+field_name: field_anio_contrato
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

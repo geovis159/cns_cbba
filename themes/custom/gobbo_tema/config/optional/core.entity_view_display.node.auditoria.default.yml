@@ -1,0 +1,57 @@
+uuid: 6989eaf8-4642-42e2-9de4-cd36f931cd60
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.auditoria.field_anio_auditoria
+    - field.field.node.auditoria.field_descripcion_auditoria
+    - field.field.node.auditoria.field_documentos_auditoria
+    - field.field.node.auditoria.field_tipo_auditoria
+    - node.type.auditoria
+  module:
+    - file
+    - options
+    - user
+id: node.auditoria.default
+targetEntityType: node
+bundle: auditoria
+mode: default
+content:
+  field_anio_auditoria:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_descripcion_auditoria:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_documentos_auditoria:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tipo_auditoria:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

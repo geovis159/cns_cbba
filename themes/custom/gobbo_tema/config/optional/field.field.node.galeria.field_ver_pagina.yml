@@ -1,0 +1,21 @@
+uuid: 4565bbe3-6169-4a96-b682-921dd9649c8a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ver_pagina
+    - node.type.galeria
+id: node.galeria.field_ver_pagina
+field_name: field_ver_pagina
+entity_type: node
+bundle: galeria
+label: 'Ver Página'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Ver
+default_value_callback: ''
+settings: {  }
+field_type: string

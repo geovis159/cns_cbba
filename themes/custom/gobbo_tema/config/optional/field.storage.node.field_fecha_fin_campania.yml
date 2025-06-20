@@ -1,0 +1,20 @@
+uuid: 67d1052c-c7a7-41d1-ad3a-dd9c3744387f
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_fecha_fin_campania
+field_name: field_fecha_fin_campania
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

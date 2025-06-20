@@ -1,0 +1,18 @@
+uuid: 60c64e2b-e803-41e1-a873-c07998eebbfa
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tipo_carrousel
+id: node.tipo_carrousel.title
+field_name: title
+entity_type: node
+bundle: tipo_carrousel
+label: 'Título Carrousel'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: 910d3de8-ca70-42ae-a52f-a532a627ca39
+langcode: es
+status: true
+dependencies: {  }
+id: rol_comunicacion
+label: 'Rol Comunicacion'
+weight: 5
+is_admin: null
+permissions: {  }

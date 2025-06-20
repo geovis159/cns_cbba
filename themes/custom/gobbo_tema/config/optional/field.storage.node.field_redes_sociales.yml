@@ -1,0 +1,19 @@
+uuid: 32b03b32-a593-4920-8c3a-6231103a097d
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_redes_sociales
+field_name: field_redes_sociales
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

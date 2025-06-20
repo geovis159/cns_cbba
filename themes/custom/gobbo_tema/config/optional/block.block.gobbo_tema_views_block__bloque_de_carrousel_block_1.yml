@@ -1,0 +1,29 @@
+uuid: ca1c7093-9463-4143-a5d7-11942d0062f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.bloque_de_carrousel
+  module:
+    - system
+    - views
+  theme:
+    - gobbo_tema
+id: gobbo_tema_views_block__bloque_de_carrousel_block_1
+theme: gobbo_tema
+region: highlighted
+weight: -9
+provider: null
+plugin: 'views_block:bloque_de_carrousel-block_1'
+settings:
+  id: 'views_block:bloque_de_carrousel-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

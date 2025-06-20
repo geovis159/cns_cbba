@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+<div class="accordion p-2"  id="accordionExample{{row['content']['#row']._entity.id}}">
+
+
+  <div style="border-radius: 20px;" class=" fondo-paper accordion-item">
+      <h2 class="accordion-header">
+          <div class="row text-center align-items-center justify-content-center">
+              <div class="col-12 col-md-2">
+                  <img class="mt-4 ms-4 mb-4 me-0" height="120" width="120" src="{{file_url(row['content']['#row']._entity.field_imagen_autoridad.entity.uri.value)}}" alt="..." style="object-fit: cover; border-radius: 60px;">
+              </div>
+              <div class="col-12 col-md-10">
+
+                  <div class="row text-center justify-content-between">
+                      <div class="col-12 col-md-4">
+                          <h4>{{row['content']['#row']._entity.field_nombre_autoridad.value}}</h4>
+
+                          <p class="subtitulo">{{row['content']['#row']._entity.field_cargo_autoridad.value}}</p>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        {% if row['content']['#row']._entity.field_informacion_autoridad.getString()|length > 1 %}
+                        <a class="subtitulo mt-5" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne{{row['content']['#row']._entity.id}}" aria-expanded="true" aria-controls="collapseOne{{row['content']['#row']._entity.id}}">
+                            Ver resumen ejecutivo <i class="bi bi-chevron-down"></i>
+                        </a>
+                        {% endif %}
+                      </div>
+                  </div>
+
+
+              </div>
+
+          </div>
+
+      </h2>
+      <div id="collapseOne{{row['content']['#row']._entity.id}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample{{row['content']['#row']._entity.id}}">
+          <div class="accordion-body">
+            {# {{node.field_contenido_nota.value|raw}} #}
+              <div class="pt-2" id="contenido-nota-prensa" style="text-align: justify;">{{row['content']['#row']._entity.field_informacion_autoridad.value|raw}}</div>
+          </div>
+      </div>
+  </div>
+
+
+</div>
+{% endfor %}

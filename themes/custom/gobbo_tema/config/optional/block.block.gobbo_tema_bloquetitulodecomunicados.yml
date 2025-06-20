@@ -1,0 +1,30 @@
+uuid: 1ef52b51-19dc-4214-bcb3-2fa47fc7e836
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:titulo_bloque:8e993371-2386-47cd-a17c-8fab82470654'
+  module:
+    - block_content
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquetitulodecomunicados
+theme: gobbo_tema
+region: content
+weight: -17
+provider: null
+plugin: 'block_content:8e993371-2386-47cd-a17c-8fab82470654'
+settings:
+  id: 'block_content:8e993371-2386-47cd-a17c-8fab82470654'
+  label: 'Bloque título de Comunicados'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,19 @@
+uuid: 12a873e0-15c2-4ad1-b167-c4e3a9e5e4b0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_indicador
+    - node.type.indicadores
+id: node.indicadores.field_titulo_indicador
+field_name: field_titulo_indicador
+entity_type: node
+bundle: indicadores
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,49 @@
+uuid: 02d5c341-23ef-44c7-8d07-adef100e0571
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.memoria_institucional.field_anio_mem_inst
+    - field.field.node.memoria_institucional.field_descripcion_mem_inst
+    - field.field.node.memoria_institucional.field_documento_mem_inst
+    - node.type.memoria_institucional
+  module:
+    - file
+    - user
+id: node.memoria_institucional.default
+targetEntityType: node
+bundle: memoria_institucional
+mode: default
+content:
+  field_anio_mem_inst:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_descripcion_mem_inst:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_documento_mem_inst:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

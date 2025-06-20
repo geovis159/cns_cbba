@@ -1,0 +1,65 @@
+uuid: 2e871e47-fbc3-4f3a-ae46-602094c9fbb3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.enlaces_de_interes.field_descripcion_enlaceinteres
+    - field.field.node.enlaces_de_interes.field_enlace_enlaceinteres
+    - field.field.node.enlaces_de_interes.field_imagen_enlaceinteres
+    - field.field.node.enlaces_de_interes.field_tipo
+    - node.type.enlaces_de_interes
+  module:
+    - image
+    - link
+    - options
+    - user
+id: node.enlaces_de_interes.default
+targetEntityType: node
+bundle: enlaces_de_interes
+mode: default
+content:
+  field_descripcion_enlaceinteres:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_enlace_enlaceinteres:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_imagen_enlaceinteres:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_tipo:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

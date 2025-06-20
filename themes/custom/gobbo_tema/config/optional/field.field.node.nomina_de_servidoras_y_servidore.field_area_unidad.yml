@@ -1,0 +1,19 @@
+uuid: 3aff3069-937a-4eb5-a7d7-c16e1a9087cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area_unidad
+    - node.type.nomina_de_servidoras_y_servidore
+id: node.nomina_de_servidoras_y_servidore.field_area_unidad
+field_name: field_area_unidad
+entity_type: node
+bundle: nomina_de_servidoras_y_servidore
+label: 'Area / Unidad'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

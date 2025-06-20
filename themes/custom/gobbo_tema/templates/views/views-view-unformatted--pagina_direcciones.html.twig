@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<div class="row gy-4">
+{% for row in rows %}
+  {# {{dump(row.content['#row']._entity.field_oficina_direcciones.value)}}
+  {{dump(row.content['#row']._entity.field_telefono_direcciones.value)}}
+  {{dump(row.content['#row']._entity.field_departamento_direcciones.0.getFieldDefinition().getFieldStorageDefinition().getSetting('allowed_values')[value_departamento])}}
+  {{dump(row.content['#row']._entity.field_direccion_direcciones.value)}}
+  {{dump(row.content['#row']._entity.field_latitud_direcciones.value)}}
+  {{dump(row.content['#row']._entity.field_longitud_direcciones.value)}} #}
+
+        <div class="col-12 col-md-8 col-lg-10">
+          <div class="container p-1">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-6">
+                                    <p class="text-start h6 mb-3" style="font-weight: bold;">Nombre de oficina:
+                                        {{row.content['#row']._entity.field_oficina_direcciones.value}}
+                                    </p>
+                                    <p class="text-start h7 mb-3"><i class="bi bi-geo-alt small"></i>Dirección:
+                                      {{row.content['#row']._entity.field_direccion_direcciones.value}}
+                                    <p class="text-start h7"><i class="bi bi-telephone small"></i>Teléfono:
+                                       {{row.content['#row']._entity.field_telefono_direcciones.value}}
+                                    </p>
+                                </div>
+
+                                <div class="col-12 col-md-12 col-lg-6">
+                                    <iframe width="100%" height="130" src="https://www.openstreetmap.org/export/embed.html?bbox={{row.content['#row']._entity.field_longitud_direcciones.value}}%2C{{row.content['#row']._entity.field_latitud_direcciones.value}}%2C{{row.content['#row']._entity.field_longitud_direcciones.value}}%2C{{row.content['#row']._entity.field_latitud_direcciones.value}}&amp;layer=mapnik&amp;marker={{row.content['#row']._entity.field_latitud_direcciones.value}}%2C{{row.content['#row']._entity.field_longitud_direcciones.value}}" style="border:0;"></iframe>
+                                    <div class="d-grid gap-2">
+                                        <a class="btn btn-secondary btn-sm" target="_blank" href="https://www.openstreetmap.org/?mlat={{row.content['#row']._entity.field_latitud_direcciones.value}}&mlon={{row.content['#row']._entity.field_longitud_direcciones.value}}#map=19/{{row.content['#row']._entity.field_latitud_direcciones.value}}/{{row.content['#row']._entity.field_longitud_direcciones.value}}&layers=N">
+                                            Abrir mapa
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+      </div>
+      {# <div class="col-12 col-md-4 col-lg-2">
+          <div class="card">
+              <div class="card-body">
+                  <?php foreach ($lDepartamento as $value) { ?>
+                      <p class="text-start 75 mb-3">
+                          <a href="<?php echo substr(get_permalink($id_page), 0, -1) . '?q=' . $value; ?>"><!-- class="text-light"-->
+                              <?php echo $value ?> <i class="bi bi-arrow-right"></i></i>
+                          </a>
+                      </p>
+              </div>
+          </div>
+      </div> #}

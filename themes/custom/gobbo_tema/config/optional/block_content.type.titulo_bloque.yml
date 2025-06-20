@@ -1,0 +1,8 @@
+uuid: c0678b8c-d9e8-41fe-9153-5956909e0718
+langcode: es
+status: true
+dependencies: {  }
+id: titulo_bloque
+label: 'Bloque titulos'
+revision: false
+description: 'Bloque para contenido de títulos y enlaces'

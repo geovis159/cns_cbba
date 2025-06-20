@@ -1,0 +1,21 @@
+uuid: 17b43caa-60c9-4313-96b4-5c9e3c28aac8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_comunicado
+    - node.type.comunicados
+  module:
+    - datetime
+id: node.comunicados.field_fecha_comunicado
+field_name: field_fecha_comunicado
+entity_type: node
+bundle: comunicados
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

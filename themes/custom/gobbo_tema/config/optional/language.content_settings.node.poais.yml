@@ -1,0 +1,11 @@
+uuid: 02d76ac5-8414-4d94-ad75-8001fc140405
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.poais
+id: node.poais
+target_entity_type_id: node
+target_bundle: poais
+default_langcode: site_default
+language_alterable: false

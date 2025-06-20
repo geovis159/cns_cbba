@@ -1,0 +1,114 @@
+uuid: 17fea1f0-bfc6-48fc-9c97-ed8e2228ed2c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.contratos.field_anio_contrato
+    - field.field.node.contratos.field_documento_contrato
+    - field.field.node.contratos.field_empresa
+    - field.field.node.contratos.field_fecha_de_contrato
+    - field.field.node.contratos.field_nro_contratos
+    - node.type.contratos
+  module:
+    - datetime
+    - file
+    - path
+id: node.contratos.default
+targetEntityType: node
+bundle: contratos
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_anio_contrato:
+    type: number
+    weight: 124
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_documento_contrato:
+    type: file_generic
+    weight: 126
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_empresa:
+    type: string_textfield
+    weight: 121
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fecha_de_contrato:
+    type: datetime_default
+    weight: 125
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nro_contratos:
+    type: number
+    weight: 123
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

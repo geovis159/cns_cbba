@@ -1,0 +1,69 @@
+uuid: 6351571c-f15c-4c9f-a64a-2817e6e18e40
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.convotorias.field_anio_convocatoria_bs
+    - field.field.node.convotorias.field_convocatoria
+    - field.field.node.convotorias.field_cuce
+    - field.field.node.convotorias.field_fecha_de_cierre_convocator
+    - field.field.node.convotorias.field_terminos_de_referencia
+    - node.type.convotorias
+  module:
+    - datetime
+    - file
+    - user
+id: node.convotorias.default
+targetEntityType: node
+bundle: convotorias
+mode: default
+content:
+  field_anio_convocatoria_bs:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_convocatoria:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_cuce:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_fecha_de_cierre_convocator:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_terminos_de_referencia:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

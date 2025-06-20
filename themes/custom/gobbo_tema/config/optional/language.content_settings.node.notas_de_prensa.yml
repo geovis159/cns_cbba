@@ -1,0 +1,11 @@
+uuid: 6d124956-18bc-4715-9d84-7664d2c2aa75
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.notas_de_prensa
+id: node.notas_de_prensa
+target_entity_type_id: node
+target_bundle: notas_de_prensa
+default_langcode: site_default
+language_alterable: false

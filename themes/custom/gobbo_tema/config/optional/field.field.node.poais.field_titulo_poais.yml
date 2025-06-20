@@ -1,0 +1,19 @@
+uuid: 5f229800-ac1a-4cb0-a5cf-8db850f8da00
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_poais
+    - node.type.poais
+id: node.poais.field_titulo_poais
+field_name: field_titulo_poais
+entity_type: node
+bundle: poais
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

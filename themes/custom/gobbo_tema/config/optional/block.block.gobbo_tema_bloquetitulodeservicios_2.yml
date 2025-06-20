@@ -1,0 +1,30 @@
+uuid: ee96427e-d76f-4cf6-98e5-8551ddbb7d11
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:titulo_bloque:5990c439-7995-43ec-a4f2-41a134221be6'
+  module:
+    - block_content
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquetitulodeservicios_2
+theme: gobbo_tema
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:5990c439-7995-43ec-a4f2-41a134221be6'
+settings:
+  id: 'block_content:5990c439-7995-43ec-a4f2-41a134221be6'
+  label: 'Bloque Titulo de servicios'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

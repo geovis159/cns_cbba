@@ -1,0 +1,20 @@
+uuid: 60c33bbe-f195-4b91-8049-be5807840e9d
+langcode: es
+status: true
+dependencies:
+  module:
+    - bloque_generales_gobbo
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquemarcagobbo
+theme: gobbo_tema
+region: top_header
+weight: 0
+provider: null
+plugin: bloque_marca_gobbo
+settings:
+  id: bloque_marca_gobbo
+  label: 'Bloque marca gobbo'
+  label_display: visible
+  provider: bloque_generales_gobbo
+visibility: {  }

@@ -1,0 +1,114 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+
+<div id="carousel-img" class="carousel carousel-dark slide" style="height: 384px;" data-bs-ride="carousel">
+
+	<div class="carousel-indicators">
+		{% for row in campos %}
+			<button type="button" data-bs-target="#carousel-img" data-bs-slide-to="{{loop.index0}}" class="{{loop.index0 == 0 ? 'active' : ''}}" aria-label="Slide{{(loop.index0 + 1)}}" aria-current="{{ loop.index0 == 0 ? 'true' : ''}}"></button>
+		{% endfor %}
+	</div>
+
+
+	<div class="carousel-inner h-100">
+		{% for row in campos %}
+			{# {{row['field_titulo_carrousel']}}
+						  {{row['field_imagen_carrousel']}}
+						  {{row['field_descripcion_carrousel']}}
+						  {{row['field_transicion_carrousel']}}
+						  uri:{{row['field_enlace_carrousel']['uri']}}
+						  texro{{row['field_enlace_carrousel']['title']}} #}
+			<div class="carousel-item  {{ loop.index0 == 0 ? 'active' : ''}} h-100" data-bs-interval="{{row['field_transicion_carrousel']}}" style="transition: transform 0.5s ease-in-out;">
+
+				<img style="object-fit: cover !important; height: 384px;  width: 100%;" src="{{file_url(row['field_imagen_carrousel'])}}" class="">
+				<div class="carousel-caption  d-block" style="right: 10%;left: 10%;">
+					{% if row['field_titulo_carrousel'] %}
+
+					{# Modo escritorio #}
+					<div class="ocultar-en-movil">
+						<div class="card mx-auto  mb-4 ms-2" style="width: 60%;height: 260px; background-color: rgba({{row['field_colorRgb_carrousel']}},0.40);">
+							<div class="card-body text-start text-white">
+								<div class="text-start d-none d-sm-block ">
+									<h2 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" class="text-white">{{row['field_titulo_carrousel']}}</h2>
+									<h6 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" class="text-white">{{row['field_descripcion_carrousel']}}</h6>
+								</div>
+								<div class="text-start d-block d-sm-none text-white">
+									<h4 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;" class="text-white">{{row['field_titulo_carrousel']}}
+									</h4>
+									<h6 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;" class="text-white">{{row['field_descripcion_carrousel']}}</h6>
+								</div>
+								<div class="text-end d-none d-sm-block">
+									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-dark" style="background-color: {{row['field_color_carrousel']}};">
+										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
+										<i class='bi bi-arrow-right'></i>
+									</a>
+								</div>
+								<div class="text-eendd-block d-sm-none">
+									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-sm btn-dark" style="background-color: {{row['field_color_carrousel']}};">
+										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
+										<i class='bi bi-arrow-right'></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					{# Modo Movil #}
+					<div class="mostrar-en-movil">
+						<div class="card mx-auto mt-4" style="height: 330px; background-color: rgba({{row['field_colorRgb_carrousel']}},0.40);">
+							<div class="card-body text-start text-white">
+								<div class="text-start d-none d-sm-block ">
+									<h2 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" class="text-white">{{row['field_titulo_carrousel']}}</h2>
+									<h6 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;" class="text-white">{{row['field_descripcion_carrousel']}}</h6>
+								</div>
+								<div class="text-start d-block d-sm-none text-white">
+									<h4 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;" class="text-white">{{row['field_titulo_carrousel']}}
+									</h4>
+									<h6 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;" class="text-white">{{row['field_descripcion_carrousel']}}</h6>
+								</div>
+								<div class="text-end d-none d-sm-block">
+									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-dark" style="background-color: {{row['field_color_carrousel']}};">
+										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
+										<i class='bi bi-arrow-right'></i>
+									</a>
+								</div>
+								<div class="text-eendd-block d-sm-none">
+									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-sm btn-dark" style="background-color: {{row['field_color_carrousel']}};">
+										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
+										<i class='bi bi-arrow-right'></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+
+		{% endfor %}
+	</div>
+
+
+	<button class="carousel-control-prev" type="button" data-bs-target="#carousel-img" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carousel-img" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	</button>
+
+</div>

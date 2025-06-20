@@ -1,0 +1,21 @@
+uuid: 62646eff-9523-4483-a7f0-132befe5e511
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_publicacion
+    - node.type.publicaciones
+  module:
+    - datetime
+id: node.publicaciones.field_fecha_publicacion
+field_name: field_fecha_publicacion
+entity_type: node
+bundle: publicaciones
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

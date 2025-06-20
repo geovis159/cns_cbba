@@ -1,0 +1,65 @@
+uuid: 3cf61839-e761-41a9-b745-8a56cc5b9b67
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_bolivia_a_tu_servicio
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_correo_bolivia
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_linea_gratuita_bolivia
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_redes_bolivia
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_telefono_bolivia
+id: block_content.bloque_bolivia_a_tu_servicio.default
+targetEntityType: block_content
+bundle: bloque_bolivia_a_tu_servicio
+mode: default
+content:
+  field_correo_bolivia:
+    type: email_default
+    weight: 28
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_linea_gratuita_bolivia:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_redes_bolivia:
+    type: entity_reference_autocomplete
+    weight: 29
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_telefono_bolivia:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

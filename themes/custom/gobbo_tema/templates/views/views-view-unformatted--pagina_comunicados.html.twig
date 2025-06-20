@@ -1,0 +1,113 @@
+{#
+/**
+* @file
+* Theme override to display a view of unformatted rows.
+*
+* Available variables:
+* - title: The title of this group of rows. May be empty.
+* - rows: A list of the view's row items.
+* - attributes: The row's HTML attributes.
+* - content: The row's content.
+* - view: The view object.
+* - default_row_class: A flag indicating whether default classes should be
+* used on rows.
+*
+* @see template_preprocess_views_view_unformatted()
+*/
+#}
+
+
+
+<div id="comunicado" class="row" style='margin-bottom: 25px;'>
+
+	{% set comunicados = [] %}
+
+	{% for row in rows %}
+
+	{% set comunicado = {'titulo':row.content['#row']._entity.field_titulo_comunicado.value,
+                          'contenido':row.content['#row']._entity.field_contenido_comunicado.value,
+                          'archivo': file_url(row.content['#row']._entity.field_archivo_comunicado.entity.getFileUri()),
+                         } %}
+
+				{% set comunicados = comunicados | merge([comunicado]) %}
+	<div class='col-sm-12'>
+		<div class='card' style='margin-bottom: 25px;'>
+			<div class='card-body'>
+				<p class='texto-default'>
+					{% if row.content['#row']._entity.field_fecha_comunicado.value %}
+						<small class='texto-default text-muted'>{{row.content['#row']._entity.field_fecha_comunicado.value|date('d/m/Y')}}
+					{% endif %}
+						|
+						{{row.content['#row']._entity.field_lugar_comunicado.value}}</small>
+				</p>
+				<h5 class='card-title'>{{row.content['#row']._entity.field_titulo_comunicado.value}}</h5>
+				<p  class="resumen card-text">
+					{{row.content['#row']._entity.field_resumen_comunicado.value}}</p>
+			</div>
+			<div class='card-footer bg-transparent' style='border: none;'>
+				<div class="d-flex justify-content-end">
+					<a href="{{file_url(row.content['#row']._entity.field_archivo_comunicado.entity.getFileUri())}}" class="btn" role="button" style='border: none;'
+						target="_blank">
+						<p>Descargar PDF
+							<i class="bi bi-download">
+						</i>
+					</a>
+					<a href="#" class="btn" role="button" style='border: none;'>
+						<p class='text-lg-end ver-comunicado' data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+							data-post-id="{{loop.index0}}">Ver comunicado
+							<i class='bi bi-arrow-right'></i>
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% endfor %}
+</div>
+
+
+
+
+<div  class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div id="comunicado" class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 800px;">
+		<div id="modal-comunicado" class="fondo-default modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">
+					<strong>Comunicado</strong>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h5 id="modal-titulo"></h5>
+				<div class="contenido-modal texto-default" id="modal-contenido" style="white-space: pre-wrap;"></div>
+			</div>
+			<div class="modal-footer">
+				<a href="" target="_blank" id="modal-archivo" class="btn texto-default">Descargar
+					<i class="icono-color bi bi-file-earmark-pdf-fill"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var postData = JSON.parse("{{ comunicados|json_encode|e('js') }}");
+</script>
+<script>
+	let items = document.querySelectorAll('.otro .carousel .carousel-item')
+
+	document.querySelectorAll('.ver-comunicado').forEach(item => {
+		item.addEventListener('click', event => {
+			const postId = item.getAttribute('data-post-id');
+			const titulo = document.getElementById('modal-titulo');
+			const contenido = document.getElementById('modal-contenido');
+			const archivo = document.getElementById('modal-archivo');
+
+			const post = postData[postId];
+			titulo.textContent = post.titulo;
+			contenido.innerHTML = post.contenido;
+			archivo.setAttribute('href', post.archivo);
+		});
+	});
+</script>

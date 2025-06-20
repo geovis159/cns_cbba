@@ -1,0 +1,19 @@
+uuid: 5886bb2b-609e-454e-bcc8-d2fb0277456e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcionrend
+    - node.type.rendicion_publica
+id: node.rendicion_publica.field_descripcionrend
+field_name: field_descripcionrend
+entity_type: node
+bundle: rendicion_publica
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

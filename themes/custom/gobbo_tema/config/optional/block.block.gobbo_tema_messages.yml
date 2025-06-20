@@ -1,0 +1,22 @@
+uuid: 9b4c035e-68fa-4f77-84b1-969068b40d8b
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gobbo_tema
+_core:
+  default_config_hash: k0ShMuAEh3P9MmdD1TUPjssdmdesxid-gfRwxN5IvB8
+id: gobbo_tema_messages
+theme: gobbo_tema
+region: featured_top
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

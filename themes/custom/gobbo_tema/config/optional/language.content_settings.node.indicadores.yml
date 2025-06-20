@@ -1,0 +1,11 @@
+uuid: b34c9dfb-d31d-46e2-8fe5-1511786f5e4c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.indicadores
+id: node.indicadores
+target_entity_type_id: node
+target_bundle: indicadores
+default_langcode: site_default
+language_alterable: false

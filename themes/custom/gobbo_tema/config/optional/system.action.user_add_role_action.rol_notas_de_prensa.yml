@@ -1,0 +1,14 @@
+uuid: 28eb4942-a2ac-49ba-8d61-e16e158eefb2
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_notas_de_prensa
+  module:
+    - user
+id: user_add_role_action.rol_notas_de_prensa
+label: 'Añade el rol Rol Notas de prensa al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rol_notas_de_prensa

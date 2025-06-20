@@ -1,0 +1,21 @@
+uuid: 8708215b-3479-4a56-bf85-29195964d2f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_api_gobbo_servicios
+    - node.type.servicios
+id: node.servicios.field_api_gobbo_servicios
+field_name: field_api_gobbo_servicios
+entity_type: node
+bundle: servicios
+label: 'Api Gob.bo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

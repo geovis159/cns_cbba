@@ -1,0 +1,19 @@
+uuid: 3684f3e5-bbff-4a77-a803-e0a56485a3d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duracion_curso
+    - node.type.cursos
+id: node.cursos.field_duracion_curso
+field_name: field_duracion_curso
+entity_type: node
+bundle: cursos
+label: 'Tiempo de duración'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

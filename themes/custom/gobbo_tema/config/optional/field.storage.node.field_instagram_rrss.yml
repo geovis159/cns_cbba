@@ -1,0 +1,19 @@
+uuid: 6c4126c1-452a-4b5a-ac14-273750559b22
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_instagram_rrss
+field_name: field_instagram_rrss
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

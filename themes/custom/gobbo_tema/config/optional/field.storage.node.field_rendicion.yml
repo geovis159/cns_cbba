@@ -1,0 +1,20 @@
+uuid: dd6ea7b4-fe5a-4230-8f6e-5831f7296ec1
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_rendicion
+field_name: field_rendicion
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

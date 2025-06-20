@@ -1,0 +1,25 @@
+uuid: ae380622-c4f8-4617-84c9-0db1d527daeb
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gobbo_tema
+_core:
+  default_config_hash: m2vcNW_AN_9GEPqfrSZnW6JXpaWfuTH0kGglKbTca-Y
+id: gobbo_tema_site_branding
+theme: gobbo_tema
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,48 @@
+uuid: 65f4b667-2a04-4afa-a84d-f8dd3c7e4b6e
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_bolivia_a_tu_servicio
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_correo_bolivia
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_linea_gratuita_bolivia
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_redes_bolivia
+    - field.field.block_content.bloque_bolivia_a_tu_servicio.field_telefono_bolivia
+id: block_content.bloque_bolivia_a_tu_servicio.default
+targetEntityType: block_content
+bundle: bloque_bolivia_a_tu_servicio
+mode: default
+content:
+  field_correo_bolivia:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_linea_gratuita_bolivia:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_redes_bolivia:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_telefono_bolivia:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,84 @@
+uuid: a7fcfcd6-5e18-44d6-957b-169d05136871
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tipo_carrousel.field_color_carrousel
+    - field.field.node.tipo_carrousel.field_descripcion_carrousel
+    - field.field.node.tipo_carrousel.field_enlace_carrousel
+    - field.field.node.tipo_carrousel.field_imagen_carrousel
+    - field.field.node.tipo_carrousel.field_titulo_carrousel
+    - field.field.node.tipo_carrousel.field_transicion_carrousel
+    - node.type.tipo_carrousel
+  module:
+    - image
+    - link
+    - user
+id: node.tipo_carrousel.default
+targetEntityType: node
+bundle: tipo_carrousel
+mode: default
+content:
+  field_color_carrousel:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_descripcion_carrousel:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_enlace_carrousel:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_imagen_carrousel:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_titulo_carrousel:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_transicion_carrousel:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

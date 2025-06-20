@@ -1,0 +1,27 @@
+uuid: 307167c9-0776-4af2-aedb-522e56444f4e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.memoria_institucional.field_anio_mem_inst
+    - field.field.node.memoria_institucional.field_descripcion_mem_inst
+    - field.field.node.memoria_institucional.field_documento_mem_inst
+    - node.type.memoria_institucional
+  module:
+    - user
+id: node.memoria_institucional.teaser
+targetEntityType: node
+bundle: memoria_institucional
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_mem_inst: true
+  field_descripcion_mem_inst: true
+  field_documento_mem_inst: true
+  langcode: true

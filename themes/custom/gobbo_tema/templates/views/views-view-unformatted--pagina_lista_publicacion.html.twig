@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<div id="boletines" class="row" style='margin-bottom: 25px;'>
+
+
+	{% for row in rows %}
+
+		<div class='col-12 col-sm-6 col-md-4 p-2' >
+			<div class='card h-100'>
+				<img style="object-fit: contain;" src='{{file_url(row['content']['#row']._entity.field_portada_publicacion.entity.uri.value)}}' class='mx-2 my-4' alt='imagen' height='174'>
+
+				<div class="mx-4 fecha">
+					{% if row['content']['#row']._entity.field_fecha_publicacion.value %}
+						{{row['content']['#row']._entity.field_fecha_publicacion.value|date('d/m/Y')}}
+					{% endif %}
+				</div>
+				<h5
+					class='card-title mx-4 my-2' style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;">
+					{{row['content']['#row']._entity.field_titulo_publicacion.value}}
+				</h5>
+				<div class='card-body'>
+
+					<div class="mx-2 resumen" style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;">
+						{{row['content']['#row']._entity.field_resumen_publicacion.value}}
+					</div>
+
+				</div>
+				<div class='card-footer bg-transparent my-0 py-0' style='border: none; align-items: flex-end;'>
+
+					<a target="_blank" href="{{file_url(row.content['#row']._entity.field_documento_publicacion.entity.getFileUri())}}">
+						<p class='text-lg-end'>Descargar
+						<i class="bi bi-file-earmark-arrow-down-fill"></i> 
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+</div>

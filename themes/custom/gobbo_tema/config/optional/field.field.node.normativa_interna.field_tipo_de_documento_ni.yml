@@ -1,0 +1,21 @@
+uuid: d1ecf34a-43c6-4fce-9ec4-90b78c0b1f99
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_documento_ni
+    - node.type.normativa_interna
+  module:
+    - options
+id: node.normativa_interna.field_tipo_de_documento_ni
+field_name: field_tipo_de_documento_ni
+entity_type: node
+bundle: normativa_interna
+label: 'Tipo de documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

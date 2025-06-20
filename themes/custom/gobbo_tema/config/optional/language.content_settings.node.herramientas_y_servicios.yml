@@ -1,0 +1,11 @@
+uuid: 6618be8f-c8d8-48c8-a754-b45767a4f63c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.herramientas_y_servicios
+id: node.herramientas_y_servicios
+target_entity_type_id: node
+target_bundle: herramientas_y_servicios
+default_langcode: site_default
+language_alterable: false

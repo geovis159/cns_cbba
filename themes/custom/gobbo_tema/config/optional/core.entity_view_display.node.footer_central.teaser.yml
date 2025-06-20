@@ -1,0 +1,37 @@
+uuid: 033c30a9-245f-4bf8-9e4f-7e4e7062ebbd
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.footer_central.field_correo_electronico_footer
+    - field.field.node.footer_central.field_direcciones_footer
+    - field.field.node.footer_central.field_linea_gratuita_footer
+    - field.field.node.footer_central.field_logo_central_footer
+    - field.field.node.footer_central.field_logo_derecho_footer
+    - field.field.node.footer_central.field_redes_sociales
+    - field.field.node.footer_central.field_telefono_footer
+    - field.field.node.footer_central.field_titulo_footer
+    - node.type.footer_central
+  module:
+    - user
+id: node.footer_central.teaser
+targetEntityType: node
+bundle: footer_central
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_correo_electronico_footer: true
+  field_direcciones_footer: true
+  field_linea_gratuita_footer: true
+  field_logo_central_footer: true
+  field_logo_derecho_footer: true
+  field_redes_sociales: true
+  field_telefono_footer: true
+  field_titulo_footer: true
+  langcode: true

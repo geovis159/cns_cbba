@@ -1,0 +1,20 @@
+uuid: cef9fd3d-967e-4221-af53-e224eac2cc80
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_fecha_galeria
+field_name: field_fecha_galeria
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

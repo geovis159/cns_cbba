@@ -1,0 +1,30 @@
+uuid: 89c79a32-e795-4d8f-98f9-50ada034fc38
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:titulo_bloque:afd85f6e-b986-44d6-90eb-1b27d8850667'
+  module:
+    - block_content
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquetitulodeenlacesdeinteres
+theme: gobbo_tema
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:afd85f6e-b986-44d6-90eb-1b27d8850667'
+settings:
+  id: 'block_content:afd85f6e-b986-44d6-90eb-1b27d8850667'
+  label: 'Bloque Título de Enlaces de Interes'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

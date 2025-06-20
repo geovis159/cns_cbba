@@ -1,0 +1,23 @@
+uuid: baad02e6-a4ec-46ce-9b75-2a296619308c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_poais
+    - node.type.poais
+id: node.poais.field_anio_poais
+field_name: field_anio_poais
+entity_type: node
+bundle: poais
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

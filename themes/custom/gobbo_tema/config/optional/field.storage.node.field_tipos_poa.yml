@@ -1,0 +1,27 @@
+uuid: cb838dd0-0dd8-44fb-bfc6-68f4a5d4e6ba
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipos_poa
+field_name: field_tipos_poa
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: poa_institucional
+      label: 'POA Institucional'
+    -
+      value: poa_por_unidad_organizacional
+      label: 'POA por unidad organizacional'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

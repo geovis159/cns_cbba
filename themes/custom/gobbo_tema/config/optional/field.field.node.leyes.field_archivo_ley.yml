@@ -1,0 +1,27 @@
+uuid: 55563063-d83b-4b32-a4ba-3f3eb43e63f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archivo_ley
+    - node.type.leyes
+  module:
+    - file
+id: node.leyes.field_archivo_ley
+field_name: field_archivo_ley
+entity_type: node
+bundle: leyes
+label: Archivo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: false
+field_type: file

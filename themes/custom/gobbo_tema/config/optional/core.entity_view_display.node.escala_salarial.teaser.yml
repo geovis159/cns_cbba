@@ -1,0 +1,29 @@
+uuid: 61245b5d-0edc-4178-86c6-2b60b957d3bb
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.escala_salarial.field_anio_escala_salarial
+    - field.field.node.escala_salarial.field_documento_escala_salarial
+    - field.field.node.escala_salarial.field_fecha_de_aprobacion
+    - field.field.node.escala_salarial.field_titulo_escala_salrial
+    - node.type.escala_salarial
+  module:
+    - user
+id: node.escala_salarial.teaser
+targetEntityType: node
+bundle: escala_salarial
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_escala_salarial: true
+  field_documento_escala_salarial: true
+  field_fecha_de_aprobacion: true
+  field_titulo_escala_salrial: true
+  langcode: true

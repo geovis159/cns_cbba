@@ -1,0 +1,31 @@
+uuid: 069422c5-fa6a-4868-9a6b-0902090be5d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.indicadores.field_archivo_indicador
+    - field.field.node.indicadores.field_descripcion_indicador
+    - field.field.node.indicadores.field_enlace_indicador
+    - field.field.node.indicadores.field_imagen_indicador
+    - field.field.node.indicadores.field_titulo_indicador
+    - node.type.indicadores
+  module:
+    - user
+id: node.indicadores.teaser
+targetEntityType: node
+bundle: indicadores
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_archivo_indicador: true
+  field_descripcion_indicador: true
+  field_enlace_indicador: true
+  field_imagen_indicador: true
+  field_titulo_indicador: true
+  langcode: true

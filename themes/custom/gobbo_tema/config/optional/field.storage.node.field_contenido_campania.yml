@@ -1,0 +1,19 @@
+uuid: ff77e9aa-1008-4915-9be4-4ff421a5b150
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_contenido_campania
+field_name: field_contenido_campania
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: e6be0544-5d08-47ef-880c-c6557ab22925
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_correo_personal
+    - node.type.personal
+id: node.personal.field_correo_personal
+field_name: field_correo_personal
+entity_type: node
+bundle: personal
+label: Correo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

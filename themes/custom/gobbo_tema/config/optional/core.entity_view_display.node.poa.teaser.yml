@@ -1,0 +1,31 @@
+uuid: 10f3abe4-0e0a-41dc-bc50-98640d864179
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.poa.field_anio_poa
+    - field.field.node.poa.field_descripcion_poa
+    - field.field.node.poa.field_documento_poa
+    - field.field.node.poa.field_tipos_poa
+    - field.field.node.poa.field_unidad_poa
+    - node.type.poa
+  module:
+    - user
+id: node.poa.teaser
+targetEntityType: node
+bundle: poa
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_poa: true
+  field_descripcion_poa: true
+  field_documento_poa: true
+  field_tipos_poa: true
+  field_unidad_poa: true
+  langcode: true

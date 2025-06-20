@@ -1,0 +1,23 @@
+uuid: e7598090-9edb-4e71-88cd-ec776e0c707a
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_creditos
+    - field.storage.block_content.field_reglas_credito
+  module:
+    - link
+id: block_content.bloque_creditos.field_reglas_credito
+field_name: field_reglas_credito
+entity_type: block_content
+bundle: bloque_creditos
+label: "Términos y condiciones\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

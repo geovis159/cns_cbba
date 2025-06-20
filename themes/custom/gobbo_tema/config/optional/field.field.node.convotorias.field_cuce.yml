@@ -1,0 +1,19 @@
+uuid: 8528f6e0-fffa-40c3-96ca-ca664551874a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cuce
+    - node.type.convotorias
+id: node.convotorias.field_cuce
+field_name: field_cuce
+entity_type: node
+bundle: convotorias
+label: CUCE
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

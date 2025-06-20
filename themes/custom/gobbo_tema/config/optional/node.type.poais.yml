@@ -1,0 +1,18 @@
+uuid: 29890668-9bc8-4d18-9c1b-4d5a07227545
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: POAIs
+type: poais
+description: 'Plan Operativo Anual Individual'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

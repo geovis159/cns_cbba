@@ -1,0 +1,14 @@
+uuid: fd5c0f9b-6451-4b08-996d-f0f2124ca9d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_notas_de_prensa
+  module:
+    - user
+id: user_remove_role_action.rol_notas_de_prensa
+label: 'Elimina el rol Rol Notas de prensa al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rol_notas_de_prensa

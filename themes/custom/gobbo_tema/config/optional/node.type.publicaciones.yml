@@ -1,0 +1,18 @@
+uuid: 0ccf722d-5332-4762-8bad-efbf55bd408a
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Publicaciones
+type: publicaciones
+description: 'Tipo de contenido para publicaciones: Boletines, Artículos y Revistas'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

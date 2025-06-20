@@ -1,0 +1,19 @@
+uuid: 8ef87862-1e14-4bc8-b3e2-33fc46844263
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resumen_nota
+    - node.type.notas_de_prensa
+id: node.notas_de_prensa.field_resumen_nota
+field_name: field_resumen_nota
+entity_type: node
+bundle: notas_de_prensa
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

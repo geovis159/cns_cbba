@@ -1,0 +1,27 @@
+uuid: 88a42c0e-fd09-4856-80bc-408ff50587a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.datos_y_estadisticas.field_ano_periodo
+    - field.field.node.datos_y_estadisticas.field_descripcion_datos_estadist
+    - field.field.node.datos_y_estadisticas.field_detalle
+    - node.type.datos_y_estadisticas
+  module:
+    - user
+id: node.datos_y_estadisticas.teaser
+targetEntityType: node
+bundle: datos_y_estadisticas
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_ano_periodo: true
+  field_descripcion_datos_estadist: true
+  field_detalle: true
+  langcode: true

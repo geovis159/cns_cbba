@@ -1,0 +1,25 @@
+uuid: 260efd7d-1196-4c64-9092-e9a103449e73
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.perfil.field_nro_perfil
+    - field.field.node.perfil.field_titulo_perfil
+    - node.type.perfil
+  module:
+    - user
+id: node.perfil.teaser
+targetEntityType: node
+bundle: perfil
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_nro_perfil: true
+  field_titulo_perfil: true
+  langcode: true

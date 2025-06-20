@@ -1,0 +1,66 @@
+uuid: 91998555-8a19-412d-8876-b9eb3821a505
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.poa.field_anio_poa
+    - field.field.node.poa.field_descripcion_poa
+    - field.field.node.poa.field_documento_poa
+    - field.field.node.poa.field_tipos_poa
+    - field.field.node.poa.field_unidad_poa
+    - node.type.poa
+  module:
+    - file
+    - options
+    - user
+id: node.poa.default
+targetEntityType: node
+bundle: poa
+mode: default
+content:
+  field_anio_poa:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_descripcion_poa:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_documento_poa:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_tipos_poa:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_unidad_poa:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

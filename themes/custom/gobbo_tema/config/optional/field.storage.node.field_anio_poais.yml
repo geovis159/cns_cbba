@@ -1,0 +1,20 @@
+uuid: 6bb8bdc5-1a51-4683-85b4-71bd9c14db36
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_anio_poais
+field_name: field_anio_poais
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

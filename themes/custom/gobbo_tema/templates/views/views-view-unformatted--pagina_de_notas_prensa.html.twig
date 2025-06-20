@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<div id="nota-prensa" class="row" style='margin-bottom: 25px;'>
+
+
+	{% for row in rows %}
+	
+		<div class='col-12 col-sm-6 col-md-4' style='margin-bottom: 25px;'>
+			<div class='card h-100'>
+				<img style="object-fit: cover;" src='{{file_url(row['content']['#row']._entity.field_imagen_nota.entity.uri.value)}}' class='card-img-top mx-auto' alt='{{row['content']['#row']._entity.field_imagen_nota.value.0.alt}}' width='50' height='270'>
+				<div class='card-body'>
+					<p class='card-text'>
+						<small class='text-muted'>
+							{% if row['content']['#row']._entity.created.value %}
+								{{row['content']['#row']._entity.created.value|date('d/m/Y')}}
+							{% endif %}
+							|
+							{{row['content']['#row']._entity.field_lugar_nota.value}}
+
+						</small>
+					</p>
+					<h5 class='card-title' style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;">
+						{{row['content']['#row']._entity.field_titulo_nota.value}}
+					</h5>
+
+				</div>
+				<div class='card-footer bg-transparent' style='border: none;'>
+					<a href="{{url('<front>')}}/node/{{row['content']['#row']._entity.nid.value}}">
+						<p class='text-lg-end'>Leer nota
+							<i class='bi bi-arrow-right'></i>
+						</p>
+					</a>
+
+				</div>
+			</div>
+		</div>
+
+
+	{% endfor %}
+
+</div>

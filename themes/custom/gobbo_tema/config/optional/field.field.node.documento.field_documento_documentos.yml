@@ -1,0 +1,27 @@
+uuid: 687eb6a4-e968-495e-be73-8a9568e0f9bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_documentos
+    - node.type.documento
+  module:
+    - file
+id: node.documento.field_documento_documentos
+field_name: field_documento_documentos
+entity_type: node
+bundle: documento
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

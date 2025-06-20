@@ -1,0 +1,18 @@
+uuid: 705b98ef-49e4-4db6-b607-02bc7582a937
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Datos y Estadisticas'
+type: datos_y_estadisticas
+description: 'Datos y Estadisticas'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

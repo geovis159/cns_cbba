@@ -1,0 +1,20 @@
+uuid: 2dc9868a-87d0-44ba-8cd1-cef6879a6c07
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_anio_mem_inst
+field_name: field_anio_mem_inst
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

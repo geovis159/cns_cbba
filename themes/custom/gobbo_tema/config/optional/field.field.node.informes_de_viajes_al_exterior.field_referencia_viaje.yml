@@ -1,0 +1,19 @@
+uuid: 83d773a8-2d9e-42df-a6f4-c8d5603a6a70
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referencia_viaje
+    - node.type.informes_de_viajes_al_exterior
+id: node.informes_de_viajes_al_exterior.field_referencia_viaje
+field_name: field_referencia_viaje
+entity_type: node
+bundle: informes_de_viajes_al_exterior
+label: Referencia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

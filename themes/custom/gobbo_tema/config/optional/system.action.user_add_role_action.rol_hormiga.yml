@@ -1,0 +1,14 @@
+uuid: 480db274-e6c2-4c17-af81-896102160e02
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_hormiga
+  module:
+    - user
+id: user_add_role_action.rol_hormiga
+label: 'Añade el rol Rol Hormiga al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rol_hormiga

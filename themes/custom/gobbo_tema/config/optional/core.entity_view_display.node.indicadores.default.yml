@@ -1,0 +1,74 @@
+uuid: b05b8b6d-4dbb-4226-a9cf-9b6ce5733503
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.indicadores.field_archivo_indicador
+    - field.field.node.indicadores.field_descripcion_indicador
+    - field.field.node.indicadores.field_enlace_indicador
+    - field.field.node.indicadores.field_imagen_indicador
+    - field.field.node.indicadores.field_titulo_indicador
+    - node.type.indicadores
+  module:
+    - file
+    - image
+    - link
+    - user
+id: node.indicadores.default
+targetEntityType: node
+bundle: indicadores
+mode: default
+content:
+  field_archivo_indicador:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_descripcion_indicador:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_enlace_indicador:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_imagen_indicador:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_titulo_indicador:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

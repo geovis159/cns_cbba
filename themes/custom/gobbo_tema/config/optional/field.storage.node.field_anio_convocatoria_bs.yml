@@ -1,0 +1,20 @@
+uuid: b1053d7f-6c6a-4207-be36-63e186dc37f6
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_anio_convocatoria_bs
+field_name: field_anio_convocatoria_bs
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

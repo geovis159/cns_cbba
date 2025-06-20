@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+
+<div id="servicios" class="row" style='margin-bottom: 25px;'>
+
+<div class="row">
+	{% for row in rows %}
+		<div class='col-12 m-2'>
+			<div class='card  h-100 card p-2 ' style='border-radius: 20px;'>
+				<div class='card-body '>
+					<div class='d-flex flex-column flex-md-row align-items-center'>
+						<img  class='text-success pe-4'style="object-fit: contain;" src="{{file_url(row.content['#row']._entity.field_imagen_servicios.entity.getFileUri())}}"   width='75' height='75'>
+				
+						<div class="align-middle pb-4" >
+							<p class="titulo ">{{row.content['#row']._entity.field_titulo_servicios.value}}</p>
+
+							<div class="anuncio" style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;">{{row.content['#row']._entity.field_anuncio_servicios.value}}</div>
+						</div>
+						<div class="ms-auto align-self-center pb-0">
+
+							{% if row.content['#row']._entity.field_enlace_servicios.uri|length > 1 %}
+							<a class="btn ver-detalles ms-4" style="text-decoration: none;min-width: 140px;" target="_blank" href="{{row.content['#row']._entity.field_enlace_servicios.uri}}">Ver detalles
+							</a>
+							{% else %}
+							<a class="btn ver-detalles ms-4" style="text-decoration: none;min-width: 140px;" href="{{url('<front>')}}/node/{{row.content['#row']._entity.nid.value}}">Ver detalles
+							</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	{% endfor %}
+
+</div>
+
+
+</div>

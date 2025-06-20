@@ -1,0 +1,25 @@
+uuid: e57fe324-174e-46bb-be3e-f6fb54c9647e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.proveedores.field_descripcion_proveedor
+    - field.field.node.proveedores.field_nombre_del_proveedor
+    - node.type.proveedores
+  module:
+    - user
+id: node.proveedores.teaser
+targetEntityType: node
+bundle: proveedores
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_descripcion_proveedor: true
+  field_nombre_del_proveedor: true
+  langcode: true

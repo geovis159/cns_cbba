@@ -1,0 +1,23 @@
+uuid: 4b66f61f-155e-49f3-b945-286bef20cc9e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rendicion
+    - node.type.rendicion_publica
+id: node.rendicion_publica.field_rendicion
+field_name: field_rendicion
+entity_type: node
+bundle: rendicion_publica
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

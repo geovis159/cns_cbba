@@ -1,0 +1,19 @@
+uuid: 0f6fe45e-4152-4a10-acc1-b73558bb2d1f
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.formulario_de_denuncias_por_hech
+    - field.storage.contact_message.field_form_apellidos_denuncia
+id: contact_message.formulario_de_denuncias_por_hech.field_form_apellidos_denuncia
+field_name: field_form_apellidos_denuncia
+entity_type: contact_message
+bundle: formulario_de_denuncias_por_hech
+label: Apellidos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

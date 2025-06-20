@@ -1,0 +1,27 @@
+uuid: 96a7d333-aa4a-472a-8b0d-1139199d77bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentorend
+    - node.type.rendicion_publica
+  module:
+    - file
+id: node.rendicion_publica.field_documentorend
+field_name: field_documentorend
+entity_type: node
+bundle: rendicion_publica
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

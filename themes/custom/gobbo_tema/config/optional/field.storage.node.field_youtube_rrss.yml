@@ -1,0 +1,19 @@
+uuid: 81976b49-3b4a-42ca-bac5-d130ecfc55d8
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_youtube_rrss
+field_name: field_youtube_rrss
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

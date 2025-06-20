@@ -1,0 +1,21 @@
+uuid: edaa542a-d504-48bb-961f-62159872ee4f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_cierre
+    - node.type.oportunidad_de_empleo
+  module:
+    - datetime
+id: node.oportunidad_de_empleo.field_fecha_de_cierre
+field_name: field_fecha_de_cierre
+entity_type: node
+bundle: oportunidad_de_empleo
+label: 'Fecha de cierre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

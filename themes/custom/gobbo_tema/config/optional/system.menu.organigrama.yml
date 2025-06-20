@@ -1,0 +1,8 @@
+uuid: 74c7cc5f-a5b2-4340-89c6-9044cef906ca
+langcode: es
+status: true
+dependencies: {  }
+id: organigrama
+label: Organigrama
+description: 'Menu utilizado para Organigrama'
+locked: false

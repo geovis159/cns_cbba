@@ -1,0 +1,29 @@
+uuid: 6df49a05-ba8b-4120-9dec-90339c88d470
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.organigrama
+  module:
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_organigrama_2
+theme: gobbo_tema
+region: featured_bottom_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:organigrama'
+settings:
+  id: 'system_menu_block:organigrama'
+  label: Organigrama
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/509

@@ -1,0 +1,11 @@
+uuid: 60d649f0-8f39-458a-ab32-28117653d985
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.nomina_de_servidoras_y_servidore
+id: node.nomina_de_servidoras_y_servidore
+target_entity_type_id: node
+target_bundle: nomina_de_servidoras_y_servidore
+default_langcode: site_default
+language_alterable: false

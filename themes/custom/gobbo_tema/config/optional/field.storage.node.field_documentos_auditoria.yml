@@ -1,0 +1,23 @@
+uuid: 497e767e-dd25-4f8d-aac5-b9ad8c501c64
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_documentos_auditoria
+field_name: field_documentos_auditoria
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

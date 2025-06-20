@@ -1,0 +1,18 @@
+uuid: 188a55c2-5344-4192-a624-2c31faa195ce
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Manual de procedimiento'
+type: manual_de_procedimiento
+description: 'Manual de procedimiento'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

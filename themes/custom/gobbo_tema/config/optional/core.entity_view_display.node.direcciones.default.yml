@@ -1,0 +1,74 @@
+uuid: c399176f-0f29-40db-a618-ade2940555e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.direcciones.field_departamento_direcciones
+    - field.field.node.direcciones.field_direccion_direcciones
+    - field.field.node.direcciones.field_latitud_direcciones
+    - field.field.node.direcciones.field_longitud_direcciones
+    - field.field.node.direcciones.field_oficina_direcciones
+    - field.field.node.direcciones.field_telefono_direcciones
+    - node.type.direcciones
+  module:
+    - options
+    - user
+id: node.direcciones.default
+targetEntityType: node
+bundle: direcciones
+mode: default
+content:
+  field_departamento_direcciones:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_direccion_direcciones:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_latitud_direcciones:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_longitud_direcciones:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_oficina_direcciones:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_telefono_direcciones:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,24 @@
+uuid: 28b8351a-ecf7-4ffe-b6dc-d57a8abef6e8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contenido_nota
+    - filter.format.basic_html
+    - node.type.notas_de_prensa
+  module:
+    - text
+id: node.notas_de_prensa.field_contenido_nota
+field_name: field_contenido_nota
+entity_type: node
+bundle: notas_de_prensa
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,68 @@
+uuid: 55b21599-6a0f-4942-9a3c-0c2719cd698b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.normativa_externa.field_cite_referencia_nexternaa
+    - field.field.node.normativa_externa.field_documento
+    - field.field.node.normativa_externa.field_fecha
+    - field.field.node.normativa_externa.field_tipo_de_documento
+    - field.field.node.normativa_externa.field_titulo
+    - node.type.normativa_externa
+  module:
+    - datetime
+    - file
+    - options
+    - user
+id: node.normativa_externa.default
+targetEntityType: node
+bundle: normativa_externa
+mode: default
+content:
+  field_cite_referencia_nexternaa:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_documento:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_fecha:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_tipo_de_documento:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_titulo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,27 @@
+uuid: 20d565b3-7aa6-4d25-b1d3-6591f0c5b0c9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_manual_organizac
+    - node.type.manual_de_organizacion_funcional
+  module:
+    - file
+id: node.manual_de_organizacion_funcional.field_documento_manual_organizac
+field_name: field_documento_manual_organizac
+entity_type: node
+bundle: manual_de_organizacion_funcional
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

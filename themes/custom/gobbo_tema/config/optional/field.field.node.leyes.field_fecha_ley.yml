@@ -1,0 +1,21 @@
+uuid: aaea582f-2228-4f27-8ff9-82fdbd544876
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_ley
+    - node.type.leyes
+  module:
+    - datetime
+id: node.leyes.field_fecha_ley
+field_name: field_fecha_ley
+entity_type: node
+bundle: leyes
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

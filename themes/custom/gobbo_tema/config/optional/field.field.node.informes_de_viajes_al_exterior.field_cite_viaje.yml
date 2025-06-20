@@ -1,0 +1,19 @@
+uuid: 682b93d5-c071-46e4-9c9e-a3f0c669426f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cite_viaje
+    - node.type.informes_de_viajes_al_exterior
+id: node.informes_de_viajes_al_exterior.field_cite_viaje
+field_name: field_cite_viaje
+entity_type: node
+bundle: informes_de_viajes_al_exterior
+label: CITE
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

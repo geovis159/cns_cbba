@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+{# <div{{ attributes.addClass(classes) }}>
+
+  {% block content %}
+    <div{{ content_attributes.addClass('content') }}>
+      {{ content }}
+    </div>
+  {% endblock %}
+</div> #}
+<div style="background-image:url(/{{ directory }}/imagenes/alpha-web-cinta.png); background-repeat:repeat-x; background-size: contain; height: 48px; "></div>
+<hr class="hr"></hr><div class="text-center">
+{% if content['#block_content'].field_reglas_credito.value[0]['title'] %}
+
+	<a class="footer-credito text-center pe-2" target="_blank" href="{{content['field_reglas_credito'][0]['#url']}}" style="text-decoration: none;">
+		{{content['#block_content'].field_reglas_credito.value[0]['title']}}
+		<i class="bi bi-arrow-right-short"></i>
+	</a>
+{% endif %}
+{% if content['#block_content'].field_politicas_credito.value[0]['title'] %}
+
+	<a class="footer-credito text-center pe-2" target="_blank" href="{{content['field_politicas_credito'][0]['#url']}}" style="text-decoration: none;">
+		{{content['#block_content'].field_politicas_credito.value[0]['title']}}
+		<i class="bi bi-arrow-right-short"></i>
+	</a>
+{% endif %}
+{% if content['#block_content'].field_sitemap_credito.value[0]['title'] %}
+	<a class="footer-credito text-center" target="_blank" href="{{content['field_sitemap_credito'][0]['#url']}}" style="text-decoration: none;">Mapa del sítio
+		<i class="bi bi-arrow-right-short"></i>
+	</a>
+{% endif %}</div>
+
+<!-- Pie de pagina -->
+<div id="pie-pagina" class="footer-credito text-center mb-3">
+  {% if content['#block_content'].field_titulo_credito.value  %}
+	<a class="" href="#" style="text-decoration: none;">{{content['#block_content'].field_titulo_credito.value}}</a>
+  {% endif %}
+</div>

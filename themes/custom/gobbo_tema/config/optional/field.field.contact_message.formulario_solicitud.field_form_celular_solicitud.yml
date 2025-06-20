@@ -1,0 +1,23 @@
+uuid: 826a6a25-1164-454e-89c7-832aa17abf29
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.formulario_solicitud
+    - field.storage.contact_message.field_form_celular_solicitud
+id: contact_message.formulario_solicitud.field_form_celular_solicitud
+field_name: field_form_celular_solicitud
+entity_type: contact_message
+bundle: formulario_solicitud
+label: 'Nro. de Celular'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

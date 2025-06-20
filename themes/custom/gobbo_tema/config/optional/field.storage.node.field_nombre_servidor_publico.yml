@@ -1,0 +1,21 @@
+uuid: be1b9c28-6639-4b30-a27c-69e82b21dfba
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_nombre_servidor_publico
+field_name: field_nombre_servidor_publico
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

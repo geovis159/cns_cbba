@@ -1,0 +1,19 @@
+uuid: 42aa6529-9fcb-411f-929a-b802bc325b3a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_manual_procedimient
+    - node.type.manual_de_procedimiento
+id: node.manual_de_procedimiento.field_titulo_manual_procedimient
+field_name: field_titulo_manual_procedimient
+entity_type: node
+bundle: manual_de_procedimiento
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

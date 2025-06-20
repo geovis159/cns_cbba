@@ -1,0 +1,27 @@
+uuid: 5916887a-8020-4611-9fe5-33237a60286c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_publicacion
+    - node.type.publicaciones
+  module:
+    - file
+id: node.publicaciones.field_documento_publicacion
+field_name: field_documento_publicacion
+entity_type: node
+bundle: publicaciones
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

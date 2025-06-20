@@ -1,0 +1,4 @@
+services:
+  api_tramites_gobbo.api_client:
+    class: Drupal\api_tramites_gobbo\ApiClient
+    arguments: ['@http_client', '@config.factory']

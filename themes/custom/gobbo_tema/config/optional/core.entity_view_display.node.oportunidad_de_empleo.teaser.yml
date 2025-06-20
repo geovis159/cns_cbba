@@ -1,0 +1,37 @@
+uuid: 330cbbbe-e701-495d-b672-d4b7621ec5a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oportunidad_de_empleo.field_actividades_especificas
+    - field.field.node.oportunidad_de_empleo.field_cantidad
+    - field.field.node.oportunidad_de_empleo.field_enlace
+    - field.field.node.oportunidad_de_empleo.field_experiencia_laboral_oportu
+    - field.field.node.oportunidad_de_empleo.field_fecha_de_cierre
+    - field.field.node.oportunidad_de_empleo.field_formacion_academica
+    - field.field.node.oportunidad_de_empleo.field_puesto
+    - field.field.node.oportunidad_de_empleo.field_tipo_de_contratacion
+    - node.type.oportunidad_de_empleo
+  module:
+    - user
+id: node.oportunidad_de_empleo.teaser
+targetEntityType: node
+bundle: oportunidad_de_empleo
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_actividades_especificas: true
+  field_cantidad: true
+  field_enlace: true
+  field_experiencia_laboral_oportu: true
+  field_fecha_de_cierre: true
+  field_formacion_academica: true
+  field_puesto: true
+  field_tipo_de_contratacion: true
+  langcode: true

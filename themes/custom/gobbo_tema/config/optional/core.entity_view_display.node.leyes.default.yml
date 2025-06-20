@@ -1,0 +1,59 @@
+uuid: 17230405-6491-478a-8fc5-d621b856957c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.leyes.field_archivo_ley
+    - field.field.node.leyes.field_descripcion_ley
+    - field.field.node.leyes.field_fecha_ley
+    - field.field.node.leyes.field_titulo_ley
+    - node.type.leyes
+  module:
+    - datetime
+    - file
+    - user
+id: node.leyes.default
+targetEntityType: node
+bundle: leyes
+mode: default
+content:
+  field_archivo_ley:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_descripcion_ley:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_fecha_ley:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_titulo_ley:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: d41db1e3-a0f6-45ef-884c-1932eefdfd7f
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Campañas
+type: campanas
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

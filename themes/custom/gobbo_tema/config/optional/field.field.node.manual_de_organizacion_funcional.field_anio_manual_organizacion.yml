@@ -1,0 +1,23 @@
+uuid: 31ce9113-4f1c-471f-af4b-f1d66ed60a8a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_manual_organizacion
+    - node.type.manual_de_organizacion_funcional
+id: node.manual_de_organizacion_funcional.field_anio_manual_organizacion
+field_name: field_anio_manual_organizacion
+entity_type: node
+bundle: manual_de_organizacion_funcional
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: 3218c48c-11fc-48c2-a5b4-f433edf83174
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.formulario_solicitud
+    - field.storage.contact_message.field_form_recepcion_solicitud
+  module:
+    - options
+id: contact_message.formulario_solicitud.field_form_recepcion_solicitud
+field_name: field_form_recepcion_solicitud
+entity_type: contact_message
+bundle: formulario_solicitud
+label: 'Forma de recepción de la información solicitada '
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: mensaje_de_correo_electronico
+default_value_callback: ''
+settings: {  }
+field_type: list_string

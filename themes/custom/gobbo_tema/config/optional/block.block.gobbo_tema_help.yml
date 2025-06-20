@@ -1,0 +1,22 @@
+uuid: 93295041-d73a-4aa6-ad99-1fda6695cd7d
+langcode: es
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - gobbo_tema
+_core:
+  default_config_hash: 8f6AL6kQ-UuMDIj47PbDq7MgpNmkGikzUEADg4bbzWc
+id: gobbo_tema_help
+theme: gobbo_tema
+region: featured_top
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

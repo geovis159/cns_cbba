@@ -1,0 +1,23 @@
+uuid: ffff7750-ef77-4c02-b8ff-1f9da7c3c0a8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nro_perfil
+    - node.type.perfil
+id: node.perfil.field_nro_perfil
+field_name: field_nro_perfil
+entity_type: node
+bundle: perfil
+label: Nro.
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
