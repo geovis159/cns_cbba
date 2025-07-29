@@ -1,0 +1,20 @@
+uuid: 8b845aa0-1697-48a7-99b2-b5bb5757fdf1
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_fecha_ini_curso
+field_name: field_fecha_ini_curso
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

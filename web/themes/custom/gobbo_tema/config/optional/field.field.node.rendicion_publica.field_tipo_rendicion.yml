@@ -1,0 +1,21 @@
+uuid: 0b4af6bf-5cbe-4467-8ced-46afaa1304ce
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_rendicion
+    - node.type.rendicion_publica
+  module:
+    - options
+id: node.rendicion_publica.field_tipo_rendicion
+field_name: field_tipo_rendicion
+entity_type: node
+bundle: rendicion_publica
+label: Tipo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

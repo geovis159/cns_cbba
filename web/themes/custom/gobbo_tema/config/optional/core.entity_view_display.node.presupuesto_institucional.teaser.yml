@@ -1,0 +1,27 @@
+uuid: eab08ae9-e887-438c-bcff-0db86430a1cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.presupuesto_institucional.field_ano
+    - field.field.node.presupuesto_institucional.field_descripcion_presupuesto
+    - field.field.node.presupuesto_institucional.field_documento_pres
+    - node.type.presupuesto_institucional
+  module:
+    - user
+id: node.presupuesto_institucional.teaser
+targetEntityType: node
+bundle: presupuesto_institucional
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_ano: true
+  field_descripcion_presupuesto: true
+  field_documento_pres: true
+  langcode: true

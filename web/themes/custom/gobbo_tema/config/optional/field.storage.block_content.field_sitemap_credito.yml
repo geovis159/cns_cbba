@@ -1,0 +1,19 @@
+uuid: fb74efac-8543-488d-8377-73c3ac7410b8
+langcode: es
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_sitemap_credito
+field_name: field_sitemap_credito
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

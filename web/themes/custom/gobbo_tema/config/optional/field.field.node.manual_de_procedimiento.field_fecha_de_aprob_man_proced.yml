@@ -1,0 +1,21 @@
+uuid: 87b2c628-ad72-438a-bdf9-952612de23d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_aprob_man_proced
+    - node.type.manual_de_procedimiento
+  module:
+    - datetime
+id: node.manual_de_procedimiento.field_fecha_de_aprob_man_proced
+field_name: field_fecha_de_aprob_man_proced
+entity_type: node
+bundle: manual_de_procedimiento
+label: 'Fecha de aprobación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

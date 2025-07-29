@@ -1,0 +1,11 @@
+uuid: 99471860-60bc-4b05-8565-a3d7c962dc09
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.auditoria
+id: node.auditoria
+target_entity_type_id: node
+target_bundle: auditoria
+default_langcode: site_default
+language_alterable: false

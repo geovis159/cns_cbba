@@ -1,0 +1,145 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+<div class="container pt-4">
+	{{ menus.menu_links(items, attributes, 0, '') }}
+	{% macro menu_links(items, attributes, menu_level, departamento) %}
+		{# {{dump(items)}} #}
+		{% import _self as menus %}
+		{% if items %}
+			{% if menu_level == 0 %}
+				<ul {{ attributes.addClass('')|without('id') }}>
+		    {% else %}
+				<div class="staff-panel {{menu_level == 1 ? 'show' : ''}}">
+					<ul class="staffer-archive-grid staff-ul-main staff-ul-main-show">
+			{% endif %}
+
+						{% for item in items %}
+							{%
+						set classes = [
+
+						item.below ? '' : loop.index0 == 0 ?  menu_level == 1 ? 'staff-li-head level_1' : 'staff-li-head': menu_level == 1 ? 'staff-li level_1' : 'staff-li',
+							item.is_expanded ? 'show':'',
+							item.is_collapsed ? 'menu-item--collapsed',
+							item.in_active_trail ? 'menu-item--active-trail',
+						]
+						%}
+
+							<li{{item.attributes.addClass(classes)}} style="list-style: none; ">
+
+								{% if item.below %}
+									{# {{dump(item)}} #}
+									<button class="staff-accordion{{menu_level == 0 ? ' level_0' : ' level_1'}} ">{{item['title']}}</button>
+									{{ menus.menu_links(item.below, attributes, menu_level + 1, item['title']) }}
+
+								{% else %}
+									{# ini - mostrando al personal #}
+									{% if loop.index0 == 0 %}
+
+										<div class="staff-content">
+											<div data-bs-toggle="modal" data-bs-target="#cardmodal{{item['node'].id}}" style="cursor: pointer;">
+												<img class="aligncenter staffer-list-image wp-post-image" src="{{file_url(item['node'].field_imagen_personal.entity.getFileUri())}}" width="250" height="250" alt="">
+												<header class="staffer-staff-header">
+													<h3 class="staffer-staff-title">
+														<a data-name="{{item['node'].field_nombre_personal.value}}">
+															{{item['node'].field_nombre_personal.value}}</a>
+													</h3>
+													<small class="staffer-staff-title">{{item['node'].field_cargo_personal.value}}</small>
+												</header>
+											</div>
+										</div>
+										<hr class="staff-hr">
+									{% else %}
+
+										<div class="staff-content">
+											<div data-bs-toggle="modal" data-bs-target="#cardmodal{{item['node'].id}}" style="cursor: pointer;">
+												<img class="aligncenter staffer-list-image wp-post-image" src="{{file_url(item['node'].field_imagen_personal.entity.getFileUri())}}" width="250" height="250" alt="">
+												<header class="staffer-staff-header">
+													<h3 class="staffer-staff-title">
+														<a data-bio="" data-name="{{item['node'].field_nombre_personal.value}}">
+															{{item['node'].field_nombre_personal.value}}</a>
+													</h3>
+													<small class="staffer-staff-title">{{item['node'].field_cargo_personal.value}}</small>
+												</header>
+											</div>
+										</div>
+
+									{% endif %}
+									{# Ini - Modal Personal #}
+									<div class="modal fade cw-staffer-modal" id="cardmodal{{item['node'].id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cardmodalLabel" aria-hidden="true">
+										<div id="persona" class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 800px;">
+											<div id="modal-persona" class="fondo-default modal-content">
+												<div class="modal-header">
+
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="row text-center">
+														<div class="col-12 col-md-6">
+                              <div class="cw-modal-image">
+                                <img  src="{{file_url(item['node'].field_imagen_personal.entity.getFileUri())}}" width="180" height="180" alt="">
+                              </div>
+															<h5 class="staff-name pt-3">
+																{{item['node'].field_nombre_personal.value}}</h5>
+														</div>
+														<div class="col-12 col-md-6" style="text-align: left;">
+															<h5 class="staff-title">{{item['node'].field_cargo_personal.value}}</h5>
+															<h5 class="staff-department">{{departamento}}</h5>
+                              <div class="section pt-4">
+                                <div class="staff-mail">
+                                  <a href="mailto:{{item['node'].field_correo_personal.value}}">{{item['node'].field_correo_personal.value}}</a>
+                                </div>
+                                <div class="staff-phone">
+                                  {{item['node'].field_telefono_personal.value}}
+                                </div>
+                              </div>
+														</div>
+                            <div class="col-12 p-4">
+                              {{item['node'].field_informacion_personal.value|raw}}
+                            </div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									{# Fin - Modal Personal #}
+
+
+									{# fin - mostrando al personal  #}
+								{% endif %}
+							</li>
+						{% endfor %}
+						{% if menu_level == 0 %}
+						</ul>
+				{% else %}
+					</ul>
+				</div>
+			{% endif %}
+		{% endif %}
+	{% endmacro %}
+</div>

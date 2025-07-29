@@ -1,0 +1,21 @@
+uuid: 30422b8e-3fbc-4b29-9e6e-ce0a868bb9c3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modalidad_curso
+    - node.type.cursos
+  module:
+    - options
+id: node.cursos.field_modalidad_curso
+field_name: field_modalidad_curso
+entity_type: node
+bundle: cursos
+label: Modalidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

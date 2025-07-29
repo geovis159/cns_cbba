@@ -1,0 +1,23 @@
+uuid: 412d2212-116d-4d8e-8d9d-ef671d1d27a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_documentos
+    - node.type.documento
+id: node.documento.field_anio_documentos
+field_name: field_anio_documentos
+entity_type: node
+bundle: documento
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 0edf123a-63a5-4323-957d-764c669e64fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_manual_organizac
+    - node.type.manual_de_organizacion_funcional
+id: node.manual_de_organizacion_funcional.field_titulo_manual_organizac
+field_name: field_titulo_manual_organizac
+entity_type: node
+bundle: manual_de_organizacion_funcional
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

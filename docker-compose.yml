@@ -1,0 +1,36 @@
+services:
+  drupal:
+    image: drupal:10
+    hostname: drupal
+    container_name: drupal
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/var/www/html
+      #- ./:/var/www/html
+      #- ./localhost.conf:/etc/apache2/sites-available/localhost.conf
+    depends_on:
+      - db
+    networks:
+      - drupal_net
+
+  db:
+    image: mariadb:10.6
+    hostname: db
+    container_name: db
+    restart: always
+    volumes:
+      - ./data_mysql:/var/lib/mysql:Z
+    environment:
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: Password123
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    networks:
+      - drupal_net
+
+networks:
+  drupal_net:
+    external: true

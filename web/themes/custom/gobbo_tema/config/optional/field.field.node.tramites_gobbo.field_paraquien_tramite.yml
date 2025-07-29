@@ -1,0 +1,19 @@
+uuid: 48f22694-e039-4bb8-86a9-141116d96c86
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paraquien_tramite
+    - node.type.tramites_gobbo
+id: node.tramites_gobbo.field_paraquien_tramite
+field_name: field_paraquien_tramite
+entity_type: node
+bundle: tramites_gobbo
+label: '¿A quién va dirigido?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

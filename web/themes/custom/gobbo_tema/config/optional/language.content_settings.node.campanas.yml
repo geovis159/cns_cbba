@@ -1,0 +1,11 @@
+uuid: 70968a95-77ec-40e4-b5b6-7dc0151c77f8
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.campanas
+id: node.campanas
+target_entity_type_id: node
+target_bundle: campanas
+default_langcode: site_default
+language_alterable: false

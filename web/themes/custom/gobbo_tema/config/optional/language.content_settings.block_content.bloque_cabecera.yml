@@ -1,0 +1,11 @@
+uuid: c5c1f88f-c8e2-41c1-a4c8-fbe2e936cf8d
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_cabecera
+id: block_content.bloque_cabecera
+target_entity_type_id: block_content
+target_bundle: bloque_cabecera
+default_langcode: site_default
+language_alterable: false

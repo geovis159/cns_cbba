@@ -1,0 +1,106 @@
+uuid: c0c0c049-c573-4bca-8a29-a13c57b323d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.escala_salarial.field_anio_escala_salarial
+    - field.field.node.escala_salarial.field_documento_escala_salarial
+    - field.field.node.escala_salarial.field_fecha_de_aprobacion
+    - field.field.node.escala_salarial.field_titulo_escala_salrial
+    - node.type.escala_salarial
+  module:
+    - datetime
+    - file
+    - path
+id: node.escala_salarial.default
+targetEntityType: node
+bundle: escala_salarial
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_anio_escala_salarial:
+    type: number
+    weight: 123
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_documento_escala_salarial:
+    type: file_generic
+    weight: 125
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_fecha_de_aprobacion:
+    type: datetime_default
+    weight: 124
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_titulo_escala_salrial:
+    type: string_textfield
+    weight: 121
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

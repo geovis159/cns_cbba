@@ -1,0 +1,33 @@
+uuid: a4073c1e-9749-4873-8bad-57d1f7ad4185
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.redes_sociales.field_facebook_rrss
+    - field.field.node.redes_sociales.field_instagram_rrss
+    - field.field.node.redes_sociales.field_tiktok_rrss
+    - field.field.node.redes_sociales.field_whatsapp_rrss
+    - field.field.node.redes_sociales.field_x_rrss
+    - field.field.node.redes_sociales.field_youtube_rrss
+    - node.type.redes_sociales
+  module:
+    - user
+id: node.redes_sociales.teaser
+targetEntityType: node
+bundle: redes_sociales
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_facebook_rrss: true
+  field_instagram_rrss: true
+  field_tiktok_rrss: true
+  field_whatsapp_rrss: true
+  field_x_rrss: true
+  field_youtube_rrss: true
+  langcode: true

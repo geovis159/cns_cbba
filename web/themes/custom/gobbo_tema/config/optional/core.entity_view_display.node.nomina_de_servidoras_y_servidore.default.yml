@@ -1,0 +1,65 @@
+uuid: 80996918-95f6-4e46-badc-2fbc89ca0d9d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.nomina_de_servidoras_y_servidore.field_area_unidad
+    - field.field.node.nomina_de_servidoras_y_servidore.field_cargo
+    - field.field.node.nomina_de_servidoras_y_servidore.field_correo_institucional
+    - field.field.node.nomina_de_servidoras_y_servidore.field_nombre_servidor_publico
+    - field.field.node.nomina_de_servidoras_y_servidore.field_telefono
+    - node.type.nomina_de_servidoras_y_servidore
+  module:
+    - user
+id: node.nomina_de_servidoras_y_servidore.default
+targetEntityType: node
+bundle: nomina_de_servidoras_y_servidore
+mode: default
+content:
+  field_area_unidad:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_cargo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_correo_institucional:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_nombre_servidor_publico:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_telefono:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

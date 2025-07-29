@@ -1,0 +1,29 @@
+uuid: cef23bb8-1e52-4e35-9b5b-bb928ec10bbb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_redes_sociales
+    - node.type.footer_central
+    - node.type.redes_sociales
+id: node.footer_central.field_redes_sociales
+field_name: field_redes_sociales
+entity_type: node
+bundle: footer_central
+label: 'Redes sociales'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      redes_sociales: redes_sociales
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 691d377c-0942-4fa7-9303-4a4e879dda3f
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Servicios
+type: servicios
+description: 'Servicios que ofrece la entidad'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

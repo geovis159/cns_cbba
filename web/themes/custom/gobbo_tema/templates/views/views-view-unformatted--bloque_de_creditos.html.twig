@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% for row in rows %}
+
+	{# dump($variables['rows'][0]['content']['#row']->_entity->field_enlace_carrousel->title) #}
+	{# {{dump(row['content']['#row']._entity.field_credito_footer.value)}} #}
+
+	<div style="background-image:url(/{{ directory }}/imagenes/alpha-web-cinta.png); background-repeat:repeat-x; background-size: contain; height: 48px; "> </div>
+	<hr class="hr">
+	</hr>
+	<!-- Pie de pagina -->
+	<div class="footer-credito text-center pb-3">
+		<a class="" href="#" style="text-decoration: none;">{{row['content']['#row']._entity.field_credito_footer.value}}</a>
+	</div>
+{% endfor %}

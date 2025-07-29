@@ -1,0 +1,20 @@
+uuid: 1eed2aa4-a60b-4f3c-ab1f-79254d93f293
+langcode: es
+status: true
+dependencies:
+  module:
+    - bloque_generales_gobbo
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquefiltrosgobbo
+theme: gobbo_tema
+region: top_header_form
+weight: 0
+provider: null
+plugin: bloque_filtros_gobbo
+settings:
+  id: bloque_filtros_gobbo
+  label: 'Bloque filtros gobbo'
+  label_display: visible
+  provider: bloque_generales_gobbo
+visibility: {  }

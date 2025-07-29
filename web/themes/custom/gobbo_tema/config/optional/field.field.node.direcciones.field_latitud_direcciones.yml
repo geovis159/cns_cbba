@@ -1,0 +1,19 @@
+uuid: 3e49a5ff-4f4c-427a-bd3e-6c559674067c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latitud_direcciones
+    - node.type.direcciones
+id: node.direcciones.field_latitud_direcciones
+field_name: field_latitud_direcciones
+entity_type: node
+bundle: direcciones
+label: Latitud
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

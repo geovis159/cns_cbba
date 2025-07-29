@@ -1,0 +1,48 @@
+uuid: ce4524d9-fa5a-4418-871a-6a458cca3eb6
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_departamento_direcciones
+field_name: field_departamento_direcciones
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: la_paz
+      label: 'La Paz'
+    -
+      value: pando
+      label: Pando
+    -
+      value: beni
+      label: Beni
+    -
+      value: santa_cruz
+      label: 'Santa Cruz'
+    -
+      value: cochabamba
+      label: Cochabamba
+    -
+      value: chiquisaca
+      label: Chiquisaca
+    -
+      value: oruro
+      label: Oruro
+    -
+      value: potosi
+      label: Potosi
+    -
+      value: tarija
+      label: Tarija
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

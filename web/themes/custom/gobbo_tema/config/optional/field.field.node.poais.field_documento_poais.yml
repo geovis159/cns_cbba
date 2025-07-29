@@ -1,0 +1,27 @@
+uuid: 48f4ad0f-f78c-4d48-9e04-d7b68f18b068
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_poais
+    - node.type.poais
+  module:
+    - file
+id: node.poais.field_documento_poais
+field_name: field_documento_poais
+entity_type: node
+bundle: poais
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: true
+field_type: file

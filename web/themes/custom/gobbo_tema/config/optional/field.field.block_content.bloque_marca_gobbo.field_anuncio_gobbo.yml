@@ -1,0 +1,19 @@
+uuid: 9a4e1626-f423-40f0-97e4-00ba471a1581
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_marca_gobbo
+    - field.storage.block_content.field_anuncio_gobbo
+id: block_content.bloque_marca_gobbo.field_anuncio_gobbo
+field_name: field_anuncio_gobbo
+entity_type: block_content
+bundle: bloque_marca_gobbo
+label: 'Anuncio gobbo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

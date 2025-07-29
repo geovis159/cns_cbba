@@ -1,0 +1,23 @@
+uuid: 92ad04ab-fb46-485b-84e3-ba4de1f2d5e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.footer_credito.field_credito_footer
+    - node.type.footer_credito
+  module:
+    - user
+id: node.footer_credito.teaser
+targetEntityType: node
+bundle: footer_credito
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_credito_footer: true
+  langcode: true

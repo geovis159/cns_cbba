@@ -1,0 +1,30 @@
+uuid: e35d2cf7-c29b-4d82-b88c-8407c6c0aa06
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:titulo_bloque:a6aded80-8a19-4b0a-bc35-5d3ed172844f'
+  module:
+    - block_content
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquetituloindicadores
+theme: gobbo_tema
+region: content
+weight: -15
+provider: null
+plugin: 'block_content:a6aded80-8a19-4b0a-bc35-5d3ed172844f'
+settings:
+  id: 'block_content:a6aded80-8a19-4b0a-bc35-5d3ed172844f'
+  label: 'Bloque Título Indicadores'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

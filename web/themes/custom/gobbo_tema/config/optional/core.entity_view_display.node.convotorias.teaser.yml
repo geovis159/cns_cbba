@@ -1,0 +1,31 @@
+uuid: 9bd479c0-130d-4625-a13a-42048c8a8ae4
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.convotorias.field_anio_convocatoria_bs
+    - field.field.node.convotorias.field_convocatoria
+    - field.field.node.convotorias.field_cuce
+    - field.field.node.convotorias.field_fecha_de_cierre_convocator
+    - field.field.node.convotorias.field_terminos_de_referencia
+    - node.type.convotorias
+  module:
+    - user
+id: node.convotorias.teaser
+targetEntityType: node
+bundle: convotorias
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_convocatoria_bs: true
+  field_convocatoria: true
+  field_cuce: true
+  field_fecha_de_cierre_convocator: true
+  field_terminos_de_referencia: true
+  langcode: true

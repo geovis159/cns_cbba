@@ -1,0 +1,23 @@
+uuid: 741f7fb8-a941-4dca-8bcf-1a1c14203c6c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_escala_salarial
+    - node.type.escala_salarial
+id: node.escala_salarial.field_anio_escala_salarial
+field_name: field_anio_escala_salarial
+entity_type: node
+bundle: escala_salarial
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

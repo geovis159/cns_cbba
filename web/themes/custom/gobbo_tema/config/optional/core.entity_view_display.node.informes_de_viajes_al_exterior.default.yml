@@ -1,0 +1,58 @@
+uuid: 64fc38c7-b08b-4522-bc28-383d7558ba62
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.informes_de_viajes_al_exterior.field_anio_info_viajes
+    - field.field.node.informes_de_viajes_al_exterior.field_cite_viaje
+    - field.field.node.informes_de_viajes_al_exterior.field_pdf_viaje
+    - field.field.node.informes_de_viajes_al_exterior.field_referencia_viaje
+    - node.type.informes_de_viajes_al_exterior
+  module:
+    - file
+    - user
+id: node.informes_de_viajes_al_exterior.default
+targetEntityType: node
+bundle: informes_de_viajes_al_exterior
+mode: default
+content:
+  field_anio_info_viajes:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_cite_viaje:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_pdf_viaje:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_referencia_viaje:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

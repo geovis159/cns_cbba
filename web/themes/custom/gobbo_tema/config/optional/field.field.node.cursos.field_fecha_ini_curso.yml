@@ -1,0 +1,21 @@
+uuid: e8742c88-0e26-402e-9139-7fc78fa31442
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_ini_curso
+    - node.type.cursos
+  module:
+    - datetime
+id: node.cursos.field_fecha_ini_curso
+field_name: field_fecha_ini_curso
+entity_type: node
+bundle: cursos
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

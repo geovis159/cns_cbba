@@ -1,0 +1,19 @@
+uuid: 2ad880da-e01d-4b97-a4ac-21eea59ceaeb
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.formulario_de_denuncias_por_hech
+    - field.storage.contact_message.field_field_form_ci_denuncia
+id: contact_message.formulario_de_denuncias_por_hech.field_field_form_ci_denuncia
+field_name: field_field_form_ci_denuncia
+entity_type: contact_message
+bundle: formulario_de_denuncias_por_hech
+label: 'Nro. de Cédula de Identidad'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

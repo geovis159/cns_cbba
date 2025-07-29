@@ -1,0 +1,23 @@
+uuid: f273e2bd-8d19-4d20-86b1-0f3518cfd8cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cantidad
+    - node.type.oportunidad_de_empleo
+id: node.oportunidad_de_empleo.field_cantidad
+field_name: field_cantidad
+entity_type: node
+bundle: oportunidad_de_empleo
+label: Cantidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

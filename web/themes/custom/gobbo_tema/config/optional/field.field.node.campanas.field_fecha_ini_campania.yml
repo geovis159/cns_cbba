@@ -1,0 +1,21 @@
+uuid: 2709bcdc-6ded-4d71-ab2d-405af951dfdf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_ini_campania
+    - node.type.campanas
+  module:
+    - datetime
+id: node.campanas.field_fecha_ini_campania
+field_name: field_fecha_ini_campania
+entity_type: node
+bundle: campanas
+label: "Fecha de Inicio\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

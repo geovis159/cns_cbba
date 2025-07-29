@@ -1,0 +1,11 @@
+uuid: 493f080c-ecfd-4175-95e2-34c134ce88d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.leyes
+id: node.leyes
+target_entity_type_id: node
+target_bundle: leyes
+default_langcode: site_default
+language_alterable: false

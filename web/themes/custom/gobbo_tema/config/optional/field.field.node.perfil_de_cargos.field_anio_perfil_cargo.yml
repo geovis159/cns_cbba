@@ -1,0 +1,23 @@
+uuid: 132b83ef-605c-488c-a186-49448dcae332
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_perfil_cargo
+    - node.type.perfil_de_cargos
+id: node.perfil_de_cargos.field_anio_perfil_cargo
+field_name: field_anio_perfil_cargo
+entity_type: node
+bundle: perfil_de_cargos
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

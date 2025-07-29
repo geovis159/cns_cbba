@@ -1,0 +1,19 @@
+uuid: da49f4cc-6090-4c8f-99bf-38e4a8c6c158
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_x_rrss
+field_name: field_x_rrss
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

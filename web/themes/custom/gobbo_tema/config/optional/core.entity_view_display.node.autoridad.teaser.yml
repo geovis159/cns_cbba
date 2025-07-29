@@ -1,0 +1,29 @@
+uuid: ce5c1c71-1f85-4686-8d9d-c67cca9c418b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.autoridad.field_cargo_autoridad
+    - field.field.node.autoridad.field_imagen_autoridad
+    - field.field.node.autoridad.field_informacion_autoridad
+    - field.field.node.autoridad.field_nombre_autoridad
+    - node.type.autoridad
+  module:
+    - user
+id: node.autoridad.teaser
+targetEntityType: node
+bundle: autoridad
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cargo_autoridad: true
+  field_imagen_autoridad: true
+  field_informacion_autoridad: true
+  field_nombre_autoridad: true
+  langcode: true

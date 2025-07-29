@@ -1,0 +1,8 @@
+uuid: d5bf2559-7275-4996-b840-005d4dd8679d
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_marca_gobbo
+label: 'Bloque marca Gobbo'
+revision: false
+description: 'Bloque de mensaje de sitio oficial de Gob.bo'

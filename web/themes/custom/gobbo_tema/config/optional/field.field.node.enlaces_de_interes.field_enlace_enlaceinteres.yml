@@ -1,0 +1,23 @@
+uuid: 155401a8-617c-418a-9e22-11b5e2fe662c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlace_enlaceinteres
+    - node.type.enlaces_de_interes
+  module:
+    - link
+id: node.enlaces_de_interes.field_enlace_enlaceinteres
+field_name: field_enlace_enlaceinteres
+entity_type: node
+bundle: enlaces_de_interes
+label: Enlace
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

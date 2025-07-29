@@ -1,0 +1,9 @@
+uuid: 5d3c85f4-b7b6-43e0-9a29-4c58bead5052
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de enlaces'
+vid: tipos_de_enlaces
+description: 'Tipos de enlaces de interes'
+weight: 0
+new_revision: false

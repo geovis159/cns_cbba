@@ -1,0 +1,38 @@
+uuid: c70f4d89-df87-48b1-a14d-5d505149d1f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo_central_footer
+    - node.type.footer_central
+  module:
+    - image
+id: node.footer_central.field_logo_central_footer
+field_name: field_logo_central_footer
+entity_type: node
+bundle: footer_central
+label: 'Logo central'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

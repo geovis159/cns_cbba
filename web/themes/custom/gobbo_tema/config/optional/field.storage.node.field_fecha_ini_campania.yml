@@ -1,0 +1,20 @@
+uuid: 8918da20-f880-46f7-983a-d469f2b842f4
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_fecha_ini_campania
+field_name: field_fecha_ini_campania
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

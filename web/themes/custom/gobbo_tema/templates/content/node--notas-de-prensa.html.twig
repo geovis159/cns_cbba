@@ -1,0 +1,211 @@
+{#
+/**
+* @file
+* Bootstrap Barrio's theme implementation to display a node.
+*
+* Available variables:
+* - node: The node entity with limited access to object properties and methods.
+Only "getter" methods (method names starting with "get", "has", or "is")
+and a few common methods such as "id" and "label" are available. Calling
+other methods (such as node.delete) will result in an exception.
+* - label: The title of the node.
+* - content: All node items. Use {{ content }} to print them all,
+* or print a subset such as {{ content.field_example }}. Use
+* {{ content|without('field_example') }} to temporarily suppress the printing
+* of a given child element.
+* - author_picture: The node author user entity, rendered using the "compact"
+* view mode.
+* - metadata: Metadata for this node.
+* - date: Themed creation date field.
+* - author_name: Themed author name field.
+* - url: Direct URL of the current node.
+* - display_submitted: Whether submission information should be displayed.
+* - attributes: HTML attributes for the containing element.
+* The attributes.class element may contain one or more of the following
+* classes:
+* - node: The current template type (also known as a "theming hook").
+* - node--type-[type]: The current node type. For example, if the node is an
+* "Article" it would result in "node--type-article". Note that the machine
+* name will often be in a short form of the human readable label.
+* - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+* teaser would result in: "node--view-mode-teaser", and
+* full: "node--view-mode-full".
+* The following are controlled through the node publishing options.
+* - node--promoted: Appears on nodes promoted to the front page.
+* - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+* teaser listings.
+* - node--unpublished: Appears on unpublished nodes visible only to site
+* admins.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main
+* content tag that appears in the template.
+* - author_attributes: Same as attributes, except applied to the author of
+* the node tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+* - page: Flag for the full page state. Will be true if view_mode is 'full'.
+* - readmore: Flag for more state. Will be true if the teaser content of the
+* node cannot hold the main body content.
+* - logged_in: Flag for authenticated user status. Will be true when the
+* current user is a logged-in member.
+* - is_admin: Flag for admin user status. Will be true when the current user
+* is an administrator.
+*
+* @see template_preprocess_node()
+*/
+#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+node.isPromoted() ? 'node--promoted',
+node.isSticky() ? 'node--sticky',
+not node.isPublished() ? 'node--unpublished',
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+'clearfix',
+]
+%}
+
+  <style>
+    /* Estilos del toast */
+	#toast {
+        visibility: hidden;
+        min-width: 300px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 16px;
+        position: absolute;
+        z-index: 1;
+        left: 30%;
+        bottom: 10px;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, bottom 0.5s;
+    }
+
+    #toast.show {
+        visibility: visible;
+        opacity: 1;
+        bottom: 50px;
+    }
+  </style>
+<article id='nota-prensa' {{attributes.addClass(classes)}}>
+
+
+	<div class="container pt-0 detalle-nota">
+		<div class="row">
+			<div class='col-sm-8'>
+				<div class="pt-4" style='border: none;'>
+					<div class="card-body pt-0">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="{{url('<front>')}}">Inicio</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="/p-gina-de-notas-de-prensa">Notas
+										de prensa</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{content['field_titulo_nota']['#items'].value}}</li>
+
+							</ol>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+
+			<div class='col-12 col-sm-12 col-md-10 col-lg-9'>
+				<div class="py-2" style='border: none;'>
+
+					<div class="card-body pt-0">
+
+						<h2>{{content['field_titulo_nota']['#items'].value}}</h2>
+
+						<div class="d-flex justify-content-end" style='margin-bottom: 10px;'>
+							<div id="red-social" class="m-0 texto-default" style="border-bottom: 2px solid;">
+								<div class="text-lg-end" style="position: relative;">
+									<p class='mb-0 pb-0 ms-2 texto-default text-start'>
+										<strong>Compartir</strong>
+									</p>
+									<a href="https://www.facebook.com/sharer/sharer.php?u={{url('<front>')}}node/{{(node.id)}}" class="mx-3 text-reset" target="_blank">
+										<i class="icon texto-default bi bi-facebook fs-3"></i>
+									</a>
+									<a href="https://wa.me/?text=¡Mira%20este%20sitio%20web!%20{{url('<front>')}}node/{{(node.id)}}" target="_blank" class="mx-3 text-reset">
+										<i class="icon texto-default bi bi-whatsapp fs-3"></i>
+									</a>
+									<a href="https://twitter.com/intent/tweet?text=¡Mira%20este%20sitio%20web!%20{{url('<front>')}}node/{{(node.id)}}" class="mx-3 text-reset" target="_blank">
+										<i class="icon texto-default bi bi-twitter-x fs-3"></i>
+									</a>
+									<a onclick="copyLink()" class="mx-3 text-reset" target="_blank" style="cursor: pointer;">
+										<i class="icon texto-default bi bi-link fs-3"></i>
+									</a>
+									<div id="toast">¡Enlace copiado al portapapeles!</div>
+
+								</div>
+							
+							
+							</div>
+						</div>
+						<p class="card-text parrafo-resumen">{{content['field_resumen_nota']['#items'].value}}</p>
+						<div class="pb-2">
+							{% set date_service = drupal_date.formatter %}
+
+							<img src='{{file_url(node.field_imagen_nota.entity.getFileUri())}}'
+								class='card-img-top mx-auto'>
+							<p style="font-size: 12px;" class="pt-2 card-text texto-default">
+								{{node.field_descripcion_nota.value}}</p>
+						</div>
+						<p class="card-title parrafo-fecha texto-default">{{node.field_lugar_nota.value}},
+							{{node.created.value|date('j')}} {{node.created.value|format_date("custom", "F")}}
+							de
+							{{node.created.value|date('Y')}}
+
+						</p>
+						<div class="pt-2 texto-default" id="contenido-nota-prensa" style="text-align: justify;">
+							{{node.field_contenido_nota.value|raw}}</div>
+					</div>
+					<!-- <div class="card-footer bg-transparent border-success">Footer</div> -->
+				</div>
+
+			</div>
+			<!-- <div class='col-sm-4'>
+						
+						        </div> -->
+
+		</div>
+
+
+	</div>
+</article>
+
+<script>
+  function copyLink() {
+    const link = window.location.href;
+    navigator.clipboard.writeText(link).then(() => {
+		showToast();
+    });
+  }
+  function showToast() {
+      const toast = document.getElementById("toast");
+      toast.className = "show";
+      setTimeout(() => {
+        toast.className = toast.className.replace("show", "");
+      }, 3000); 
+    }
+</script>

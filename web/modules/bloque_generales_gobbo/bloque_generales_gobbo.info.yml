@@ -1,0 +1,7 @@
+name: 'Bloques generales Gobbo'
+type: module
+description: 'Bloques de contenido generales por defecto.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:block

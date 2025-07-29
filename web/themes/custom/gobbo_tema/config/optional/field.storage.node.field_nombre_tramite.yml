@@ -1,0 +1,19 @@
+uuid: 2a5027fb-6e3f-4475-b3b9-b7782a60522c
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_nombre_tramite
+field_name: field_nombre_tramite
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

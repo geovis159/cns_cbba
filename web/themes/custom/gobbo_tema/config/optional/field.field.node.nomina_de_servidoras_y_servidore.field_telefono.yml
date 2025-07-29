@@ -1,0 +1,23 @@
+uuid: 7cf82b29-91d0-434d-b9b1-f4944a1f96d4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono
+    - node.type.nomina_de_servidoras_y_servidore
+id: node.nomina_de_servidoras_y_servidore.field_telefono
+field_name: field_telefono
+entity_type: node
+bundle: nomina_de_servidoras_y_servidore
+label: Teléfono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

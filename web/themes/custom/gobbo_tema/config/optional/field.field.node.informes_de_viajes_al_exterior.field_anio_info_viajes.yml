@@ -1,0 +1,23 @@
+uuid: a9061a40-3f85-4017-8483-656c2b3baf47
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_info_viajes
+    - node.type.informes_de_viajes_al_exterior
+id: node.informes_de_viajes_al_exterior.field_anio_info_viajes
+field_name: field_anio_info_viajes
+entity_type: node
+bundle: informes_de_viajes_al_exterior
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

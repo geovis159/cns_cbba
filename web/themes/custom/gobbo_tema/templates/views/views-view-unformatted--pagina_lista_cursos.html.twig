@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<div id="cursos" class="row" style='margin-bottom: 25px;'>
+
+
+	{% for row in rows %}
+
+
+	<div class='col-sm-4'>
+		<div class='card h-100'>
+			<h5 class='card-title m-4' style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;">
+				{{row['content']['#row']._entity.field_titulo_curso.value}}
+			</h5>
+			<img style="object-fit: cover;" src='{{file_url(row['content']['#row']._entity.field_imagen_curso.entity.uri.value)}}' class='mx-2' alt='imagen' height='240'>
+			<div class='card-body'>
+				<p class='texto-anuncio'>
+					<strong> Modalidad </strong>
+					{{row['content']['#row']._entity.field_modalidad_curso.value}}
+				</p>
+				<p class='texto-anuncio'>
+				<strong> Tiempo de duración </strong>
+				{{row['content']['#row']._entity.field_duracion_curso.value}}
+				</p>
+				<p class='texto-anuncio'>
+				<strong> Fecha de inicio </strong>
+				{% if row['content']['#row']._entity.field_fecha_ini_curso.value %}
+					{{row['content']['#row']._entity.field_fecha_ini_curso.value|date('d/m/Y')}}
+				{% endif %}
+				</p>
+			</div>
+			<div class='card-footer bg-transparent my-0 py-0' style='border: none; align-items: flex-end;'>
+
+				<a href="{{url('<front>')}}/node/{{row['content']['#row']._entity.nid.value}}">
+					<p class='text-lg-end'>Ver curso <i class='bi bi-arrow-right'></i></p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	{% endfor %}
+
+</div>

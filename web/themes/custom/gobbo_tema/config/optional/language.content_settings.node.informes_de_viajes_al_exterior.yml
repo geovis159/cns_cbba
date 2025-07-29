@@ -1,0 +1,11 @@
+uuid: f4075f1e-fc9d-4b56-8698-d55805915882
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.informes_de_viajes_al_exterior
+id: node.informes_de_viajes_al_exterior
+target_entity_type_id: node
+target_bundle: informes_de_viajes_al_exterior
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,29 @@
+uuid: a706a18b-87c5-48a6-9f52-8e41a992b211
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.leyes.field_archivo_ley
+    - field.field.node.leyes.field_descripcion_ley
+    - field.field.node.leyes.field_fecha_ley
+    - field.field.node.leyes.field_titulo_ley
+    - node.type.leyes
+  module:
+    - user
+id: node.leyes.teaser
+targetEntityType: node
+bundle: leyes
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_archivo_ley: true
+  field_descripcion_ley: true
+  field_fecha_ley: true
+  field_titulo_ley: true
+  langcode: true

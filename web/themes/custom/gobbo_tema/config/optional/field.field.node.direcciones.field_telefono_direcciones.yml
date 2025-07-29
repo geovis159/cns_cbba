@@ -1,0 +1,19 @@
+uuid: ca543cd4-303e-46e1-8ca1-978d5914d9b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono_direcciones
+    - node.type.direcciones
+id: node.direcciones.field_telefono_direcciones
+field_name: field_telefono_direcciones
+entity_type: node
+bundle: direcciones
+label: 'Número de teléfono'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

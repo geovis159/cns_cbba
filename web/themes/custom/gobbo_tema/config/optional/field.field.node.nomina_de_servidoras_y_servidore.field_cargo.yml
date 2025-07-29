@@ -1,0 +1,19 @@
+uuid: 06f4cbd4-2884-4e3f-a24d-6eb82dd9d761
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargo
+    - node.type.nomina_de_servidoras_y_servidore
+id: node.nomina_de_servidoras_y_servidore.field_cargo
+field_name: field_cargo
+entity_type: node
+bundle: nomina_de_servidoras_y_servidore
+label: Cargo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

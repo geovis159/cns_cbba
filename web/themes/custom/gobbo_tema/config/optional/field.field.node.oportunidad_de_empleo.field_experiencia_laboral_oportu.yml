@@ -1,0 +1,19 @@
+uuid: 401dd4cb-ae0c-4a59-9e18-b55b69ede5e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiencia_laboral_oportu
+    - node.type.oportunidad_de_empleo
+id: node.oportunidad_de_empleo.field_experiencia_laboral_oportu
+field_name: field_experiencia_laboral_oportu
+entity_type: node
+bundle: oportunidad_de_empleo
+label: 'Experiencia Laboral'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

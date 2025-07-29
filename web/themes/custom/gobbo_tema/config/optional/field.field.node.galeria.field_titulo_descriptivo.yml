@@ -1,0 +1,19 @@
+uuid: 704961cc-da21-4547-977c-2d3d6008b723
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_descriptivo
+    - node.type.galeria
+id: node.galeria.field_titulo_descriptivo
+field_name: field_titulo_descriptivo
+entity_type: node
+bundle: galeria
+label: 'Título descriptivo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

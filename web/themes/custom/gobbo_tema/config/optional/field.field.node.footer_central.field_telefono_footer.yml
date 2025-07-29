@@ -1,0 +1,19 @@
+uuid: 1d076ec2-b7f2-42d9-8dd5-01ae0b293a60
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono_footer
+    - node.type.footer_central
+id: node.footer_central.field_telefono_footer
+field_name: field_telefono_footer
+entity_type: node
+bundle: footer_central
+label: 'Teléfono institucional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

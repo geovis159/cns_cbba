@@ -1,0 +1,23 @@
+uuid: 7f270049-d6f4-43cc-a0ca-3da35a4a3d85
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instagram_rrss
+    - node.type.redes_sociales
+  module:
+    - link
+id: node.redes_sociales.field_instagram_rrss
+field_name: field_instagram_rrss
+entity_type: node
+bundle: redes_sociales
+label: Instagram
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

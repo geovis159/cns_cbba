@@ -1,0 +1,11 @@
+uuid: 69b79511-b8cb-424b-a643-b480935fddd7
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_creditos
+id: block_content.bloque_creditos
+target_entity_type_id: block_content
+target_bundle: bloque_creditos
+default_langcode: site_default
+language_alterable: false

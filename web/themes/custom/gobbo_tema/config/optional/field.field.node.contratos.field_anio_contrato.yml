@@ -1,0 +1,23 @@
+uuid: f70dbfe8-e9cb-4f77-888b-1c62cd321135
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_contrato
+    - node.type.contratos
+id: node.contratos.field_anio_contrato
+field_name: field_anio_contrato
+entity_type: node
+bundle: contratos
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

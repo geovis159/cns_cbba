@@ -1,0 +1,19 @@
+uuid: cceb1792-8215-4fc8-b097-e3039275a8b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linea_gratuita_footer
+    - node.type.footer_central
+id: node.footer_central.field_linea_gratuita_footer
+field_name: field_linea_gratuita_footer
+entity_type: node
+bundle: footer_central
+label: 'Línea gratuita'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

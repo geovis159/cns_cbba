@@ -1,0 +1,11 @@
+uuid: 961537fd-6e2e-4c3d-876b-7b6be62c1b9a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.contratos
+id: node.contratos
+target_entity_type_id: node
+target_bundle: contratos
+default_langcode: site_default
+language_alterable: false

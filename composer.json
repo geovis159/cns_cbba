@@ -1,0 +1,61 @@
+{
+  "name": "vendor_name/gobbo-portal-plantilla-drupal",
+  "description": "Plantilla Gob.bo basada en Drupal 10 con módulos comunes",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Sistemas",
+      "email": "email@example.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {
+    "drupal/core-recommended": "^10",
+    "drupal/core-composer-scaffold": "^10",
+    "drupal/core-project-message": "^10",
+    "drupal/bootstrap_barrio": "^4.2",
+    "drupal/admin_toolbar": "^3.5",
+    "drupal/paragraphs": "^1.13",
+    "drupal/webform": "^6.1",
+    "drupal/pathauto": "^1.10",
+    "drupal/token": "^1.12",
+    "drush/drush": "^11.5"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-install-cmd": [
+      "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
+      "Drupal\\Core\\Composer\\Composer::ensureHtaccess"
+    ],
+    "post-update-cmd": [
+      "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
+      "Drupal\\Core\\Composer\\Composer::ensureHtaccess"
+    ]
+  },
+  "extra": {
+    "enable-patching": true,
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      }
+    },
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": ["type:drupal-library"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+    }
+  }
+}

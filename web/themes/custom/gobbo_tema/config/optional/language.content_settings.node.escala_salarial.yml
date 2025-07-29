@@ -1,0 +1,11 @@
+uuid: ad7f09ab-175e-422d-9b15-857314b32c77
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.escala_salarial
+id: node.escala_salarial
+target_entity_type_id: node
+target_bundle: escala_salarial
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,66 @@
+uuid: 9a089ff5-128a-4a08-9141-a90a8c4c079c
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_cabecera
+    - field.field.block_content.bloque_cabecera.field_cabecera_lema
+    - field.field.block_content.bloque_cabecera.field_cabecera_logo_1
+    - field.field.block_content.bloque_cabecera.field_cabecera_logo_2
+    - field.field.block_content.bloque_cabecera.field_cabecera_nombre
+    - field.field.block_content.bloque_cabecera.field_cabecera_sigla
+  module:
+    - image
+id: block_content.bloque_cabecera.default
+targetEntityType: block_content
+bundle: bloque_cabecera
+mode: default
+content:
+  field_cabecera_lema:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cabecera_logo_1:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cabecera_logo_2:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_cabecera_nombre:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cabecera_sigla:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,60 @@
+uuid: 2565aaf9-2a0e-4c66-b48e-b5f8c8e3a168
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.herramientas_y_servicios.field_anuncio
+    - field.field.node.herramientas_y_servicios.field_contenido
+    - field.field.node.herramientas_y_servicios.field_imagen
+    - field.field.node.herramientas_y_servicios.field_titulo_herramientas
+    - node.type.herramientas_y_servicios
+  module:
+    - image
+    - text
+    - user
+id: node.herramientas_y_servicios.default
+targetEntityType: node
+bundle: herramientas_y_servicios
+mode: default
+content:
+  field_anuncio:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_contenido:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_imagen:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_titulo_herramientas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

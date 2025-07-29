@@ -1,0 +1,29 @@
+uuid: 96d33d05-6c6a-4edb-97b4-40a6799bcd87
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.informes_de_viajes_al_exterior.field_anio_info_viajes
+    - field.field.node.informes_de_viajes_al_exterior.field_cite_viaje
+    - field.field.node.informes_de_viajes_al_exterior.field_pdf_viaje
+    - field.field.node.informes_de_viajes_al_exterior.field_referencia_viaje
+    - node.type.informes_de_viajes_al_exterior
+  module:
+    - user
+id: node.informes_de_viajes_al_exterior.teaser
+targetEntityType: node
+bundle: informes_de_viajes_al_exterior
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_info_viajes: true
+  field_cite_viaje: true
+  field_pdf_viaje: true
+  field_referencia_viaje: true
+  langcode: true

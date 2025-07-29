@@ -1,0 +1,38 @@
+uuid: f053a07b-87f9-455a-b7eb-63e6fce808e6
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:15d0107a-515c-4e8b-a5e5-1b9256c8e63b'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_indicadores
+theme: gobbo_tema
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:15d0107a-515c-4e8b-a5e5-1b9256c8e63b'
+settings:
+  id: 'block_content:15d0107a-515c-4e8b-a5e5-1b9256c8e63b'
+  label: Indicadores
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      indicadores: indicadores

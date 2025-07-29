@@ -1,0 +1,19 @@
+uuid: b59e1185-41e1-4d64-af82-83fbed9cb44c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_curso
+    - node.type.cursos
+id: node.cursos.field_titulo_curso
+field_name: field_titulo_curso
+entity_type: node
+bundle: cursos
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

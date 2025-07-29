@@ -1,0 +1,19 @@
+uuid: 295c8ed0-53db-4356-8a49-41924516c25a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono_personal
+    - node.type.personal
+id: node.personal.field_telefono_personal
+field_name: field_telefono_personal
+entity_type: node
+bundle: personal
+label: Teléfono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

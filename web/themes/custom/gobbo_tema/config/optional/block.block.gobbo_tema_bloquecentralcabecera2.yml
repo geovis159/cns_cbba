@@ -1,0 +1,21 @@
+uuid: a93622e5-1c52-489c-8819-14f789cf6b69
+langcode: es
+status: false
+dependencies:
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquecentralcabecera2
+theme: gobbo_tema
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:47a4f373-2516-4986-9ae2-115575c3a24b'
+settings:
+  id: 'block_content:47a4f373-2516-4986-9ae2-115575c3a24b'
+  label: 'Bloque central cabecera 2'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

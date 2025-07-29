@@ -1,0 +1,75 @@
+uuid: 038a8e2d-82e8-44fc-aacb-e8acf0a07618
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_cabecera
+    - field.field.block_content.bloque_cabecera.field_cabecera_lema
+    - field.field.block_content.bloque_cabecera.field_cabecera_logo_1
+    - field.field.block_content.bloque_cabecera.field_cabecera_logo_2
+    - field.field.block_content.bloque_cabecera.field_cabecera_nombre
+    - field.field.block_content.bloque_cabecera.field_cabecera_sigla
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.bloque_cabecera.default
+targetEntityType: block_content
+bundle: bloque_cabecera
+mode: default
+content:
+  field_cabecera_lema:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cabecera_logo_1:
+    type: image_image
+    weight: 29
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_cabecera_logo_2:
+    type: image_image
+    weight: 30
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_cabecera_nombre:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cabecera_sigla:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

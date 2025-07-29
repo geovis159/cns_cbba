@@ -1,0 +1,27 @@
+uuid: 10e03049-10a1-4e23-afc4-80fae3820d1d
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_rendicion
+field_name: field_tipo_rendicion
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: inicial
+      label: Inicial
+    -
+      value: final
+      label: Final
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

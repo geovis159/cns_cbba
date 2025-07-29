@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{# <input{{ attributes.addClass("form-control  fondo-default").removeClass("form-text") }} />{{ children }} #}
+<div class="input-group texto-default" style="display: flex !important; ">
+    <input{{ attributes.addClass("form-control fondo-default texto-default").removeClass("form-text") }} />{{ children }}
+    <input type="submit" hidden id="id-enviar"></input>
+    <span class="input-group-text fondo-default" id="clearInput{{ attributes.storage['id'] }}"><i class="bi bi-x-circle-fill texto-default"></i></span>
+</div>
+
+<script>
+    document.getElementById('clearInput{{ attributes.storage['id'] }}').addEventListener('click', function() {
+        document.getElementById('{{ attributes.storage['id'] }}').value = ''; 
+        document.getElementById('id-enviar').click();
+    });
+
+</script>

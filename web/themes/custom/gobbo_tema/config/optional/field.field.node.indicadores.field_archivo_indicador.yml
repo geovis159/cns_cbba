@@ -1,0 +1,27 @@
+uuid: c60f2ca7-70ec-4cfe-a2e9-61a1cfc40dac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archivo_indicador
+    - node.type.indicadores
+  module:
+    - file
+id: node.indicadores.field_archivo_indicador
+field_name: field_archivo_indicador
+entity_type: node
+bundle: indicadores
+label: Archivo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

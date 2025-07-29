@@ -1,0 +1,19 @@
+uuid: 1f5bd78d-ce78-4b0a-a377-5ae8e256eb32
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_nota
+    - node.type.notas_de_prensa
+id: node.notas_de_prensa.field_descripcion_nota
+field_name: field_descripcion_nota
+entity_type: node
+bundle: notas_de_prensa
+label: 'Descripción de imagen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 80f7af70-a42d-4121-b51c-232ef1fbfaed
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.formulario_de_denuncias_por_hech
+    - field.storage.contact_message.field_form_celular_denuncia
+id: contact_message.formulario_de_denuncias_por_hech.field_form_celular_denuncia
+field_name: field_form_celular_denuncia
+entity_type: contact_message
+bundle: formulario_de_denuncias_por_hech
+label: 'Nro. de Celular '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

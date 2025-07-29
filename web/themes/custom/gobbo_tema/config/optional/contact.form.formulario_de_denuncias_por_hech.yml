@@ -1,0 +1,12 @@
+uuid: 17177991-d1a0-4156-aef2-4475e878772f
+langcode: es
+status: true
+dependencies: {  }
+id: formulario_de_denuncias_por_hech
+label: 'Formulario de denuncias'
+recipients:
+  - denuncias@agetic.gob.bo
+reply: ''
+weight: 0
+message: ''
+redirect: ''

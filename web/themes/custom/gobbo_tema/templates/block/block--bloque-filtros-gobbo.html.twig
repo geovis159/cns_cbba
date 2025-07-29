@@ -1,0 +1,92 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* Available variables:
+* - plugin_id: The ID of the block implementation.
+* - label: The configured label of the block if visible.
+* - configuration: A list of the block's configuration values.
+* - label: The configured label for the block.
+* - label_display: The display settings for the label.
+* - provider: The module or other provider that provided this block plugin.
+* - Block plugin specific settings will also be stored here.
+* - content: The content of this block.
+* - attributes: array of HTML attributes populated by modules, intended to
+* be added to the main container tag of this template.
+* - id: A valid HTML ID and guaranteed unique.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main content
+* tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+<div class="container px-4 pt-2">
+	<div class="row justify-content-end">
+		<div class="col-12 col-md-4">
+			<div class="d-flex flex-row justify-content-end ">
+				<button id="theme-switcher-button" class="btn">
+					<i id="icono-tema" class="icono-color bi"></i>
+				</button>
+				<div class='mostrar-en-movil'>
+                    <button id="button-buscar" class="btn btn-search"><i id="icono-tema" class=" icono-color bi bi-search"></i></button>
+                </div>
+				<div class="mostrar-en-movil">
+					<form id="form-buscar" role="search" method="get" class="form-inline" action="/search/node">
+						<div style="border-radius: 7px;" class="input-group border border-1">
+							<input type="search" value name="keys" data-drupal-selector="edit-keys" class="fondo-default form-control border border-0 texto-default" placeholder="Buscar...">
+							<div class="input-group-prepend">
+								<button  class="btn btn-outline-white my-0 border-0" type="submit">
+									<i class="icono-color bi bi-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="mostrar-en-movil">
+
+					<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#main-menu" aria-controls="main-menu" aria-label="Toggle navigation">
+						<i class="icono-color bi bi-list"></i>
+					</button>
+				</div>
+				<div class="ocultar-en-movil ms-3">
+					<form role="search" method="get" class="form-inline" action="/search/node">
+						<div style="border-radius: 5px;" class="input-group border border-1">
+							<input type="search" value name="keys" data-drupal-selector="edit-keys" class="fondo-default form-control border border-0 texto-default" placeholder="Buscar...">
+							<div class="input-group-prepend">
+								<button  class="btn btn-outline-white my-0 border-0" type="submit">
+									<i class="icono-color bi bi-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const search = document.querySelector("#form-buscar");
+const formBuscar = document.getElementById("form-buscar");
+const input = search.querySelector("input");
+formBuscar.style.display = "none";
+const buscarBtn = document.querySelector("#button-buscar");
+const buscarBtnElement = document.getElementById("button-buscar");
+buscarBtn.addEventListener("click", () => {
+  console.log("Click en Btn search");
+  formBuscar.style.display = "block";
+  buscarBtnElement.style.display = "none";
+  input.focus();
+});
+
+</script>

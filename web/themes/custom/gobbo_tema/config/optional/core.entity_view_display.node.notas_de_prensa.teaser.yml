@@ -1,0 +1,33 @@
+uuid: 98d99f28-203a-4b3b-ae68-179ee1160ab6
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.notas_de_prensa.field_contenido_nota
+    - field.field.node.notas_de_prensa.field_descripcion_nota
+    - field.field.node.notas_de_prensa.field_imagen_nota
+    - field.field.node.notas_de_prensa.field_lugar_nota
+    - field.field.node.notas_de_prensa.field_resumen_nota
+    - field.field.node.notas_de_prensa.field_titulo_nota
+    - node.type.notas_de_prensa
+  module:
+    - user
+id: node.notas_de_prensa.teaser
+targetEntityType: node
+bundle: notas_de_prensa
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contenido_nota: true
+  field_descripcion_nota: true
+  field_imagen_nota: true
+  field_lugar_nota: true
+  field_resumen_nota: true
+  field_titulo_nota: true
+  langcode: true

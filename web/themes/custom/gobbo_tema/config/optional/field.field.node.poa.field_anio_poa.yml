@@ -1,0 +1,23 @@
+uuid: ad0ca967-00e6-4ed8-9f8c-4dfaab6e7ada
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_poa
+    - node.type.poa
+id: node.poa.field_anio_poa
+field_name: field_anio_poa
+entity_type: node
+bundle: poa
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

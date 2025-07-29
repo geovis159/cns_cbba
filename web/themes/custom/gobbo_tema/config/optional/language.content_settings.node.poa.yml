@@ -1,0 +1,11 @@
+uuid: 6d29d91f-f699-4f07-a71e-392ade318695
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.poa
+id: node.poa
+target_entity_type_id: node
+target_bundle: poa
+default_langcode: site_default
+language_alterable: false

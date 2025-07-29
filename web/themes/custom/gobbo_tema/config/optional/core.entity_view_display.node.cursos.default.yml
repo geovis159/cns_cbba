@@ -1,0 +1,79 @@
+uuid: 5b28d708-228e-4454-b03e-d7aa3d56bc1c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.cursos.field_contenido_curso
+    - field.field.node.cursos.field_duracion_curso
+    - field.field.node.cursos.field_fecha_ini_curso
+    - field.field.node.cursos.field_imagen_curso
+    - field.field.node.cursos.field_modalidad_curso
+    - field.field.node.cursos.field_titulo_curso
+    - node.type.cursos
+  module:
+    - datetime
+    - image
+    - options
+    - text
+    - user
+id: node.cursos.default
+targetEntityType: node
+bundle: cursos
+mode: default
+content:
+  field_contenido_curso:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_duracion_curso:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_fecha_ini_curso:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_imagen_curso:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_modalidad_curso:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_titulo_curso:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

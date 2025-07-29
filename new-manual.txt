@@ -1,0 +1,10 @@
+docker-compose up -d --force-recreate drupal
+docker logs -f --tail 200 drupal
+docker cp themes/custom/ drupal:/opt/drupal/web/themes/
+docker cp modules/custom drupal:/opt/drupal/web/modules
+docker-compose restart drupal
+ 
+docker exec -it drupal bash
+o otra alternativa
+docker exec -it drupal drush cache:rebuild
+cat docker-compose.yml 

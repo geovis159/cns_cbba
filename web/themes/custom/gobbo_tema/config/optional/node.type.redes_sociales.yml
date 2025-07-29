@@ -1,0 +1,18 @@
+uuid: 6b161fe1-673f-4069-a060-bba204955308
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Redes sociales'
+type: redes_sociales
+description: 'Contenido de redes sociales'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

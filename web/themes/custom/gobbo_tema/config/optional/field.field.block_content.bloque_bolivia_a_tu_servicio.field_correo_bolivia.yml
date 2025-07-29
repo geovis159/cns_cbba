@@ -1,0 +1,19 @@
+uuid: 2aae4ceb-db1d-40b6-86a7-5d53b29aa047
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_bolivia_a_tu_servicio
+    - field.storage.block_content.field_correo_bolivia
+id: block_content.bloque_bolivia_a_tu_servicio.field_correo_bolivia
+field_name: field_correo_bolivia
+entity_type: block_content
+bundle: bloque_bolivia_a_tu_servicio
+label: 'Correo electrónico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

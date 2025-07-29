@@ -1,0 +1,19 @@
+uuid: 6a41c463-fd44-4cbb-93a6-920cd26970ab
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_enlace_carrousel
+field_name: field_enlace_carrousel
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

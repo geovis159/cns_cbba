@@ -1,0 +1,65 @@
+uuid: 48d6c637-f4db-4e1c-b9fb-6b7a9823d5ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_creditos
+    - field.field.block_content.bloque_creditos.field_politicas_credito
+    - field.field.block_content.bloque_creditos.field_reglas_credito
+    - field.field.block_content.bloque_creditos.field_sitemap_credito
+    - field.field.block_content.bloque_creditos.field_titulo_credito
+  module:
+    - link
+id: block_content.bloque_creditos.default
+targetEntityType: block_content
+bundle: bloque_creditos
+mode: default
+content:
+  field_politicas_credito:
+    type: link_default
+    weight: 29
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_reglas_credito:
+    type: link_default
+    weight: 27
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_sitemap_credito:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_titulo_credito:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

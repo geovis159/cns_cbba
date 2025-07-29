@@ -1,0 +1,30 @@
+uuid: 05d8dfe2-ff94-4611-a465-22175ab2c152
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_de_documento
+field_name: field_tipo_de_documento
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ley
+      label: Ley
+    -
+      value: decreto_supremo
+      label: 'Decreto supremo'
+    -
+      value: resolucion_ministerial
+      label: 'Resolucion ministerial'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

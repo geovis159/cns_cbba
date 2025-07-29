@@ -1,0 +1,21 @@
+uuid: 7f80d71a-9d5f-404e-9c79-6ffa43ee8709
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_titulo_contacto
+field_name: field_titulo_contacto
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

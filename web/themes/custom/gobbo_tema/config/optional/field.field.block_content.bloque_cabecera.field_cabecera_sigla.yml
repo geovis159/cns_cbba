@@ -1,0 +1,19 @@
+uuid: 23ed70cb-b4c9-43fc-ab31-6093ce2e6738
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_cabecera
+    - field.storage.block_content.field_cabecera_sigla
+id: block_content.bloque_cabecera.field_cabecera_sigla
+field_name: field_cabecera_sigla
+entity_type: block_content
+bundle: bloque_cabecera
+label: Sigla
+description: 'Sigla de institución'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

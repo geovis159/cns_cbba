@@ -1,0 +1,65 @@
+uuid: 3b21a02f-12f2-41ef-9443-8f701018649e
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.comunicados
+    - node.type.page
+    - node.type.tipo_carrousel
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Editor de contenido'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create comunicados content'
+  - 'create page content'
+  - 'create terms in tags'
+  - 'create tipo_carrousel content'
+  - 'create url aliases'
+  - 'delete any comunicados content'
+  - 'delete any tipo_carrousel content'
+  - 'delete article revisions'
+  - 'delete comunicados revisions'
+  - 'delete own article content'
+  - 'delete own comunicados content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete own tipo_carrousel content'
+  - 'delete page revisions'
+  - 'delete tipo_carrousel revisions'
+  - 'edit any comunicados content'
+  - 'edit any tipo_carrousel content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own comunicados content'
+  - 'edit own page content'
+  - 'edit own tipo_carrousel content'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert comunicados revisions'
+  - 'revert tipo_carrousel revisions'
+  - 'view all revisions'
+  - 'view comunicados revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view tipo_carrousel revisions'

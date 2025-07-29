@@ -1,0 +1,29 @@
+uuid: 81f6a844-45e8-46c2-9980-976d0348dc86
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_bolivia_a_tu_servicio
+    - field.storage.block_content.field_redes_bolivia
+    - node.type.redes_sociales
+id: block_content.bloque_bolivia_a_tu_servicio.field_redes_bolivia
+field_name: field_redes_bolivia
+entity_type: block_content
+bundle: bloque_bolivia_a_tu_servicio
+label: 'Redes sociales'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      redes_sociales: redes_sociales
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: f7af7df1-108a-4038-a381-bb1317dba120
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_api_gobbo_servicios
+field_name: field_api_gobbo_servicios
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

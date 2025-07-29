@@ -1,0 +1,11 @@
+uuid: 3908969a-6072-431a-98ba-30ca733b132b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.comunicados
+id: node.comunicados
+target_entity_type_id: node
+target_bundle: comunicados
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: 47269170-58fd-4c5c-b0d8-d42ea8e327ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.notas_de_prensa
+  module:
+    - node
+id: rol_notas_de_prensa
+label: 'Rol Notas de prensa'
+weight: 6
+is_admin: null
+permissions:
+  - 'create notas_de_prensa content'
+  - 'delete any notas_de_prensa content'
+  - 'delete notas_de_prensa revisions'
+  - 'delete own notas_de_prensa content'
+  - 'edit any notas_de_prensa content'
+  - 'edit own notas_de_prensa content'
+  - 'revert notas_de_prensa revisions'
+  - 'view notas_de_prensa revisions'

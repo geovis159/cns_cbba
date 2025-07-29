@@ -1,0 +1,19 @@
+uuid: 026edd96-bdf2-4209-9af9-ed22ec678706
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_bolivia_a_tu_servicio
+    - field.storage.block_content.field_telefono_bolivia
+id: block_content.bloque_bolivia_a_tu_servicio.field_telefono_bolivia
+field_name: field_telefono_bolivia
+entity_type: block_content
+bundle: bloque_bolivia_a_tu_servicio
+label: Teléfono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

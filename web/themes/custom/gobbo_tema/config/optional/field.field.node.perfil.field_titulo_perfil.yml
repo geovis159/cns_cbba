@@ -1,0 +1,19 @@
+uuid: 8d8082d5-f7d1-41e5-8ab1-fe3ac99943c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_perfil
+    - node.type.perfil
+id: node.perfil.field_titulo_perfil
+field_name: field_titulo_perfil
+entity_type: node
+bundle: perfil
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

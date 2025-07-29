@@ -1,0 +1,19 @@
+uuid: 137f488b-9ddd-4513-b198-df7601eec64c
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_correo_contacto
+id: contact_message.personal.field_correo_contacto
+field_name: field_correo_contacto
+entity_type: contact_message
+bundle: personal
+label: 'Dirección de correo electrónico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,33 @@
+uuid: f7a53db5-3a42-41e9-9bf3-cfaab8c5a11c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.personal.field_cargo_personal
+    - field.field.node.personal.field_correo_personal
+    - field.field.node.personal.field_imagen_personal
+    - field.field.node.personal.field_informacion_personal
+    - field.field.node.personal.field_nombre_personal
+    - field.field.node.personal.field_telefono_personal
+    - node.type.personal
+  module:
+    - user
+id: node.personal.teaser
+targetEntityType: node
+bundle: personal
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cargo_personal: true
+  field_correo_personal: true
+  field_imagen_personal: true
+  field_informacion_personal: true
+  field_nombre_personal: true
+  field_telefono_personal: true
+  langcode: true

@@ -1,0 +1,27 @@
+uuid: 8d886aa1-44c2-4013-8e24-6d674b47658d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_terminos_de_referencia
+    - node.type.convotorias
+  module:
+    - file
+id: node.convotorias.field_terminos_de_referencia
+field_name: field_terminos_de_referencia
+entity_type: node
+bundle: convotorias
+label: 'Terminos de referencia'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

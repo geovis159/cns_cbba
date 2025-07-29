@@ -1,0 +1,27 @@
+uuid: 4393068c-6f97-4200-b068-10d405537c73
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_multimedias_galeria
+    - node.type.galeria
+  module:
+    - file
+id: node.galeria.field_multimedias_galeria
+field_name: field_multimedias_galeria
+entity_type: node
+bundle: galeria
+label: Multimedias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'jpeg jpg png webm mp4 avi'
+  max_filesize: ''
+  description_field: true
+field_type: file

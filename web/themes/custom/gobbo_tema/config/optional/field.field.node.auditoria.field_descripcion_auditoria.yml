@@ -1,0 +1,19 @@
+uuid: 5740c360-707e-45e7-a18e-d1cceee5e7ef
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_auditoria
+    - node.type.auditoria
+id: node.auditoria.field_descripcion_auditoria
+field_name: field_descripcion_auditoria
+entity_type: node
+bundle: auditoria
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

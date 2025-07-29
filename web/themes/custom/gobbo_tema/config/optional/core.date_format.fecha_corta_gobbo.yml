@@ -1,0 +1,8 @@
+uuid: d3916479-2957-419c-aba7-c1e59006317f
+langcode: es
+status: true
+dependencies: {  }
+id: fecha_corta_gobbo
+label: 'Fecha corta gobbo'
+locked: false
+pattern: d/m/Y

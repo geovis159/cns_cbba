@@ -1,0 +1,37 @@
+uuid: fcdebda9-01bd-4c2c-a5ef-31bdf14f31c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.proveedores.field_descripcion_proveedor
+    - field.field.node.proveedores.field_nombre_del_proveedor
+    - node.type.proveedores
+  module:
+    - user
+id: node.proveedores.default
+targetEntityType: node
+bundle: proveedores
+mode: default
+content:
+  field_descripcion_proveedor:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_nombre_del_proveedor:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

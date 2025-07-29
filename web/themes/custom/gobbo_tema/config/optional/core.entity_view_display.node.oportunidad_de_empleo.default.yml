@@ -1,0 +1,100 @@
+uuid: 3b9f108e-3166-42b2-b86a-9906d75596cb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.oportunidad_de_empleo.field_actividades_especificas
+    - field.field.node.oportunidad_de_empleo.field_cantidad
+    - field.field.node.oportunidad_de_empleo.field_enlace
+    - field.field.node.oportunidad_de_empleo.field_experiencia_laboral_oportu
+    - field.field.node.oportunidad_de_empleo.field_fecha_de_cierre
+    - field.field.node.oportunidad_de_empleo.field_formacion_academica
+    - field.field.node.oportunidad_de_empleo.field_puesto
+    - field.field.node.oportunidad_de_empleo.field_tipo_de_contratacion
+    - node.type.oportunidad_de_empleo
+  module:
+    - datetime
+    - link
+    - options
+    - user
+id: node.oportunidad_de_empleo.default
+targetEntityType: node
+bundle: oportunidad_de_empleo
+mode: default
+content:
+  field_actividades_especificas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_cantidad:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_enlace:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_experiencia_laboral_oportu:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_fecha_de_cierre:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_formacion_academica:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_puesto:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tipo_de_contratacion:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: 9f1901fa-eb7f-4dfc-9691-97e5d08e0e78
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Convocatorias
+type: convotorias
+description: Convocatorias
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,23 @@
+uuid: e460ecef-1230-4b74-9637-f959e3e77b69
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_auditoria
+    - node.type.auditoria
+id: node.auditoria.field_anio_auditoria
+field_name: field_anio_auditoria
+entity_type: node
+bundle: auditoria
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

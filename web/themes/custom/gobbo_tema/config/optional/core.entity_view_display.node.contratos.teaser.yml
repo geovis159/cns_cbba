@@ -1,0 +1,31 @@
+uuid: e4324a66-b720-49b6-bb1d-961518161cb0
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contratos.field_anio_contrato
+    - field.field.node.contratos.field_documento_contrato
+    - field.field.node.contratos.field_empresa
+    - field.field.node.contratos.field_fecha_de_contrato
+    - field.field.node.contratos.field_nro_contratos
+    - node.type.contratos
+  module:
+    - user
+id: node.contratos.teaser
+targetEntityType: node
+bundle: contratos
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_contrato: true
+  field_documento_contrato: true
+  field_empresa: true
+  field_fecha_de_contrato: true
+  field_nro_contratos: true
+  langcode: true

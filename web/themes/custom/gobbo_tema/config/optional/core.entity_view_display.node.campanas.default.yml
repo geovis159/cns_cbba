@@ -1,0 +1,92 @@
+uuid: ea50a446-7253-4a36-a8bf-e63428acdc0b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.campanas.field_contenido_campania
+    - field.field.node.campanas.field_fecha_fin_campania
+    - field.field.node.campanas.field_fecha_ini_campania
+    - field.field.node.campanas.field_imagenes_campania
+    - field.field.node.campanas.field_portada_campania
+    - field.field.node.campanas.field_resumen_campania
+    - field.field.node.campanas.field_titulo_campania
+    - node.type.campanas
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.campanas.default
+targetEntityType: node
+bundle: campanas
+mode: default
+content:
+  field_contenido_campania:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_fecha_fin_campania:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_fecha_ini_campania:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_imagenes_campania:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_portada_campania:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_resumen_campania:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_titulo_campania:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

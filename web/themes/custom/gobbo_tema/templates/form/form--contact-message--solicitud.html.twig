@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{{ attach_library('bootstrap_barrio/form') }}
+{# {{dump(element)}} #}
+<div class="pb-4">
+  <div class="alert alert-secondary d-flex align-items-center" role="alert">
+      <i class="bi bi-exclamation-triangle-fill pe-2"></i>
+      <div>
+        Los campos marcados con (*) son de llenado obligatorio
+      </div>
+    </div>
+</div>
+<div class="ps-0 ps-md-4 texto-default">
+
+  <form{{ attributes }}>
+    {# {{ children }} #}
+    <div class="pb-3 texto-default">
+      <strong >Identificación del solicitante</strong>
+    </div>
+    {{element.field_form_nombres_solicitud}}
+    {{element.field_form_apellidos_solicitud}}
+    {{element.field_form_ci_solicitud}}
+    {{element.field_form_celular_solicitud}}
+    {{element.mail}}
+    <div class="pb-3 texto-default">
+      <strong >Solicitud</strong>
+    </div>
+    {{element.field_form_peticion_solicitud}}
+    {{element.field_form_recepcion_solicitud}}
+    <div class="pb-3 texto-default">
+      <strong >Uso de la información</strong>
+    </div>
+    <p>La información solicitada, si bien es considerada pública debe ser usada para fines estrictamente lícitos, cuya responsabilidad es de la institución que custodia la misma y mediante el presente formulario y a partir de la recepción de la misma, usted es corresponsable de su buen manejo.</p>
+    {{element.actions}}
+  </form>
+</div>

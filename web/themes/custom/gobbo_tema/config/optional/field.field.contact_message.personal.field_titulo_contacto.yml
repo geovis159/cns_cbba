@@ -1,0 +1,19 @@
+uuid: b03c0dbb-8ce2-4e6b-8bcb-9faec99e432b
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_titulo_contacto
+id: contact_message.personal.field_titulo_contacto
+field_name: field_titulo_contacto
+entity_type: contact_message
+bundle: personal
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 7f841419-a5af-4290-be59-b2d1db546978
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.perfil
+id: node.perfil
+target_entity_type_id: node
+target_bundle: perfil
+default_langcode: site_default
+language_alterable: false

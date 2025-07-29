@@ -1,0 +1,25 @@
+uuid: faee4c5c-0495-444a-891f-c7cbb6a3ad85
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:titulo_bloque:6009139e-0c8b-4443-83bc-b903963a07cc'
+  module:
+    - block_content
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquetituloboliviaatuservicio
+theme: gobbo_tema
+region: footer_first
+weight: -17
+provider: null
+plugin: 'block_content:6009139e-0c8b-4443-83bc-b903963a07cc'
+settings:
+  id: 'block_content:6009139e-0c8b-4443-83bc-b903963a07cc'
+  label: 'Bloque título Bolivia a tu servicio'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

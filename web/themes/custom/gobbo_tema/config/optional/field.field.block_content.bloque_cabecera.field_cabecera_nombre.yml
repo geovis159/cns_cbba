@@ -1,0 +1,19 @@
+uuid: 9694e7f3-98e6-4ee2-8a62-3969b4c2da55
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_cabecera
+    - field.storage.block_content.field_cabecera_nombre
+id: block_content.bloque_cabecera.field_cabecera_nombre
+field_name: field_cabecera_nombre
+entity_type: block_content
+bundle: bloque_cabecera
+label: Nombre
+description: 'Nombre completo de institución'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

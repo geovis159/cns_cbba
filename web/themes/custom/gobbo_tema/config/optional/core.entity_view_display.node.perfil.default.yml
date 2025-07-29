@@ -1,0 +1,39 @@
+uuid: 53e0761d-81f2-4f69-800f-508162c636d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.perfil.field_nro_perfil
+    - field.field.node.perfil.field_titulo_perfil
+    - node.type.perfil
+  module:
+    - user
+id: node.perfil.default
+targetEntityType: node
+bundle: perfil
+mode: default
+content:
+  field_nro_perfil:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_titulo_perfil:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

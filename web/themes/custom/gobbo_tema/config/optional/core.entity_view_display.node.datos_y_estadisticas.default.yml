@@ -1,0 +1,49 @@
+uuid: be10f637-5922-47df-8cfb-1e4c2b6d6540
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.datos_y_estadisticas.field_ano_periodo
+    - field.field.node.datos_y_estadisticas.field_descripcion_datos_estadist
+    - field.field.node.datos_y_estadisticas.field_detalle
+    - node.type.datos_y_estadisticas
+  module:
+    - file
+    - user
+id: node.datos_y_estadisticas.default
+targetEntityType: node
+bundle: datos_y_estadisticas
+mode: default
+content:
+  field_ano_periodo:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_descripcion_datos_estadist:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_detalle:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

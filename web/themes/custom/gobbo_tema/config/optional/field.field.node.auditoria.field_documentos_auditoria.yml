@@ -1,0 +1,27 @@
+uuid: dd8a516b-7f04-4fb3-82aa-d9c4483e5d03
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentos_auditoria
+    - node.type.auditoria
+  module:
+    - file
+id: node.auditoria.field_documentos_auditoria
+field_name: field_documentos_auditoria
+entity_type: node
+bundle: auditoria
+label: Documentos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: true
+field_type: file

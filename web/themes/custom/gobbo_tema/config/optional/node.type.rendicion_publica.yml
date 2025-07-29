@@ -1,0 +1,18 @@
+uuid: 3781096c-3532-48ff-8591-9a82a6489195
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Rendición publica'
+type: rendicion_publica
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

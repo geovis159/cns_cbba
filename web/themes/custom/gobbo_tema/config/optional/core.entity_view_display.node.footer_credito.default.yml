@@ -1,0 +1,29 @@
+uuid: e82cacd0-46b1-4a4f-b7c2-e322b84dd1b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.footer_credito.field_credito_footer
+    - node.type.footer_credito
+  module:
+    - user
+id: node.footer_credito.default
+targetEntityType: node
+bundle: footer_credito
+mode: default
+content:
+  field_credito_footer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

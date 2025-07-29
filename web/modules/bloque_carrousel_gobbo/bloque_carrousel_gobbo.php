@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function bloque_cabecera_gobbo_preprocess_views_view_unformatted(&$variables)
+{
+  // dump($variables['rows'][0]['content']['#row']->_entity->field_imagen_carrousel->entity->uri->value);
+  // dump($variables['rows'][0]['content']['#row']->_entity->field_titulo_carrousel->value);
+  // dump($variables['rows'][0]['content']['#row']->_entity->field_descripcion_carrousel->value);
+  // dump($variables['rows'][0]['content']['#row']->_entity->field_transicion_carrousel->value);
+  // dump($variables['rows'][0]['content']['#row']->_entity->field_enlace_carrousel->uri);
+  // dump($variables['rows'][0]['content']['#row']->_entity->field_enlace_carrousel->title);
+
+  $rows = $variables['rows'];
+  foreach ($rows as $id => $row) {
+    $variables['campos'][$id] = [];
+    if (isset($row['content']['#row']->_entity->field_imagen_carrousel->entity->uri->value)) {
+      $variables['campos'][$id]['field_imagen_carrousel'] = $row['content']['#row']->_entity->field_imagen_carrousel->entity->uri->value;
+    }
+    if (isset($row['content']['#row']->_entity->field_titulo_carrousel->value)) {
+      $variables['campos'][$id]['field_titulo_carrousel'] = $row['content']['#row']->_entity->field_titulo_carrousel->value;
+    }
+    if (isset($row['content']['#row']->_entity->field_descripcion_carrousel->value)) {
+      $variables['campos'][$id]['field_descripcion_carrousel'] = $row['content']['#row']->_entity->field_descripcion_carrousel->value;
+    }
+    if (isset($row['content']['#row']->_entity->field_transicion_carrousel->value)) {
+      $variables['campos'][$id]['field_transicion_carrousel'] = $row['content']['#row']->_entity->field_transicion_carrousel->value;
+    }
+    if (isset($row['content']['#row']->_entity->field_enlace_carrousel->uri)) {
+      $variables['campos'][$id]['field_enlace_carrousel']['uri'] = $row['content']['#row']->_entity->field_enlace_carrousel->uri;
+    }
+    if (isset($row['content']['#row']->_entity->field_enlace_carrousel->title)) {
+      $variables['campos'][$id]['field_enlace_carrousel']['title'] = $row['content']['#row']->_entity->field_enlace_carrousel->title;
+    }
+     if (isset($row['content']['#row']->_entity->field_color_carrousel->value)) {
+      $hexa = $row['content']['#row']->_entity->field_color_carrousel->value;
+      // dump(implode(',',sscanf($hexa, "#%02x%02x%02x")));
+      $variables['campos'][$id]['field_color_carrousel'] = $hexa;
+      $variables['campos'][$id]['field_colorRgb_carrousel'] = sscanf($hexa, "#%02x%02x%02x");
+    }
+  }
+}
+
+

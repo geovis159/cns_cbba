@@ -1,0 +1,21 @@
+uuid: ec8aa87f-51c4-4aa0-9eca-ed176a340dee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_aprobacion
+    - node.type.escala_salarial
+  module:
+    - datetime
+id: node.escala_salarial.field_fecha_de_aprobacion
+field_name: field_fecha_de_aprobacion
+entity_type: node
+bundle: escala_salarial
+label: 'Fecha de aprobación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

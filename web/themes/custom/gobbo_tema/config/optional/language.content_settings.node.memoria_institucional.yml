@@ -1,0 +1,11 @@
+uuid: 11562550-ff4c-43d5-ab57-489783107a02
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.memoria_institucional
+id: node.memoria_institucional
+target_entity_type_id: node
+target_bundle: memoria_institucional
+default_langcode: site_default
+language_alterable: false

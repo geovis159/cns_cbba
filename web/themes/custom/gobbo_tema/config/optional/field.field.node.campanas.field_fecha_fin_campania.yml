@@ -1,0 +1,21 @@
+uuid: 8a4a6e3f-7c79-42e1-a274-2874ed78e66e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_fin_campania
+    - node.type.campanas
+  module:
+    - datetime
+id: node.campanas.field_fecha_fin_campania
+field_name: field_fecha_fin_campania
+entity_type: node
+bundle: campanas
+label: 'Fecha de finalización'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

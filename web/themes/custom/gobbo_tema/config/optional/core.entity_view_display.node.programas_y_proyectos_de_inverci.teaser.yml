@@ -1,0 +1,33 @@
+uuid: 605164ef-b3c6-42ae-aab3-194b7fc87956
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.programas_y_proyectos_de_inverci.field_codigo_sisin
+    - field.field.node.programas_y_proyectos_de_inverci.field_descripcion_proy_inv
+    - field.field.node.programas_y_proyectos_de_inverci.field_enlace_prog_proy_inv
+    - field.field.node.programas_y_proyectos_de_inverci.field_estado
+    - field.field.node.programas_y_proyectos_de_inverci.field_monto_de_inversion
+    - field.field.node.programas_y_proyectos_de_inverci.field_nombre
+    - node.type.programas_y_proyectos_de_inverci
+  module:
+    - user
+id: node.programas_y_proyectos_de_inverci.teaser
+targetEntityType: node
+bundle: programas_y_proyectos_de_inverci
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_codigo_sisin: true
+  field_descripcion_proy_inv: true
+  field_enlace_prog_proy_inv: true
+  field_estado: true
+  field_monto_de_inversion: true
+  field_nombre: true
+  langcode: true

@@ -1,0 +1,26 @@
+uuid: 217863bc-8984-434e-890d-2fce5748e8ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contenido_servicios
+    - filter.format.basic_html
+    - node.type.servicios
+  module:
+    - text
+id: node.servicios.field_contenido_servicios
+field_name: field_contenido_servicios
+entity_type: node
+bundle: servicios
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+field_type: text_with_summary

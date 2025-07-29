@@ -1,0 +1,29 @@
+uuid: 4b538578-1a64-4c7b-b9c0-9322ff06b3a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.manual_de_procedimiento.field_anio_manual_procedimiento
+    - field.field.node.manual_de_procedimiento.field_documento_manual_procedim
+    - field.field.node.manual_de_procedimiento.field_fecha_de_aprob_man_proced
+    - field.field.node.manual_de_procedimiento.field_titulo_manual_procedimient
+    - node.type.manual_de_procedimiento
+  module:
+    - user
+id: node.manual_de_procedimiento.teaser
+targetEntityType: node
+bundle: manual_de_procedimiento
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_manual_procedimiento: true
+  field_documento_manual_procedim: true
+  field_fecha_de_aprob_man_proced: true
+  field_titulo_manual_procedimient: true
+  langcode: true

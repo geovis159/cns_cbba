@@ -1,0 +1,22 @@
+uuid: b8ce56f8-5dff-417c-a700-109341187771
+langcode: es
+status: true
+dependencies: {  }
+name: mi_personalizado
+label: 'Mi personalizado'
+effects:
+  c9d3cf9e-e65a-4df6-93e3-e3bea495e153:
+    uuid: c9d3cf9e-e65a-4df6-93e3-e3bea495e153
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: true
+  9679ea43-1651-44b9-9314-12f87073e946:
+    uuid: 9679ea43-1651-44b9-9314-12f87073e946
+    id: image_resize
+    weight: 2
+    data:
+      width: 200
+      height: 200

@@ -1,0 +1,19 @@
+uuid: 8cb25bb8-c59f-4edf-b5c1-b8515669e946
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_enlace_prog_proy_inv
+field_name: field_enlace_prog_proy_inv
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

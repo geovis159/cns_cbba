@@ -1,0 +1,58 @@
+uuid: 1b6441e5-94cf-4ba3-b83a-9a8879c1692e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.rendicion_publica.field_descripcionrend
+    - field.field.node.rendicion_publica.field_documentorend
+    - field.field.node.rendicion_publica.field_rendicion
+    - field.field.node.rendicion_publica.field_tipo_rendicion
+    - node.type.rendicion_publica
+  module:
+    - file
+    - options
+    - user
+id: node.rendicion_publica.default
+targetEntityType: node
+bundle: rendicion_publica
+mode: default
+content:
+  field_descripcionrend:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_documentorend:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_rendicion:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_tipo_rendicion:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

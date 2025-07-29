@@ -1,0 +1,60 @@
+uuid: cf9fa8e5-93be-4e2f-ad8f-1349bec68398
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.perfil_de_cargos.field_anio_perfil_cargo
+    - field.field.node.perfil_de_cargos.field_documento_perfil_cargo
+    - field.field.node.perfil_de_cargos.field_fecha_de_aprobacion_perfil
+    - field.field.node.perfil_de_cargos.field_titulo_perfil_cargos
+    - node.type.perfil_de_cargos
+  module:
+    - datetime
+    - file
+    - user
+id: node.perfil_de_cargos.default
+targetEntityType: node
+bundle: perfil_de_cargos
+mode: default
+content:
+  field_anio_perfil_cargo:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_documento_perfil_cargo:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_fecha_de_aprobacion_perfil:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_titulo_perfil_cargos:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

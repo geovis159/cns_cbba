@@ -1,0 +1,18 @@
+uuid: 458c9851-c0fc-48ac-99f1-602ff669535b
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Footer central'
+type: footer_central
+description: 'Datos principales para footer'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

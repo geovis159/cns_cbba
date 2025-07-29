@@ -1,0 +1,11 @@
+uuid: 7c93f2b5-166e-45b4-85dc-1daa6ed44e53
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.documento
+id: node.documento
+target_entity_type_id: node
+target_bundle: documento
+default_langcode: site_default
+language_alterable: false

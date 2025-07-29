@@ -1,0 +1,23 @@
+uuid: efeaedba-ef05-47bb-8744-e9bcdbde5da2
+langcode: es
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - gobbo_tema
+_core:
+  default_config_hash: 75x2cM1T1Nx0jsNjNR7fYJt48iKwk6-AEfHcmK5vknk
+id: gobbo_tema_search_form_narrow
+theme: gobbo_tema
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulario de búsqueda (estrecho)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

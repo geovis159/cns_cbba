@@ -1,0 +1,21 @@
+uuid: 371aa03d-d8e6-4280-b540-f69dc74f28ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_documento
+    - node.type.normativa_externa
+  module:
+    - options
+id: node.normativa_externa.field_tipo_de_documento
+field_name: field_tipo_de_documento
+entity_type: node
+bundle: normativa_externa
+label: 'Tipo de documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 5b49c705-6d8c-4280-a865-e3a0f18c1f52
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anuncio_servicios
+    - node.type.servicios
+id: node.servicios.field_anuncio_servicios
+field_name: field_anuncio_servicios
+entity_type: node
+bundle: servicios
+label: Anuncios
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

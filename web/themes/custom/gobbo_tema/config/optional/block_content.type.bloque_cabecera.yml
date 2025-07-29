@@ -1,0 +1,8 @@
+uuid: b42ac33e-fe22-4384-9630-ff8aa4374714
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_cabecera
+label: 'Bloque cabecera'
+revision: false
+description: 'Bloque central de la cabecera '

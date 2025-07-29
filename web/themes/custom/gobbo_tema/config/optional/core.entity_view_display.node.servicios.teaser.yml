@@ -1,0 +1,35 @@
+uuid: 9ecf8dcb-20ad-476c-aa33-b41172469592
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.servicios.field_anuncio_servicios
+    - field.field.node.servicios.field_api_gobbo_servicios
+    - field.field.node.servicios.field_contenido_servicios
+    - field.field.node.servicios.field_enlace_servicios
+    - field.field.node.servicios.field_imagen_servicios
+    - field.field.node.servicios.field_slug_servicios
+    - field.field.node.servicios.field_titulo_servicios
+    - node.type.servicios
+  module:
+    - user
+id: node.servicios.teaser
+targetEntityType: node
+bundle: servicios
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anuncio_servicios: true
+  field_api_gobbo_servicios: true
+  field_contenido_servicios: true
+  field_enlace_servicios: true
+  field_imagen_servicios: true
+  field_slug_servicios: true
+  field_titulo_servicios: true
+  langcode: true

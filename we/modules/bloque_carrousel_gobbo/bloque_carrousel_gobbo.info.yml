@@ -1,0 +1,7 @@
+name: 'Bloque Carrousel Gobbo'
+type: module
+description: 'Bloque de carrouseles Gob.bo.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - block:block

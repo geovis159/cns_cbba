@@ -1,0 +1,435 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function gobbo_tema_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  // Vertical tabs.
+  $form['ajustes'] = [
+    '#type' => 'vertical_tabs',
+    '#prefix' => '<h2><small>' . t('Configuraciones tema Gobbo') . '</small></h2>',
+    '#weight' => -10,
+  ];
+
+
+    // Define configuraciones de colores.
+  $form['gobbo_colores'] = [
+    '#type' => 'details',
+    '#title' => t('Colores Gobbo'),
+    '#open' => TRUE,
+
+    '#group' => 'ajustes',
+  ];
+  $form['gobbo_colores']['color_light'] = [
+    '#type' => 'details',
+    '#title' => t('Colores Light'),
+    '#open' => TRUE,
+  ];
+   $form['gobbo_colores']['color_dark'] = [
+    '#type' => 'details',
+    '#title' => t('Colores Dark'),
+    '#open' => TRUE,
+  ];
+  $form['gobbo_colores']['color_light']['main_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Main'),
+    '#default_value' => theme_get_setting('main_light') ?? '#424740',
+    '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_light']['dark_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Dark'),
+    '#default_value' => theme_get_setting('dark_light') ?? '#252F21',
+    '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_light']['light_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Light'),
+    '#default_value' => theme_get_setting('light_light') ?? '#5C6359',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_light']['contrast_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Contrast'),
+    '#default_value' => theme_get_setting('contrast_light') ?? '#D8E9D2',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_light']['navbg_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Nav Backgroud'),
+    '#default_value' => theme_get_setting('navbg_light') ?? '#F0F1EE',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_light']['navbg_high_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Nav Backgroud Highlighted'),
+    '#default_value' => theme_get_setting('navbg_high_light') ?? '#E2E5DC',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+
+  $form['gobbo_colores']['color_light']['default_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Backgroud Default'),
+    '#default_value' => theme_get_setting('default_light') ?? '#ffffff',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+    $form['gobbo_colores']['color_light']['paper_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Backgroud Paper'),
+    '#default_value' => theme_get_setting('paper_light') ?? '#F8F9FA',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+      $form['gobbo_colores']['color_light']['texto_light'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Color texto en Light'),
+    '#default_value' => theme_get_setting('texto_light') ?? '#343A40',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+
+
+
+
+    $form['gobbo_colores']['color_dark']['main_dark'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Main'),
+    '#default_value' => theme_get_setting('main_dark') ?? '#5C6359',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_dark']['dark_dark'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Dark'),
+    '#default_value' => theme_get_setting('dark_dark') ?? '#313530',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_dark']['light_dark'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Light'),
+    '#default_value' => theme_get_setting('light_dark') ?? '#889283',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+  $form['gobbo_colores']['color_dark']['contrast_dark'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Contrast'),
+    '#default_value' => theme_get_setting('contrast_dark') ?? '#1E201D',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+
+    $form['gobbo_colores']['color_dark']['default_dark'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Backgroud Default'),
+    '#default_value' => theme_get_setting('default_dark') ?? '#292A2D',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+    $form['gobbo_colores']['color_dark']['paper_dark'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Backgroud Paper'),
+    '#default_value' => theme_get_setting('paper_dark') ?? '#222124',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+
+        $form['gobbo_colores']['color_dark']['texto_dark'] = [
+    '#type' => 'textfield',
+    '#maxlength' => 7,
+    '#size' => 10,
+    '#title' => t('Color texto en Dark'),
+    '#default_value' => theme_get_setting('texto_dark') ?? '#E9ECEF',
+       '#attributes' => [
+          'pattern' => '^#[a-fA-F0-9]{6}',
+        ],
+        '#wrapper_attributes' => [
+          'data-drupal-selector' => 'barrio-color-picker',
+        ],
+  ];
+
+
+    $form['gobbo_api_tramites'] = [
+      '#type' => 'details',
+      '#title' => t('API de trámites/servcios'),
+      '#open' => TRUE,
+
+      '#group' => 'ajustes',
+    ];
+      $form['gobbo_api_tramites']['ruta_api_gobbo'] = [
+      '#type' => 'textfield',
+      '#title' => t('API pública de trámites Gobbo'),
+      '#default_value' => theme_get_setting('ruta_api_gobbo')
+    ];
+
+     $form['gobbo_api_tramites']['id_entidad_api_gobbo'] = [
+      '#type' => 'textfield',
+      '#title' => t('Id de entidad'),
+      '#default_value' => theme_get_setting('id_entidad_api_gobbo')
+    ];
+
+    $form['gobbo_api_tramites']['token_api_gobbo'] = [
+      '#type' => 'textarea',
+      '#size' => 1000,
+      '#title' => t('Token'),
+      '#default_value' => theme_get_setting('token_api_gobbo')
+    ];
+
+    // Configuración de modal principal
+      $form['modal_central'] = [
+      '#type' => 'details',
+      '#title' => t('Modal de Comunicados'),
+      '#open' => TRUE,
+
+      '#group' => 'ajustes',
+    ];
+      $form['modal_central']['mostrar_modal'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Activar Modal Bienvenida de comunicados'),
+      '#default_value' => theme_get_setting('mostrar_modal')
+    ];
+
+ 
+  return $form;
+  //$form['#submit'][] = 'guardar_configuraciones';
+}
+
+function gobbo_tema_preprocess_html(&$variables) {
+
+ $variables['colores']['main_dark'] = theme_get_setting('main_dark') ?? '#5C6359';
+ $variables['colores']['dark_dark'] = theme_get_setting('dark_dark') ?? '#313530';
+ $variables['colores']['light_dark'] = theme_get_setting('light_dark') ?? '#889283';
+ $variables['colores']['contrast_dark'] = theme_get_setting('contrast_dark') ?? '#1E201D';
+ $variables['colores']['default_dark'] = theme_get_setting('default_dark') ?? '#292A2D';
+ $variables['colores']['paper_dark'] = theme_get_setting('paper_dark') ?? '#222124';
+ $variables['colores']['texto_dark'] = theme_get_setting('texto_dark') ?? '#E9ECEF';
+
+ $variables['colores']['main_light'] = theme_get_setting('main_light') ?? '#424740';
+ $variables['colores']['dark_light'] = theme_get_setting('dark_light') ?? '#252F21';
+ $variables['colores']['light_light'] = theme_get_setting('light_light') ?? '#5C6359';
+ $variables['colores']['contrast_light'] = theme_get_setting('contrast_light') ?? '#D8E9D2';
+ $variables['colores']['navbg_light'] = theme_get_setting('navbg_light') ?? '#F0F1EE';
+  $variables['colores']['navbg_high_light'] = theme_get_setting('navbg_high_light') ?? '#E2E5DC';
+
+ $variables['colores']['default_light'] = theme_get_setting('default_light') ?? '#ffffff';
+ $variables['colores']['paper_light'] = theme_get_setting('paper_light') ?? '#F8F9FA';
+ $variables['colores']['texto_light'] = theme_get_setting('texto_light') ?? '#343A40';
+
+}
+
+
+function gobbo_tema_preprocess_input(&$variables){
+
+  if( isset($variables['attributes']['id'])){
+  $cadena = $variables['attributes']['id'];
+  $es_fecha = strpos($cadena, 'fecha');
+  $es_date = strpos($cadena, 'date');
+  if($es_fecha !== false || $es_date !== false){
+    $variables['attributes']['type'] = 'date';
+  }
+  }
+}
+
+
+
+/**
+ * Implements hook_preprocess_HOOK() for menu blocks.
+ */
+function gobbo_tema_preprocess_block(array &$variables)
+{
+  
+  // Verifica si el bloque pertenece a un menú específico.
+  if ($variables['derivative_plugin_id'] === 'organigrama') {
+    //dump($variables);
+
+    recorrerMenu($variables['content']['#items']);
+    //dump($variables);
+  }
+}
+
+function gobbo_tema_preprocess_views_view_unformatted(array &$variables){
+    // Bloque modal incial comunicados
+  if($variables['theme_hook_original'] == 'views_view_unformatted__bloque_de_comunicados'){
+    $variables['mostrar_modal'] = theme_get_setting('mostrar_modal') ?? 1;
+  }
+  if($variables['theme_hook_original'] == 'views_view_unformatted__bloque_indicadores'){
+    foreach ($variables['rows'] as &$row) {
+      $node = $row['content']['#row']->_entity;
+      $created = $node->getCreatedTime();
+      $now = \Drupal::time()->getCurrentTime();
+      $row['minutos_desde_publicacion'] = round(($now - $created) / 60);
+    }
+
+  }
+}
+
+
+function recorrerMenu(array &$tree, int $level = 0)
+{
+  foreach ($tree as &$hijo) {
+
+    // Llamada recursiva para los hijos.
+    if (!empty($hijo['below'])) {
+      recorrerMenu($hijo['below'], $level + 1);
+    } else {
+      $node_id = $hijo['url']->getRouteParameters()['node'];
+    $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
+     if ($node) {
+       $variables['custom_node'] = $node;
+       $hijo['node'] = $node;
+       //dump($hijo);
+     }
+    }
+
+
+  }
+}
+
+function gobbo_tema_preprocess_pager(&$variables) {
+  $element = $variables['pager']['#element'];
+  $pager_manager = \Drupal::service('pager.manager');
+  $pager = $pager_manager->getPager($element);
+  if(isset($pager)){
+  $pager_max = $pager->getTotalPages();
+  $variables['totalPaginas'] = $pager_max;
+  }
+}
+
+function gobbo_tema_preprocess_views_view_table(&$variables){
+  if($variables['theme_hook_original'] == 'views_view_table__pagina_poa'){
+  $request = \Drupal::service('request_stack')->getCurrentRequest(); 
+  $variables['query_params'] = $request->query->all();
+  }
+}
+
+function gobbo_tema_preprocess_form_element(&$variables){
+  $request = \Drupal::service('request_stack')->getCurrentRequest(); 
+  $variables['query_params'] = $request->query->all();
+}

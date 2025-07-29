@@ -1,0 +1,29 @@
+uuid: 70887cec-4e7d-447d-8830-83888c3d3311
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.auditoria.field_anio_auditoria
+    - field.field.node.auditoria.field_descripcion_auditoria
+    - field.field.node.auditoria.field_documentos_auditoria
+    - field.field.node.auditoria.field_tipo_auditoria
+    - node.type.auditoria
+  module:
+    - user
+id: node.auditoria.teaser
+targetEntityType: node
+bundle: auditoria
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_auditoria: true
+  field_descripcion_auditoria: true
+  field_documentos_auditoria: true
+  field_tipo_auditoria: true
+  langcode: true

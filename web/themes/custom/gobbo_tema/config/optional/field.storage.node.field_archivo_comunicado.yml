@@ -1,0 +1,23 @@
+uuid: 27c7b540-cf21-4f72-8e22-54d18273a149
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_archivo_comunicado
+field_name: field_archivo_comunicado
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

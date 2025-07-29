@@ -1,0 +1,19 @@
+uuid: 55692397-eaea-4aaf-b5f1-dedc665e535f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_perfil_cargos
+    - node.type.perfil_de_cargos
+id: node.perfil_de_cargos.field_titulo_perfil_cargos
+field_name: field_titulo_perfil_cargos
+entity_type: node
+bundle: perfil_de_cargos
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 7b9134ea-eba9-4ecc-b3f9-52c30d3f6002
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_costo_tramite
+field_name: field_costo_tramite
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

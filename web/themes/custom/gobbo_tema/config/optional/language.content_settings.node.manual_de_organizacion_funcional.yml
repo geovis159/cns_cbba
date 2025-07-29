@@ -1,0 +1,11 @@
+uuid: f4347587-a274-467e-974f-c773999da823
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.manual_de_organizacion_funcional
+id: node.manual_de_organizacion_funcional
+target_entity_type_id: node
+target_bundle: manual_de_organizacion_funcional
+default_langcode: site_default
+language_alterable: false

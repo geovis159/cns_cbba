@@ -1,0 +1,20 @@
+uuid: 740e613e-f648-4b36-b712-0a8ea620dda3
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_form_celular_solicitud
+field_name: field_form_celular_solicitud
+entity_type: contact_message
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

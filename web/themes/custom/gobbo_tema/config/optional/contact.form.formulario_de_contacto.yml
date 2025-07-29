@@ -1,0 +1,12 @@
+uuid: 6a588e54-a9e7-4990-b8f6-82189b4c4228
+langcode: es
+status: true
+dependencies: {  }
+id: formulario_de_contacto
+label: 'Formulario de contacto'
+recipients:
+  - nataly@yopmail.com
+reply: ''
+weight: 0
+message: 'Mensaje enviado'
+redirect: /

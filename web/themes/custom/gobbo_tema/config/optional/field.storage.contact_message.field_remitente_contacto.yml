@@ -1,0 +1,21 @@
+uuid: 87d83002-b371-4a58-83e6-3ad20cf80033
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_remitente_contacto
+field_name: field_remitente_contacto
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

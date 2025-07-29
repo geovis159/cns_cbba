@@ -1,0 +1,19 @@
+uuid: f9cff03e-736c-457f-a4f2-08fc8c3de6b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargo_personal
+    - node.type.personal
+id: node.personal.field_cargo_personal
+field_name: field_cargo_personal
+entity_type: node
+bundle: personal
+label: Cargo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

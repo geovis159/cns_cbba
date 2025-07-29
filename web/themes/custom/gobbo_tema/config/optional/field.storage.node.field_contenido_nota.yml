@@ -1,0 +1,19 @@
+uuid: b6ab3076-1bfe-4506-9a59-9e0050f8e6f6
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_contenido_nota
+field_name: field_contenido_nota
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

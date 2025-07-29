@@ -1,0 +1,29 @@
+uuid: 9a42889a-14dc-4f9a-b2e0-8b452f1754dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.rendicion_publica.field_descripcionrend
+    - field.field.node.rendicion_publica.field_documentorend
+    - field.field.node.rendicion_publica.field_rendicion
+    - field.field.node.rendicion_publica.field_tipo_rendicion
+    - node.type.rendicion_publica
+  module:
+    - user
+id: node.rendicion_publica.teaser
+targetEntityType: node
+bundle: rendicion_publica
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_descripcionrend: true
+  field_documentorend: true
+  field_rendicion: true
+  field_tipo_rendicion: true
+  langcode: true

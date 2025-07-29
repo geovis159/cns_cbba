@@ -1,0 +1,19 @@
+uuid: b52c9c77-2ada-49a2-af2d-6b63c4ddb3e7
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_resumen_campania
+field_name: field_resumen_campania
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

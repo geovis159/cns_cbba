@@ -1,0 +1,19 @@
+uuid: 9f864bd7-0fa1-49aa-be14-896bc49edd59
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar_comunicado
+    - node.type.comunicados
+id: node.comunicados.field_lugar_comunicado
+field_name: field_lugar_comunicado
+entity_type: node
+bundle: comunicados
+label: Lugar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

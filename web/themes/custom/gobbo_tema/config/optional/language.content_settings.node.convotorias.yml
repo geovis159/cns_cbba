@@ -1,0 +1,11 @@
+uuid: f24747e0-34d2-41ab-90ea-f4eb75a44afd
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.convotorias
+id: node.convotorias
+target_entity_type_id: node
+target_bundle: convotorias
+default_langcode: site_default
+language_alterable: false

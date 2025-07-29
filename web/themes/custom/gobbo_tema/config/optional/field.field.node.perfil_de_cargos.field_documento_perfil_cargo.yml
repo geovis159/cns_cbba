@@ -1,0 +1,27 @@
+uuid: 882b59f9-4e21-4796-89d7-4c3959aacdf9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_perfil_cargo
+    - node.type.perfil_de_cargos
+  module:
+    - file
+id: node.perfil_de_cargos.field_documento_perfil_cargo
+field_name: field_documento_perfil_cargo
+entity_type: node
+bundle: perfil_de_cargos
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

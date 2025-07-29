@@ -1,0 +1,23 @@
+uuid: e41b769f-7676-4a14-add1-a4da08e867f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ano
+    - node.type.presupuesto_institucional
+id: node.presupuesto_institucional.field_ano
+field_name: field_ano
+entity_type: node
+bundle: presupuesto_institucional
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

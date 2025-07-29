@@ -1,0 +1,15 @@
+uuid: 964366d8-f6d7-4f5d-ac2f-b55f95b71daa
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.notas_de_prensa
+  module:
+    - node
+id: rol_hormiga
+label: 'Rol Hormiga'
+weight: 4
+is_admin: null
+permissions:
+  - 'create notas_de_prensa content'
+  - 'view notas_de_prensa revisions'

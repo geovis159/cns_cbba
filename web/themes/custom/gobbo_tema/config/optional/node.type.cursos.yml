@@ -1,0 +1,18 @@
+uuid: 789adeda-117e-4365-a04e-e9a004d5a048
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Cursos
+type: cursos
+description: 'Tipo de entidad para curso'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

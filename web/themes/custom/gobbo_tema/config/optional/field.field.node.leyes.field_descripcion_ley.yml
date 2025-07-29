@@ -1,0 +1,19 @@
+uuid: 1a8ef48f-8a04-4024-ba72-5eec68686857
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_ley
+    - node.type.leyes
+id: node.leyes.field_descripcion_ley
+field_name: field_descripcion_ley
+entity_type: node
+bundle: leyes
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

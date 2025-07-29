@@ -1,0 +1,125 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+  {# {% if menu_level == 0 %}
+  {% endif %} #}
+  {% import _self as menus %}
+  {% if items %}
+  {% if menu_level == 0 %}
+  {% set cantidad_items_level_0 = items|length %}
+  
+      <ul{{ attributes.addClass('navbar-nav pt-0 ')|without('id') }}>
+    {% else %}
+      {% if menu_level == 1 %}
+        <ul class="fondo-menu menu-nivel-0 px-4 pt-4 pb-0 dropdown-menu {{attributes['nro'] >=4 ? 'dropdown-menu-end' :''}} ">
+        <div class="menu-principal"  style='grid-auto-flow: column; grid-auto-columns: 300px; display:grid;grid-template-rows: repeat(7, auto);column-gap: 20px;' >
+      {% endif %}
+      {% if menu_level == 2 %}
+        <ul style="list-style: none;" class="collapse  pt-2 ps-4" id="collapseId_{{attributes['idBloquePadre']}}">
+      {% endif %}
+
+    {% endif %}
+    {% for item in items %}
+
+        {%
+          set classes = [
+            menu_level == 0 ?  'nav-item dropdown-center',
+            menu_level == 1 ? (item.below ? 'pb-4' : ' pb-4') : '',
+            menu_level == 2 ? 'd-flex justify-content-between align-items-center pt-1',
+          ]
+        %}
+        <li{{ item.attributes.addClass(classes) }}>
+          {%
+            set link_classes = [
+              not menu_level ? 'nav-link',
+              item.in_active_trail ? 'activo',
+              item.below ? 'dropdown-toggle',
+              menu_level == 0 ? 'texto-nivel-0 px-2': menu_level == 1 ? item.below ? 'texto-nivel-1':'texto-nivel-1 d-flex ' : 'texto-nivel-2 ps-0 ms-0  ',
+             
+              'text-start'
+              
+            ]
+          %}
+          {% if item.below %}
+          {% set attributes = attributes|merge({'nombreBloquePadre': item.title}) %}
+          {% set attributes = attributes|merge({'nro': loop.index}) %}
+            {% if menu_level == 1 %}
+              {% set idBloque = item.original_link.getDerivativeId() %}
+              {% set attributes = attributes|merge({'idBloquePadre':idBloque}) %}
+
+              <a class=" texto-nivel-1   d-flex justify-content-between align-items-center " role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseId_{{idBloque}}" data-bs-target="#collapseId_{{idBloque}}">{{item.title}}
+                <i class="bi bi-chevron-down"></i>
+              </a> 
+              {# {{ link(item.title, item.url, {'class': link_classes, 'data-bs-toggle': 'collapse', 'aria-expanded': 'true', 'aria-controls': 'arbol' }) }} #}
+            {% else %}
+            {{ link(item.title, item.url, {'class': link_classes, 'data-bs-toggle': 'dropdown', 'aria-expanded': 'true', 'aria-haspopup': 'true', 'data-bs-auto-close':'outside' }) }}
+            {% endif %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% else %}
+            
+            {{ link(item.title, item.url, {'class': link_classes}) }}
+          {% endif %}
+          {% if menu_level == 2 %}
+          <i class=" ps-1 bi bi-arrow-right-short"></i>
+          {% endif %}
+        </li>
+    {% endfor %}
+    {% if menu_level == 1 %}
+      {# div row #}
+      </div>
+    {% endif %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+<script>
+  function aplicarEstilos(e) {
+    var width = window.innerWidth
+    let elementos = document.querySelectorAll(".menu-principal");
+    elementos.forEach((el, i) => {
+      if (e.matches) {
+
+        if (width < 991) {
+          el.style.display = "block";
+        } else {
+          el.style.display = "grid";
+        }
+
+      }
+    });
+  }
+
+  // Pantalla lg
+  let mediaQuery = window.matchMedia("(max-width: 991px)");
+  let minQuery = window.matchMedia("(min-width: 991px)");
+
+  aplicarEstilos(mediaQuery);
+  mediaQuery.addListener(aplicarEstilos);
+  minQuery.addListener(aplicarEstilos);
+</script>

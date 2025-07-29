@@ -1,0 +1,19 @@
+uuid: 26de33af-55b8-45c5-9c36-419f39cef658
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_datos_estadist
+    - node.type.datos_y_estadisticas
+id: node.datos_y_estadisticas.field_descripcion_datos_estadist
+field_name: field_descripcion_datos_estadist
+entity_type: node
+bundle: datos_y_estadisticas
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+uuid: 8443c6c0-bff8-4346-9078-1cbe9fa073a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nomina_de_servidoras_y_servidore.field_area_unidad
+    - field.field.node.nomina_de_servidoras_y_servidore.field_cargo
+    - field.field.node.nomina_de_servidoras_y_servidore.field_correo_institucional
+    - field.field.node.nomina_de_servidoras_y_servidore.field_nombre_servidor_publico
+    - field.field.node.nomina_de_servidoras_y_servidore.field_telefono
+    - node.type.nomina_de_servidoras_y_servidore
+  module:
+    - user
+id: node.nomina_de_servidoras_y_servidore.teaser
+targetEntityType: node
+bundle: nomina_de_servidoras_y_servidore
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_area_unidad: true
+  field_cargo: true
+  field_correo_institucional: true
+  field_nombre_servidor_publico: true
+  field_telefono: true
+  langcode: true

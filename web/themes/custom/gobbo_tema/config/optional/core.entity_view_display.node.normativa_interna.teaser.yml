@@ -1,0 +1,31 @@
+uuid: b256a482-73d6-46a6-a103-62f9674c8862
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.normativa_interna.field_cite_referencia_ninterna
+    - field.field.node.normativa_interna.field_documento_normativa_int
+    - field.field.node.normativa_interna.field_fecha_de_publicacion
+    - field.field.node.normativa_interna.field_tipo_de_documento_ni
+    - field.field.node.normativa_interna.field_titulo_normativa_inter
+    - node.type.normativa_interna
+  module:
+    - user
+id: node.normativa_interna.teaser
+targetEntityType: node
+bundle: normativa_interna
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cite_referencia_ninterna: true
+  field_documento_normativa_int: true
+  field_fecha_de_publicacion: true
+  field_tipo_de_documento_ni: true
+  field_titulo_normativa_inter: true
+  langcode: true

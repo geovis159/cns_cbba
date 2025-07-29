@@ -1,0 +1,18 @@
+uuid: 260e04cf-d258-4e55-b409-e5188e28893b
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Programas y proyectos de inversión'
+type: programas_y_proyectos_de_inverci
+description: 'Programas y proyectos de inverción'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

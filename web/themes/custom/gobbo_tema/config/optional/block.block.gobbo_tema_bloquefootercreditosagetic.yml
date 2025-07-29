@@ -1,0 +1,25 @@
+uuid: c488e7e9-0e54-462c-8ada-a68ff59e85cb
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:bloque_creditos:b4554956-82bf-4833-aa94-29da42171347'
+  module:
+    - block_content
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquefootercreditosagetic
+theme: gobbo_tema
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:b4554956-82bf-4833-aa94-29da42171347'
+settings:
+  id: 'block_content:b4554956-82bf-4833-aa94-29da42171347'
+  label: 'Bloque footer creditos AGETIC'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

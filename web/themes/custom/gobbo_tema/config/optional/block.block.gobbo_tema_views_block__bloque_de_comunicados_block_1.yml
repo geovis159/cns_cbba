@@ -1,0 +1,29 @@
+uuid: a86513fe-4853-4b8e-900c-521a9750a0dc
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.bloque_de_comunicados
+  module:
+    - system
+    - views
+  theme:
+    - gobbo_tema
+id: gobbo_tema_views_block__bloque_de_comunicados_block_1
+theme: gobbo_tema
+region: content
+weight: -16
+provider: null
+plugin: 'views_block:bloque_de_comunicados-block_1'
+settings:
+  id: 'views_block:bloque_de_comunicados-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

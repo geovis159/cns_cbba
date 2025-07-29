@@ -1,0 +1,93 @@
+uuid: e90bfc10-2450-4468-9a4f-69d6fcf6be74
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.servicios.field_anuncio_servicios
+    - field.field.node.servicios.field_api_gobbo_servicios
+    - field.field.node.servicios.field_contenido_servicios
+    - field.field.node.servicios.field_enlace_servicios
+    - field.field.node.servicios.field_imagen_servicios
+    - field.field.node.servicios.field_slug_servicios
+    - field.field.node.servicios.field_titulo_servicios
+    - node.type.servicios
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.servicios.default
+targetEntityType: node
+bundle: servicios
+mode: default
+content:
+  field_anuncio_servicios:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_api_gobbo_servicios:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_contenido_servicios:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_enlace_servicios:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_imagen_servicios:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_slug_servicios:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_titulo_servicios:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

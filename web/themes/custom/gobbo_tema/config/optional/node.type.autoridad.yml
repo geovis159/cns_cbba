@@ -1,0 +1,18 @@
+uuid: bb6d32ec-9b7c-4b32-b8ae-c6d0804a4239
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Autoridad
+type: autoridad
+description: 'Tipo de contenido para lista de autoridades'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,23 @@
+uuid: b7c382e5-8b3d-43d7-a5eb-1afb8b7aeb88
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_documento_mem_inst
+field_name: field_documento_mem_inst
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

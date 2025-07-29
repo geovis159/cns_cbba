@@ -1,0 +1,19 @@
+uuid: 28cb3d1c-a1f0-4e33-8875-bb1b6145f9df
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_cabecera
+    - field.storage.block_content.field_cabecera_lema
+id: block_content.bloque_cabecera.field_cabecera_lema
+field_name: field_cabecera_lema
+entity_type: block_content
+bundle: bloque_cabecera
+label: Lema
+description: 'Lema o descripción corta de institución'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

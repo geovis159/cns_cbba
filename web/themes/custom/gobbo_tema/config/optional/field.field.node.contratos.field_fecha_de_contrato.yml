@@ -1,0 +1,21 @@
+uuid: fe324db3-d87a-49f3-bef4-e7f90ced372f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_contrato
+    - node.type.contratos
+  module:
+    - datetime
+id: node.contratos.field_fecha_de_contrato
+field_name: field_fecha_de_contrato
+entity_type: node
+bundle: contratos
+label: 'Fecha de contrato'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: 6b4e45fb-786f-44e9-a0cc-1d8e988a3295
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_anio_mem_inst
+    - node.type.memoria_institucional
+id: node.memoria_institucional.field_anio_mem_inst
+field_name: field_anio_mem_inst
+entity_type: node
+bundle: memoria_institucional
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

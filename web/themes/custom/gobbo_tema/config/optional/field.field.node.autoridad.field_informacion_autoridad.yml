@@ -1,0 +1,30 @@
+uuid: 769100b8-4032-46bd-a1fd-0ccf43dda90c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informacion_autoridad
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.autoridad
+  module:
+    - text
+id: node.autoridad.field_informacion_autoridad
+field_name: field_informacion_autoridad
+entity_type: node
+bundle: autoridad
+label: Información
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+field_type: text_with_summary

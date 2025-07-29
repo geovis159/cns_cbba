@@ -1,0 +1,23 @@
+uuid: bb92e828-5db8-42df-a74c-a6e9a2691f96
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_documentorend
+field_name: field_documentorend
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

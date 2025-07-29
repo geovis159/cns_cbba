@@ -1,0 +1,27 @@
+uuid: 076498df-544d-4b0c-a691-3b9eb19b8458
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_modalidad_curso
+field_name: field_modalidad_curso
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: presencial
+      label: Presencial
+    -
+      value: virtual
+      label: Virtual
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

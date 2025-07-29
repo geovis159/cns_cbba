@@ -1,0 +1,29 @@
+uuid: 50b83dd3-7023-473b-9a4f-32a0e7f0e255
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.enlaces_de_interes.field_descripcion_enlaceinteres
+    - field.field.node.enlaces_de_interes.field_enlace_enlaceinteres
+    - field.field.node.enlaces_de_interes.field_imagen_enlaceinteres
+    - field.field.node.enlaces_de_interes.field_tipo
+    - node.type.enlaces_de_interes
+  module:
+    - user
+id: node.enlaces_de_interes.teaser
+targetEntityType: node
+bundle: enlaces_de_interes
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_descripcion_enlaceinteres: true
+  field_enlace_enlaceinteres: true
+  field_imagen_enlaceinteres: true
+  field_tipo: true
+  langcode: true

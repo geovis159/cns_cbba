@@ -1,0 +1,27 @@
+uuid: a71f7ada-5c37-4fc9-aad2-8042dc4be18c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdf_viaje
+    - node.type.informes_de_viajes_al_exterior
+  module:
+    - file
+id: node.informes_de_viajes_al_exterior.field_pdf_viaje
+field_name: field_pdf_viaje
+entity_type: node
+bundle: informes_de_viajes_al_exterior
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,11 @@
+uuid: 34467d74-d4a5-4150-b2f2-b6b349d00199
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.normativa_externa
+id: node.normativa_externa
+target_entity_type_id: node
+target_bundle: normativa_externa
+default_langcode: site_default
+language_alterable: false

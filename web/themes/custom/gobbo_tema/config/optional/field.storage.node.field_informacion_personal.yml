@@ -1,0 +1,19 @@
+uuid: ef256570-179b-4b4a-8e05-4bb0db21db4b
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_informacion_personal
+field_name: field_informacion_personal
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

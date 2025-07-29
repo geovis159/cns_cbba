@@ -1,0 +1,33 @@
+uuid: 56664007-a376-4f69-8335-80a25a272d53
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_publicacion
+field_name: field_tipo_publicacion
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: revistas
+      label: Revista
+    -
+      value: articulo
+      label: Artículo
+    -
+      value: boletin
+      label: Boletin
+    -
+      value: banco_de_trabajo_de_investigacion
+      label: 'Banco de Trabajo de Investigación'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

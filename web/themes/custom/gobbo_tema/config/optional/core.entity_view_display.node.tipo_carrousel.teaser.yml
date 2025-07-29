@@ -1,0 +1,33 @@
+uuid: b5684804-78a6-4e3d-89ba-285c47e23ec2
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tipo_carrousel.field_color_carrousel
+    - field.field.node.tipo_carrousel.field_descripcion_carrousel
+    - field.field.node.tipo_carrousel.field_enlace_carrousel
+    - field.field.node.tipo_carrousel.field_imagen_carrousel
+    - field.field.node.tipo_carrousel.field_titulo_carrousel
+    - field.field.node.tipo_carrousel.field_transicion_carrousel
+    - node.type.tipo_carrousel
+  module:
+    - user
+id: node.tipo_carrousel.teaser
+targetEntityType: node
+bundle: tipo_carrousel
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_color_carrousel: true
+  field_descripcion_carrousel: true
+  field_enlace_carrousel: true
+  field_imagen_carrousel: true
+  field_titulo_carrousel: true
+  field_transicion_carrousel: true
+  langcode: true

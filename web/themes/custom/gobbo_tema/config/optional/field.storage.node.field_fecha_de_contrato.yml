@@ -1,0 +1,20 @@
+uuid: 18306da9-4264-49f9-9aa0-39830fd24378
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_fecha_de_contrato
+field_name: field_fecha_de_contrato
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

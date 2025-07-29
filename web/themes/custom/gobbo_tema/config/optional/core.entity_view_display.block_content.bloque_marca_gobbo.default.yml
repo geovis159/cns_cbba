@@ -1,0 +1,22 @@
+uuid: bf5f2180-eae3-4410-b7d0-5d6790ee360d
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_marca_gobbo
+    - field.field.block_content.bloque_marca_gobbo.field_anuncio_gobbo
+id: block_content.bloque_marca_gobbo.default
+targetEntityType: block_content
+bundle: bloque_marca_gobbo
+mode: default
+content:
+  field_anuncio_gobbo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 784e80d4-e40f-46dd-bfea-d0096dc1d377
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.redes_sociales
+id: node.redes_sociales
+target_entity_type_id: node
+target_bundle: redes_sociales
+default_langcode: site_default
+language_alterable: false

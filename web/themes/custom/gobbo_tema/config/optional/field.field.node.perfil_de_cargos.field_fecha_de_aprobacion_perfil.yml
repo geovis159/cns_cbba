@@ -1,0 +1,21 @@
+uuid: 7667ec3f-4ba6-47e4-8cf9-99c92fca354e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_aprobacion_perfil
+    - node.type.perfil_de_cargos
+  module:
+    - datetime
+id: node.perfil_de_cargos.field_fecha_de_aprobacion_perfil
+field_name: field_fecha_de_aprobacion_perfil
+entity_type: node
+bundle: perfil_de_cargos
+label: 'Fecha de aprobación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

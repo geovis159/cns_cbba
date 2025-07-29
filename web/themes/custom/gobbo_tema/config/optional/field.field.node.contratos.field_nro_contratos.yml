@@ -1,0 +1,23 @@
+uuid: 25e658ab-005e-46a6-b743-bb0bed14471e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nro_contratos
+    - node.type.contratos
+id: node.contratos.field_nro_contratos
+field_name: field_nro_contratos
+entity_type: node
+bundle: contratos
+label: 'Nro. contrato'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

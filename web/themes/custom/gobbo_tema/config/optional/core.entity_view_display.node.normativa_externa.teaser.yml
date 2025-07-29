@@ -1,0 +1,31 @@
+uuid: 8b23b111-8c48-4b02-94a1-4d7f37424d1c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.normativa_externa.field_cite_referencia_nexternaa
+    - field.field.node.normativa_externa.field_documento
+    - field.field.node.normativa_externa.field_fecha
+    - field.field.node.normativa_externa.field_tipo_de_documento
+    - field.field.node.normativa_externa.field_titulo
+    - node.type.normativa_externa
+  module:
+    - user
+id: node.normativa_externa.teaser
+targetEntityType: node
+bundle: normativa_externa
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cite_referencia_nexternaa: true
+  field_documento: true
+  field_fecha: true
+  field_tipo_de_documento: true
+  field_titulo: true
+  langcode: true

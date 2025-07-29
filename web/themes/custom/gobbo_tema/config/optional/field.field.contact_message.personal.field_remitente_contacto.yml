@@ -1,0 +1,19 @@
+uuid: bedc2920-dd10-4892-9233-937ab8c6eb05
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_remitente_contacto
+id: contact_message.personal.field_remitente_contacto
+field_name: field_remitente_contacto
+entity_type: contact_message
+bundle: personal
+label: Remitente
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

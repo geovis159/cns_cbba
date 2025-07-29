@@ -1,0 +1,23 @@
+uuid: 06b5615f-9824-446a-833b-111f1cc5bf1b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_costo_tramite
+    - node.type.tramites_gobbo
+id: node.tramites_gobbo.field_costo_tramite
+field_name: field_costo_tramite
+entity_type: node
+bundle: tramites_gobbo
+label: 'Costo en Bolivianos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

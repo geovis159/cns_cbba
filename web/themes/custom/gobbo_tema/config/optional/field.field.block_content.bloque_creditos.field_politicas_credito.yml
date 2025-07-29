@@ -1,0 +1,23 @@
+uuid: 085a05f2-494f-4d27-a315-f4f32e122a4c
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_creditos
+    - field.storage.block_content.field_politicas_credito
+  module:
+    - link
+id: block_content.bloque_creditos.field_politicas_credito
+field_name: field_politicas_credito
+entity_type: block_content
+bundle: bloque_creditos
+label: 'Políticas de privacidad'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

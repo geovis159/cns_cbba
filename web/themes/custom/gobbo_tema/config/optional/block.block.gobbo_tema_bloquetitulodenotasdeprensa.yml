@@ -1,0 +1,30 @@
+uuid: 9d101bb6-ca4e-4fd8-b070-2ea359e6c7d8
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:titulo_bloque:195f70ec-c5bf-41e8-8b90-420fa81c3153'
+  module:
+    - block_content
+    - system
+  theme:
+    - gobbo_tema
+id: gobbo_tema_bloquetitulodenotasdeprensa
+theme: gobbo_tema
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:195f70ec-c5bf-41e8-8b90-420fa81c3153'
+settings:
+  id: 'block_content:195f70ec-c5bf-41e8-8b90-420fa81c3153'
+  label: 'Bloque Titulo de Notas de Prensa'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

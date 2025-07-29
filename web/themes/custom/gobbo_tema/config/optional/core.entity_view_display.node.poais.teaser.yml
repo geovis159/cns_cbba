@@ -1,0 +1,29 @@
+uuid: 6f877fbd-7899-4731-9695-cc4e25362921
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.poais.field_anio_poais
+    - field.field.node.poais.field_documento_poais
+    - field.field.node.poais.field_titulo_poais
+    - field.field.node.poais.field_unidad_organizacional_poai
+    - node.type.poais
+  module:
+    - user
+id: node.poais.teaser
+targetEntityType: node
+bundle: poais
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_poais: true
+  field_documento_poais: true
+  field_titulo_poais: true
+  field_unidad_organizacional_poai: true
+  langcode: true

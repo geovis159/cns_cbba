@@ -1,0 +1,19 @@
+uuid: 4dff8382-10e0-4bfe-96ee-a04e437234fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.bloque_creditos
+    - field.storage.block_content.field_titulo_credito
+id: block_content.bloque_creditos.field_titulo_credito
+field_name: field_titulo_credito
+entity_type: block_content
+bundle: bloque_creditos
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

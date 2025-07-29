@@ -1,0 +1,29 @@
+uuid: 0d38958b-7653-43bc-8a4c-68ddb54c0b7e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.herramientas_y_servicios.field_anuncio
+    - field.field.node.herramientas_y_servicios.field_contenido
+    - field.field.node.herramientas_y_servicios.field_imagen
+    - field.field.node.herramientas_y_servicios.field_titulo_herramientas
+    - node.type.herramientas_y_servicios
+  module:
+    - user
+id: node.herramientas_y_servicios.teaser
+targetEntityType: node
+bundle: herramientas_y_servicios
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anuncio: true
+  field_contenido: true
+  field_imagen: true
+  field_titulo_herramientas: true
+  langcode: true

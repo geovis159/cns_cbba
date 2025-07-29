@@ -1,0 +1,27 @@
+uuid: 1f58cce9-e707-4a15-9841-f444d2503526
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_manual_procedim
+    - node.type.manual_de_procedimiento
+  module:
+    - file
+id: node.manual_de_procedimiento.field_documento_manual_procedim
+field_name: field_documento_manual_procedim
+entity_type: node
+bundle: manual_de_procedimiento
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

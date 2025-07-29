@@ -1,0 +1,99 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+
+ */
+#}
+
+<div id="enlaces-interes" >
+	
+	<div id="enlacesCarrousel" class="row  mx-auto my-2 justify-content-center enlaces{{ view.dom_id }}">
+		<div style="display: flex;" id="carousel{{ view.dom_id }}" class="carousel slide" data-bs-ride="carousel">
+			<div class="position-relative mx-2">
+				<a class="position-absolute top-50 start-50 translate-middle" href="#carousel{{ view.dom_id }}" role="button"
+					data-bs-slide="prev">
+					<i class="align-middle bi bi-caret-left-fill"></i>
+				</a>
+			</div>
+			<div class="carousel-inner" role="listbox">
+				{% set bandera = true %}
+				
+				{% for row in rows %}
+	
+				{# {% set comuinicados = [ %} #}
+				<div class="carousel-item {{ bandera ? 'active' : '' }} mt-2">
+					<div class='col-6 col-md-3'>
+						<div class='card'>
+							<div class='card-body text-center'>
+								<img style="object-fit: contain;" src='{{file_url(row.content['#row']._entity.field_imagen_enlaceinteres.entity.getFileUri())}}' class='card-img-top mx-auto' alt='imagen' width='50' height='210'>
+							</div>
+							<div class='card-footer bg-transparent' style='border: none;'>
+								<div class='row justify-content-center'>
+									<div class='col-auto px-0'>
+										<a style="display: flex;" href="{{row.content['#row']._entity.field_enlace_enlaceinteres.uri}}" target="_blank">
+											<p class='card-text px-0'>
+												{{row.content['#row']._entity.field_enlace_enlaceinteres.title}}
+											</p>
+											<i class='px-2 mb-2 bi bi-box-arrow-up-right'></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% set bandera = false %}
+				{% endfor %}
+			</div>
+			<div class="position-relative mx-2">
+				<a class="position-absolute top-50 start-50 translate-middle" href="#carousel{{ view.dom_id }}" role="button"
+					data-bs-slide="next">
+					<i class="bi bi-caret-right-fill"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{# {{dump(view.dom_id)}} #}
+
+
+<script>
+	var dato  = "{{ view.dom_id }}"
+	let items{{ view.dom_id }} = document.querySelectorAll('.enlaces{{ view.dom_id }} .carousel .carousel-item')
+	items{{ view.dom_id }}.forEach((el) => {
+		const minPerSlide = 4
+		let next = el.nextElementSibling
+		for (var i = 1; i < minPerSlide; i++) {
+			if (!next) {
+				next = items{{ view.dom_id }}[0]
+			}
+			let cloneChild = next.cloneNode(true)
+			el.appendChild(cloneChild.children[0])
+			next = next.nextElementSibling
+		}
+	})
+</script>

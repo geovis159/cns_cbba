@@ -1,0 +1,26 @@
+uuid: 6dbe3316-cbfb-439e-b94f-57e671adbd6a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contenido
+    - filter.format.basic_html
+    - node.type.herramientas_y_servicios
+  module:
+    - text
+id: node.herramientas_y_servicios.field_contenido
+field_name: field_contenido
+entity_type: node
+bundle: herramientas_y_servicios
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+field_type: text_with_summary

@@ -1,0 +1,11 @@
+uuid: 5c389164-aa46-4206-ba04-1d50bbabca2a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.normativa_interna
+id: node.normativa_interna
+target_entity_type_id: node
+target_bundle: normativa_interna
+default_langcode: site_default
+language_alterable: false

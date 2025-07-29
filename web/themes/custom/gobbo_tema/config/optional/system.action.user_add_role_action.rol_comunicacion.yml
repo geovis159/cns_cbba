@@ -1,0 +1,14 @@
+uuid: 90fe72d8-76f2-4726-98cd-39b878471ca7
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_comunicacion
+  module:
+    - user
+id: user_add_role_action.rol_comunicacion
+label: 'Añade el rol Rol Comunicacion al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rol_comunicacion

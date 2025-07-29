@@ -1,0 +1,58 @@
+uuid: f5029a1b-f542-4611-9175-5090a7ff51c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.poais.field_anio_poais
+    - field.field.node.poais.field_documento_poais
+    - field.field.node.poais.field_titulo_poais
+    - field.field.node.poais.field_unidad_organizacional_poai
+    - node.type.poais
+  module:
+    - file
+    - user
+id: node.poais.default
+targetEntityType: node
+bundle: poais
+mode: default
+content:
+  field_anio_poais:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_documento_poais:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_titulo_poais:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_unidad_organizacional_poai:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

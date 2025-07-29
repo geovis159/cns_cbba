@@ -1,0 +1,18 @@
+uuid: c6815f5b-7622-4624-9baf-21739d9c21c8
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Notas de prensa'
+type: notas_de_prensa
+description: 'Contenido de nota de prensa'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

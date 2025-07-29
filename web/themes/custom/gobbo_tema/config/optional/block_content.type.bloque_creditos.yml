@@ -1,0 +1,8 @@
+uuid: caa5d0fb-0967-4f79-8d44-8192549ce2ab
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_creditos
+label: 'Bloque footer central'
+revision: false
+description: 'Bloque para administrar información en el footer credito'

@@ -1,0 +1,19 @@
+uuid: 1a3c07da-668d-4398-b02b-05cb1db98433
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_personal
+    - node.type.personal
+id: node.personal.field_nombre_personal
+field_name: field_nombre_personal
+entity_type: node
+bundle: personal
+label: Nombre
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

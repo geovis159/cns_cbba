@@ -1,0 +1,33 @@
+uuid: 3f513e95-eac6-4caf-8342-6a9d64d7a6ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.comunicados.field_archivo_comunicado
+    - field.field.node.comunicados.field_contenido_comunicado
+    - field.field.node.comunicados.field_fecha_comunicado
+    - field.field.node.comunicados.field_lugar_comunicado
+    - field.field.node.comunicados.field_resumen_comunicado
+    - field.field.node.comunicados.field_titulo_comunicado
+    - node.type.comunicados
+  module:
+    - user
+id: node.comunicados.teaser
+targetEntityType: node
+bundle: comunicados
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_archivo_comunicado: true
+  field_contenido_comunicado: true
+  field_fecha_comunicado: true
+  field_lugar_comunicado: true
+  field_resumen_comunicado: true
+  field_titulo_comunicado: true
+  langcode: true

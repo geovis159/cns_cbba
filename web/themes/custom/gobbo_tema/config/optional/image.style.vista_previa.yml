@@ -1,0 +1,15 @@
+uuid: 27f006a7-9bef-4de8-b6ad-37031bd47a09
+langcode: es
+status: true
+dependencies: {  }
+name: vista_previa
+label: 'Vista Previa'
+effects:
+  7217bacf-1b03-41d8-89bf-d434f8ad9af3:
+    uuid: 7217bacf-1b03-41d8-89bf-d434f8ad9af3
+    id: image_scale
+    weight: 1
+    data:
+      width: 134
+      height: 170
+      upscale: false

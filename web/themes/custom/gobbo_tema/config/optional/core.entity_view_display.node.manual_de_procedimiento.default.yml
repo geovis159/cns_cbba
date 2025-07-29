@@ -1,0 +1,60 @@
+uuid: 1e73301c-c78e-4ad3-851a-f056fa29beb9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.manual_de_procedimiento.field_anio_manual_procedimiento
+    - field.field.node.manual_de_procedimiento.field_documento_manual_procedim
+    - field.field.node.manual_de_procedimiento.field_fecha_de_aprob_man_proced
+    - field.field.node.manual_de_procedimiento.field_titulo_manual_procedimient
+    - node.type.manual_de_procedimiento
+  module:
+    - datetime
+    - file
+    - user
+id: node.manual_de_procedimiento.default
+targetEntityType: node
+bundle: manual_de_procedimiento
+mode: default
+content:
+  field_anio_manual_procedimiento:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_documento_manual_procedim:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_fecha_de_aprob_man_proced:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_titulo_manual_procedimient:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

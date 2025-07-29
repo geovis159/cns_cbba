@@ -1,0 +1,19 @@
+uuid: 734715d0-402a-4d03-ad6b-f3fa99b6f9a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_escala_salrial
+    - node.type.escala_salarial
+id: node.escala_salarial.field_titulo_escala_salrial
+field_name: field_titulo_escala_salrial
+entity_type: node
+bundle: escala_salarial
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

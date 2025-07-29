@@ -1,0 +1,29 @@
+uuid: f1737b3c-3608-4a1d-bec8-9cd54c2539ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.manual_de_organizacion_funcional.field_anio_manual_organizacion
+    - field.field.node.manual_de_organizacion_funcional.field_documento_manual_organizac
+    - field.field.node.manual_de_organizacion_funcional.field_fecha_de_aprobacion_manual
+    - field.field.node.manual_de_organizacion_funcional.field_titulo_manual_organizac
+    - node.type.manual_de_organizacion_funcional
+  module:
+    - user
+id: node.manual_de_organizacion_funcional.teaser
+targetEntityType: node
+bundle: manual_de_organizacion_funcional
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anio_manual_organizacion: true
+  field_documento_manual_organizac: true
+  field_fecha_de_aprobacion_manual: true
+  field_titulo_manual_organizac: true
+  langcode: true

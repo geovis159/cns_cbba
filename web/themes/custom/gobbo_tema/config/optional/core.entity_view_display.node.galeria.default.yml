@@ -1,0 +1,81 @@
+uuid: 6eb53506-fa82-44bc-858a-00226e27e1f1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.galeria.field_fecha_galeria
+    - field.field.node.galeria.field_lugar_galeria
+    - field.field.node.galeria.field_multimedias_galeria
+    - field.field.node.galeria.field_titulo_descriptivo
+    - field.field.node.galeria.field_ver_pagina
+    - field.field.node.galeria.field_vista_previa_galeria
+    - node.type.galeria
+  module:
+    - datetime
+    - file
+    - image
+    - user
+id: node.galeria.default
+targetEntityType: node
+bundle: galeria
+mode: default
+content:
+  field_fecha_galeria:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_lugar_galeria:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_multimedias_galeria:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_titulo_descriptivo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_ver_pagina:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_vista_previa_galeria:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
