@@ -7,6 +7,8 @@ global-styling:
     component:
       css/style.css: {}
       # css/colors.css: {}
+    dependencies:
+      - gobbo_tema/jquery_cdn
 bootstrap:
   js:
     /libraries/popper.js/dist/umd/popper.min.js: { weight: -19 }

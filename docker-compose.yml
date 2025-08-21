@@ -7,6 +7,7 @@ services:
       - "8080:80"
     volumes:
       - ./web:/var/www/html
+      - ./config:/var/www/html/config
       #- ./:/var/www/html
       #- ./localhost.conf:/etc/apache2/sites-available/localhost.conf
     depends_on:
@@ -30,7 +31,6 @@ services:
       - "3306:3306"
     networks:
       - drupal_net
-
 networks:
   drupal_net:
     external: true

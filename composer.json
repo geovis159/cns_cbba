@@ -16,21 +16,23 @@
     }
   ],
   "require": {
-    "drupal/core-recommended": "^10",
+    "drupal/core-recommended": "^10.2",
     "drupal/core-composer-scaffold": "^10",
     "drupal/core-project-message": "^10",
-    "drupal/bootstrap_barrio": "^4.2",
+    "drupal/bootstrap_barrio": "^5.1.0",
     "drupal/admin_toolbar": "^3.5",
     "drupal/paragraphs": "^1.13",
     "drupal/webform": "^6.1",
     "drupal/pathauto": "^1.10",
     "drupal/token": "^1.12",
-    "drush/drush": "^11.5"
+    "drupal/ckeditor5_plugin_pack": "^1.4",
+    "drupal/sitemap": "^2.2",
+    "drush/drush": "13.0"
   },
   "conflict": {
     "drupal/drupal": "*"
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true,
   "scripts": {
     "post-install-cmd": [
@@ -56,6 +58,12 @@
       "web/profiles/contrib/{$name}": ["type:drupal-profile"],
       "web/themes/contrib/{$name}": ["type:drupal-theme"],
       "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true
     }
   }
 }

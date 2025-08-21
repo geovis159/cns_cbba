@@ -20,12 +20,13 @@ body {
 .container {
   max-width: 1140px !important;
 }
-
+/* cabecera  incio CNS */
 h1 {
   color: var(--texto-default);
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
+
 }
 
 h2 {

@@ -41,3 +41,6 @@ sites/simpletest
 
 # VSCODE
 .vscode
+"/data_mysql/" 
+/.editorconfig
+/.gitattributes

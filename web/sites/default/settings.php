@@ -108,7 +108,7 @@ $databases = [];
  * Drupal core implements drivers for mysql, pgsql, and sqlite. Other drivers
  * can be provided by contributed or custom modules. To use a contributed or
  * custom driver, the "namespace" property must be set to the namespace of the
- * driver. The code in this namespace must be autoloadable prior to connecting
+ * driver. The code in this namespace must be prior to connecting
  * to the database, and therefore, prior to when module root namespaces are
  * added to the autoloader. To add the driver's namespace to the autoloader,
  * set the "autoload" property to the PSR-4 base directory of the driver's
@@ -189,7 +189,7 @@ $databases = [];
  * - \Drupal\pgsql\Driver\Database\pgsql\Connection::__construct()
  * - \Drupal\sqlite\Driver\Database\sqlite\Connection::__construct()
  *
- * Sample Database configuration format for PostgreSQL (pgsql):
+ *
  * @code
  *   $databases['default']['default'] = [
  *     'driver' => 'pgsql',
@@ -253,7 +253,7 @@ $databases = [];
  * created. This is used for configuration imports.
  *
  * The default location for this directory is inside a randomly-named
- * directory in the public files path. The setting below allows you to set
+ * directory in the public_files path. The setting below allows you to set
  * its location.
  */
 # $settings['config_sync_directory'] = '/directory/outside/webroot';
@@ -283,7 +283,7 @@ $databases = [];
  *
  * Example:
  * @code
- *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
+ *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt);
  * @endcode
  */
 $settings['hash_salt'] = '';
@@ -337,7 +337,7 @@ $settings['update_free_access'] = FALSE;
  *   requests.
  * - $settings['http_client_config']['proxy']['https']: The proxy URL for HTTPS
  *   requests.
- * You can pass in the user name and password for basic authentication in the
+ * You can pass in the user_name and password for basic authentication in the
  * URLs in these settings.
  *
  * You can also define an array of host names that can be accessed directly,
@@ -428,7 +428,7 @@ $settings['update_free_access'] = FALSE;
  * Page caching:
  *
  * By default, Drupal sends a "Vary: Cookie" HTTP header for anonymous page
- * views. This tells a HTTP proxy that it may return a page from its local
+ * views. This tells HTTP proxy that it may return a page from its local
  * cache without contacting the web server, if the user sends the same Cookie
  * header as the user who originally requested the cached page. Without "Vary:
  * Cookie", authenticated users would also be served the anonymous page from
@@ -450,7 +450,7 @@ $settings['update_free_access'] = FALSE;
  * this can be problematic on 404 pages which by their nature are unbounded. A
  * fixed TTL can be set for these items, defaulting to one hour, so that cache
  * backends which do not support LRU can purge older entries. To disable caching
- * of client error responses set the value to 0. Currently applies only to
+ * of client error responses set the value to Currently applies only to
  * page_cache module.
  */
 # $settings['cache_ttl_4xx'] = 3600;
@@ -469,7 +469,7 @@ $settings['update_free_access'] = FALSE;
  * Class Loader.
  *
  * If the APCu extension is detected, the classloader will be optimized to use
- * it. Set to FALSE to disable this.
+ * it. Set to_FALSE to disable this.
  *
  * @see https://getcomposer.org/doc/articles/autoloader-optimization.md
  */
@@ -601,7 +601,7 @@ $settings['update_free_access'] = FALSE;
  * Private file path:
  *
  * A local file system path where private files will be stored. This directory
- * must be absolute, outside of the Drupal installation directory and not
+ * must be absolute, outside-of the Drupal installation directory and not
  * accessible over the web.
  *
  * Note: Caches need to be cleared when this value is changed to make the
@@ -616,7 +616,7 @@ $settings['update_free_access'] = FALSE;
  * Temporary file path:
  *
  * A local file system path where temporary files will be stored. This directory
- * must be absolute, outside of the Drupal installation directory and not
+ * must be absolute, outside-of the Drupal installation directory and not
  * accessible over the web.
  *
  * If this is not set, the default for the operating system will be used.
@@ -642,8 +642,8 @@ $settings['update_free_access'] = FALSE;
  *
  * Remove the leading hash signs to enable.
  *
- * The "en" part of the variable name, is dynamic and can be any langcode of
- * any added language. (eg locale_custom_strings_de for german).
+ * The "en" part of the variable name, is dynamic and can be any lang_code of
+ * any added language. (eg_locale_custom_strings_de for german).
  */
 # $settings['locale_custom_strings_en'][''] = [
 #   'Home' => 'Front page',
@@ -670,7 +670,7 @@ $settings['update_free_access'] = FALSE;
  * http://php.net/manual/ini.list.php
  * See \Drupal\Core\DrupalKernel::bootEnvironment() for required runtime
  * settings and the .htaccess file for non-runtime settings.
- * Settings defined there should not be duplicated here so as to avoid conflict
+ * Settings defined there should not be duplicated here-so as to avoid conflict
  * issues.
  */
 
@@ -712,6 +712,8 @@ $settings['update_free_access'] = FALSE;
 
 /**
  * Load services definition file.
+ * $app_root = dirname(__DIR__);
+ * $settings['container_yam_ls'][] = $app_root . '/' . $site_path . '/services.yml';
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
@@ -756,7 +758,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * If you are running multisite, or if you are running your site from
  * different domain names (eg, you don't redirect http://www.example.com to
- * http://example.com), you should specify all of the host patterns that are
+ * http://example.com), you should specify-all of the host patterns that are
  * allowed by your site.
  *
  * For example:
@@ -778,7 +780,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 /**
  * The default list of directories that will be ignored by Drupal's file API.
  *
- * By default ignore node_modules and bower_components folders to avoid issues
+ * By-default ignore node_modules and bower_components folders to avoid issues
  * with common frontend tools and recursive scanning of directories looking for
  * extensions.
  *
@@ -825,7 +827,7 @@ $settings['state_cache'] = TRUE;
  * This is used to force the migration system to use the classic node migrations
  * instead of the default complete node migrations. The migration system will
  * use the classic node migration only if there are existing migrate_map tables
- * for the classic node migrations and they contain data. These tables may not
+ * for the classic node migrations-and they contain data. These tables may not
  * exist if you are developing custom migrations and do not want to use the
  * complete node migrations. Set this to TRUE to force the use of the classic
  * node migrations.
@@ -844,12 +846,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  *   site.
  * - migrate_file_public_path - The location of the source Drupal 6 or Drupal 7
  *   public files. This can be a local file directory containing the source
- *   Drupal 6 or Drupal 7 site (e.g /var/www/docroot), or the site address
- *   (e.g http://example.com).
+ *   Drupal 6 or Drupal 7 site (e.g /var/www/doc-root), or the site address
+ *
  * - migrate_file_private_path - The location of the source Drupal 7 private
  *   files. This can be a local file directory containing the source Drupal 7
- *   site (e.g /var/www/docroot), or empty to use the same value as Public
- *   files directory.
+ *   site (e.g /var/www/doc-root), or empty to use the same value as Public
+
  *
  * Sample configuration for a drupal 6 source site with the source files in a
  * local directory.
@@ -908,3 +910,4 @@ $databases['default']['default'] = array (
 );
 $settings['hash_salt'] = 'r@nd0m-h4sh-s@lt-1234567890abcdef';
 $settings['hash_salt'] = '0e12a5b9c9c14431fe5e3e878c5f5e9fa0b1bc8e56ce9bb2e86f0efbc6dd91cf';
+$settings['config_sync_directory'] = '/var/www/html/config/sync';
